@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Closed Group — Research Reports</title><meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Research reports shared with a closed group by Ashoke Kumar Seth.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a2a4a'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='%23c9a24b' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+<style>
+  :root{
+    --ground:#eaeef4;
+    --surface:#ffffff;
+    --surface-2:#f5f8fc;
+    --ink:#16223a;
+    --ink-strong:#0d1729;
+    --muted:#5c6b85;
+    --hair:#d7dfeb;
+    --navy:#1a2a4a;
+    --gold:#a8802c;
+    --gold-bright:#c9a24b;
+    --green:#2e7d32;
+    --green-soft:#e4f0e5;
+    --shadow:0 1px 2px rgba(22,34,58,.05), 0 8px 22px rgba(22,34,58,.06);
+    --focus:#2c62c4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0d1420; --surface:#161e2c; --surface-2:#1b2434;
+      --ink:#e3e9f4; --ink-strong:#f3f6fb; --muted:#93a1ba; --hair:#28334a;
+      --navy:#1d2c49; --gold:#d7b163; --gold-bright:#d7b163;
+      --green:#6cc072; --green-soft:#1a2f1e;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.28);
+      --focus:#6f9dff;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0d1420; --surface:#161e2c; --surface-2:#1b2434;
+    --ink:#e3e9f4; --ink-strong:#f3f6fb; --muted:#93a1ba; --hair:#28334a;
+    --navy:#1d2c49; --gold:#d7b163; --gold-bright:#d7b163;
+    --green:#6cc072; --green-soft:#1a2f1e;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.28);
+    --focus:#6f9dff;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+    font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---- masthead: navy band, mirrors the report header ---- */
+  .band{
+    background:linear-gradient(135deg,#101c36 0%,var(--navy) 55%,#2b4570 100%);
+    border-bottom:4px solid;
+    border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1;
+    color:#fff; padding:34px 0 30px;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 16px;}
+  .eyebrow{
+    font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold-bright);margin-bottom:9px;
+  }
+  h1{
+    font-family:'Source Serif 4',Georgia,serif;
+    font-size:clamp(28px,6.5vw,40px);font-weight:600;line-height:1.1;
+    letter-spacing:-.015em;color:#fff;text-wrap:balance;
+  }
+  .band p{color:#b9c6de;margin-top:10px;max-width:60ch;font-size:14.5px;}
+
+  .counts{display:flex;flex-wrap:wrap;gap:0;margin-top:22px;
+    border:1px solid rgba(255,255,255,.16);border-radius:9px;overflow:hidden;}
+  .counts div{flex:1 1 25%;min-width:84px;padding:10px 13px;
+    border-right:1px solid rgba(255,255,255,.16);}
+  .counts div:last-child{border-right:none;}
+  .counts b{display:block;font-family:'Source Serif 4',Georgia,serif;
+    font-size:22px;font-weight:600;color:#fff;font-variant-numeric:tabular-nums;line-height:1.1;}
+  .counts span{display:block;font-size:9.5px;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;color:#9fb0cf;margin-top:3px;}
+
+  /* ---- controls ---- */
+  .controls{position:sticky;top:0;z-index:20;background:var(--ground);
+    padding:14px 0 11px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+    border-bottom:1px solid var(--hair);}
+  #q{flex:1 1 190px;min-width:0;font:inherit;color:var(--ink);
+    background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:9px 12px;}
+  #q::placeholder{color:var(--muted);}
+  #q:focus-visible,.seg button:focus-visible,.row:focus-visible{
+    outline:2px solid var(--focus);outline-offset:2px;}
+  .seg{display:flex;background:var(--surface);border:1px solid var(--hair);
+    border-radius:8px;overflow:hidden;}
+  .seg button{font:inherit;font-size:13px;font-weight:600;border:none;
+    background:transparent;color:var(--muted);padding:9px 13px;cursor:pointer;
+    border-right:1px solid var(--hair);}
+  .seg button:last-child{border-right:none;}
+  .seg button[aria-pressed="true"]{background:var(--surface-2);color:var(--ink-strong);}
+
+  /* ---- groups + rows ---- */
+  .group{margin:26px 0 10px;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;}
+  .group h2{font-family:'Source Serif 4',Georgia,serif;font-size:18px;
+    font-weight:600;color:var(--ink-strong);flex:0 0 auto;white-space:nowrap;}
+  .group .n{font-size:11px;font-weight:700;color:var(--muted);
+    font-variant-numeric:tabular-nums;}
+  .group p{flex:1 1 100%;font-size:13px;color:var(--muted);}
+
+  .list{display:flex;flex-direction:column;gap:7px;}
+
+  /* one column grid shared by the header row and every data row */
+  .head,.row{display:grid;
+    grid-template-columns:34px minmax(0,1fr) 58px 104px 14px;
+    align-items:center;gap:12px;}
+
+  .head{padding:0 13px 7px;border-bottom:1px solid var(--hair);margin-bottom:8px;}
+  .head span{font-size:9.5px;font-weight:700;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--muted);}
+  .head .r{text-align:right;}
+  .head i{font-style:normal;}
+  .head .sm{display:none;}
+
+  .row{background:var(--surface);border:1px solid var(--hair);
+    border-left:3px solid var(--gold-bright);border-radius:9px;padding:11px 13px;
+    text-decoration:none;color:inherit;box-shadow:var(--shadow);}
+  .row.arch{border-left-color:#9aa7bd;}
+  a.row:hover{border-color:var(--gold);}
+  .name{min-width:0;}
+  .name b{display:block;font-weight:600;font-size:15px;color:var(--ink-strong);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .name .note{display:block;font-size:11px;font-weight:400;color:var(--muted);
+    margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .col{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;
+    text-align:right;white-space:nowrap;}
+  /* left gutter: reserved always, filled only while a report is <3 days old */
+  .flag{min-width:0;}
+  .flag b{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.07em;
+    text-transform:uppercase;background:#f0b429;color:#3d2c00;
+    padding:2px 4px;border-radius:3px;line-height:1.15;}
+
+  .go{font-size:16px;color:var(--muted);}
+  a.row:hover .go{color:var(--gold);}
+  .pdfonly{font-size:9.5px;font-weight:700;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+  .empty{padding:24px 4px;color:var(--muted);font-style:italic;display:none;}
+
+  footer{margin-top:36px;padding:18px 0 46px;border-top:1px solid var(--hair);
+    font-size:12px;color:var(--muted);}
+  footer b{color:var(--ink-strong);font-weight:600;}
+  footer .disc{margin-top:9px;line-height:1.55;}
+  footer a{color:var(--gold);}
+
+  @media (max-width:620px){
+    .head{padding:0 11px 6px;}
+    .head span{font-size:8.5px;letter-spacing:.08em;white-space:nowrap;}
+    .head .lg{display:none;} .head .sm{display:inline;}
+    .head,.row{grid-template-columns:28px minmax(0,1fr) 40px 80px 10px;gap:7px;}
+    .row{padding:11px 11px;}
+    .name b{font-size:14px;}
+    .name .note{font-size:10px;}
+    .col{font-size:11.5px;}
+    .go{font-size:14px;}
+    .pdfonly{font-size:8.5px;letter-spacing:.04em;}
+  }
+  @media (max-width:360px){
+    .head,.row{grid-template-columns:26px minmax(0,1fr) 36px 72px 8px;gap:5px;}
+    .name b{font-size:13px;}
+    .name .note{display:none;}
+    .col{font-size:10.5px;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow">Closed Group &middot; Indian Listed Companies</div>
+    <h1>Closed Group</h1>
+    <p>Written and published by Ashoke Kumar Seth for a small group. Each report covers the business, moat, financials, guidance credibility, peers, risk and an Elliott Wave technical read, with every source conflict shown rather than resolved. Educational use only, not investment advice.</p>
+    <div class="counts">
+      <div><b id="cTotal">0</b><span>Reports</span></div>
+      <div><b id="cLive">0</b><span>Published</span></div>
+      <div><b id="cArch">0</b><span>Archive</span></div>
+      <div><b>2026</b><span>Oct</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search company or ticker" aria-label="Search reports">
+    <div class="seg" role="group" aria-label="Filter reports">
+      <button data-f="all" aria-pressed="true">All</button>
+      <button data-f="live" aria-pressed="false">Published</button>
+      <button data-f="archive" aria-pressed="false">Archive</button>
+    </div>
+  </div>
+
+  <section data-grp="live">
+    <div class="group">
+      <h2>Published reports</h2><span class="n">16</span>
+      <p>Full HTML reports. Tap to open.</p>
+    </div>
+    <div class="head" aria-hidden="true"><span></span><span>Name</span><span class="r"><i class="lg">Version No</i><i class="sm">Ver</i></span><span class="r">Date</span><span></span></div>
+    <div class="list" id="live"></div>
+  </section>
+
+  <section data-grp="archive">
+    <div class="group">
+      <h2>Archive</h2><span class="n">16</span>
+      <p>Earlier reports held as PDFs only. Not yet republished in this format.</p>
+    </div>
+    <div class="head" aria-hidden="true"><span></span><span>Name</span><span class="r"><i class="lg">Version No</i><i class="sm">Ver</i></span><span class="r">Date</span><span></span></div>
+    <div class="list" id="archive"></div>
+  </section>
+
+  <p class="empty" id="empty">No report matches that search.</p>
+
+  <footer>
+    <b>Ashoke Kumar Seth</b> &nbsp;|&nbsp; <a href="mailto:ashokekseth@gmail.com">ashokekseth@gmail.com</a> &nbsp;|&nbsp; Index updated 8 September 2026
+    <div class="disc">Disclosure: I am not SEBI registered. These reports are for educational purposes only and are neither advice nor an endorsement. I will not be responsible for any profit or loss arising from them. Consult your financial advisor before making any investment decision. Do your own research.</div>
+  </footer>
+</div>
+
+<script>
+// [ticker, title, report date, report version, filename, last-updated ISO date, what-changed note]
+// The note is shown only for reports with a real update (version > 1); left "" for first-time (v1) builds.
+// It persists across index rebuilds until that specific report gets a newer update — do not blank it out
+// on a routine refresh, only replace it when v(n+1) actually ships.
+var LIVE = [
+  ["VASCON","Vascon Engineers Limited","10 Oct 2026","1","VASCON_Equity_Report.html","2026-10-10", ""],
+  ["NCC","NCC Limited","10 Oct 2026","1","NCC_Equity_Report.html","2026-10-10", ""]
+];
+
+var ARCHIVE = [];
+
+// A report shows the yellow NEW flag for 3 days after its last update.
+// Computed at page load, so it clears itself without any edit here.
+var NEW_DAYS = 3;
+function isRecent(iso){
+  if (!iso) return false;
+  var t = Date.parse(iso + "T00:00:00");
+  if (isNaN(t)) return false;
+  var age = Date.now() - t;
+  return age >= 0 && age < NEW_DAYS * 86400000;
+}
+
+// The displayed date is always derived from the same ISO field that drives
+// the New flag (r[5]), not a separately-hardcoded string — a report's shown
+// date and its "New" freshness can never drift apart again this way.
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function formatIso(iso){
+  if (!iso) return "";
+  var t = Date.parse(iso + "T00:00:00");
+  if (isNaN(t)) return "";
+  var d = new Date(t);
+  return d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear();
+}
+
+function el(tag, cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
+
+function liveRow(r){
+  var a = el("a","row");
+  a.href = r[4];
+  a.dataset.s = (r[0]+" "+r[1]).toLowerCase();
+  a.innerHTML =
+    '<span class="flag"></span>' +
+    '<span class="name"><b></b><small class="note"></small></span>' +
+    '<span class="col ver"></span>' +
+    '<span class="col date"></span>' +
+    '<span class="go" aria-hidden="true">&rsaquo;</span>';
+  if (isRecent(r[5])) a.querySelector(".flag").innerHTML = '<b>New</b>';
+  a.querySelector(".name b").textContent = r[1];
+  if (r[6]) a.querySelector(".name .note").textContent = r[6];
+  a.querySelector(".ver").textContent = "v" + r[3];
+  a.querySelector(".date").textContent = formatIso(r[5]) || r[2];
+  return a;
+}
+
+function archiveRow(r){
+  var d = el("div","row arch");
+  d.dataset.s = (r[0]+" "+r[1]).toLowerCase();
+  d.innerHTML =
+    '<span class="flag"></span>' +
+    '<span class="name"><b></b></span>' +
+    '<span class="col ver">&mdash;</span>' +
+    '<span class="col date"></span>' +
+    '<span class="pdfonly">PDF</span>';
+  d.querySelector(".name b").textContent = r[1];
+  d.querySelector(".date").textContent = r[2];
+  return d;
+}
+
+var liveEl = document.getElementById("live");
+var archEl = document.getElementById("archive");
+LIVE.forEach(function(r){ liveEl.appendChild(liveRow(r)); });
+ARCHIVE.forEach(function(r){ archEl.appendChild(archiveRow(r)); });
+
+// Headline counts are derived from the data, never hand-maintained.
+document.getElementById("cLive").textContent  = LIVE.length;
+document.getElementById("cArch").textContent  = ARCHIVE.length;
+document.getElementById("cTotal").textContent = LIVE.length + ARCHIVE.length;
+
+var q = document.getElementById("q");
+var empty = document.getElementById("empty");
+var filter = "all";
+
+function apply(){
+  var term = q.value.trim().toLowerCase();
+  var shown = 0;
+  Array.prototype.forEach.call(document.querySelectorAll("section[data-grp]"), function(sec){
+    var grp = sec.getAttribute("data-grp"), n = 0;
+    Array.prototype.forEach.call(sec.querySelectorAll(".row"), function(row){
+      var ok = (filter === "all" || filter === grp) && row.dataset.s.indexOf(term) !== -1;
+      row.hidden = !ok;
+      if (ok) n++;
+    });
+    sec.hidden = (n === 0);
+    sec.querySelector(".n").textContent = n;
+    shown += n;
+  });
+  empty.style.display = shown ? "none" : "block";
+}
+
+q.addEventListener("input", apply);
+Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function(b){
+  b.addEventListener("click", function(){
+    filter = b.getAttribute("data-f");
+    Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function(x){
+      x.setAttribute("aria-pressed", String(x === b));
+    });
+    apply();
+  });
+});
+apply();
+</script>
+</body>
+</html>
