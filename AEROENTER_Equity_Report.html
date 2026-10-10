@@ -1,0 +1,999 @@
+<!-- TEMPLATE VERSION: v6 (8 Sep 2026) — Replaced the single "Report Version" cover-page field with a growable "Revision History" table (Date | Version columns, one row per version so far, e.g. "29 Jul 2026 | v1 — Original", "8 Sep 2026 | v2 — Updated") — per user instruction "because there will be more changes": a fixed two-line display would not have scaled to a 3rd/4th future refresh, a table does. Sits directly below the "Generated On" meta-block. On any future refresh, append one new <tr> row with that refresh's date and next integer version — never overwrite/remove prior rows. -->
+<!DOCTYPE html>
+<html>
+<head><meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aeroflex Enterprises Limited (AEROENTER) — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+  <div class="brand-bar"></div>
+  <div class="main">
+    <div class="logo-wrap"><div class="text-logo">AEROFLEX <span>ENTERPRISES</span></div></div>
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Aeroflex Enterprises Limited</h1>
+    <div class="divider"></div>
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: AEROENTER</div>
+      <div class="ticker-chip">BSE: 511076</div>
+      <div class="ticker-chip">Mkt Cap: ₹1,395 Cr</div>
+      <div class="ticker-chip">Master Score: B (70)</div>
+    </div>
+    <div class="sector-line">Holding &amp; Investment Company — parent of Aeroflex Industries (flexible hoses, liquid cooling) and Aeroflex Neu (packaging); NBFC and startup/fund book (formerly Sat Industries Ltd)</div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">10 October 2026</span>
+    </div>
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>10/10/26</td><td class="rev-note">v1 — initial report</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+  <div class="bottom-band"></div>
+</div>
+</div>
+<div class="page-wrap">
+<div class="page">
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 511076 &nbsp;·&nbsp; NSE: AEROENTER &nbsp;·&nbsp; Holding &amp; investment company (formerly Sat Industries Ltd) &nbsp;·&nbsp; Maharashtra (CIN L25199MH1984PLC034632; registered office not found)</div>
+      <h1>Aeroflex Enterprises Limited</h1>
+      <div class="tagline">Holds 59.84% of Aeroflex Industries — worth ~₹4,117 Cr at the 9 Oct close vs a ₹1,395 Cr market cap (~295%) &nbsp;·&nbsp; Jun-26 profit is the M.R. Organisation sale gain &nbsp;·&nbsp; Startup book only ~₹27 Cr unquoted &nbsp;·&nbsp; ~23% below the 52-week high</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">₹123.31 <span class="chg">▼ −1.71%</span></div>
+      <div class="sub">Report date: 10 Oct 2026 (close of Fri 9 Oct) &nbsp;|&nbsp; Mkt Cap: ₹1,395 Cr &nbsp;|&nbsp; Book Value: 1.69x &nbsp;|&nbsp; MarketSmith Master Score: B (70)</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#e07c00;background:#fff6e6">● Sentiment: Mixed — promoter buying vs Sell signals (1D 1 Oct, 1H 9 Oct)</div>
+    <div style="color:#c62828;background:#fdeef0">● Momentum: 1H gauges −3 / −3; 1D 0 / −1; ~23% off the high</div>
+    <div style="color:#e07c00;background:#fff6e6">● Valuation: P/E 9.2 flattered by a one-off (~22x on FY26 EPS)</div>
+    <div style="color:#2e7d32;background:#ecf6ec">● EPS 93 · Price 83 · Group 29 / 197</div>
+    <div style="color:#e07c00;background:#fff6e6">● Governance: one promoter group, three listed companies</div>
+  </div>
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Portfolio &amp; SOTP</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p><b>Aeroflex Enterprises Limited</b> (formerly <b>Sat Industries Ltd</b>) is a listed <b>holding company</b>. It is <b>not</b> Aeroflex Industries, which has its own report; it <b>owns</b> that company. Through subsidiaries it consolidates: <b>Aeroflex Industries</b> (59.84% held directly; stainless-steel flexible hoses and new liquid-cooling skids for data centres), <b>Aeroflex Neu</b> (55.50%; FIBC and woven packaging, formerly Sah Polymers), <b>Aeroflex Finance</b> (100%; an RBI-registered, non-deposit-taking NBFC) and, until 30 April 2026, <b>M.R. Organisation (MRO)</b> (68%; air-compressor parts, sold to Ingersoll-Rand). It also runs a <b>startup and fund investing book</b> — 168 investments across 35+ sectors per the annual report, mostly small tickets of ₹3 lakh to ₹1 Cr — which the user calls &lsquo;like a VC&rsquo;. The numbers in §03 show why that label overstates it.</p>
+        <p style="margin-top:7px">FY26 (consolidated, annual report): revenue from operations <b>₹697.83 Cr</b> (+20.6% on ₹578 Cr; MarketSmith TTM sales ₹752 Cr, a different period), EBITDA ₹149.81 Cr, PAT ₹85.33 Cr (₹64.22 Cr to owners, ₹21.11 Cr to minorities), <b>EPS ₹5.68</b>. <b>Standalone</b> — the parent alone — is an investing vehicle: total income ₹20.11 Cr, PAT ₹11.03 Cr, 19 employees. MarketSmith&rsquo;s blurb (&lsquo;plastics manufacturing, exports and technology services&rsquo;) is the old Sat Industries description and is outdated; the donut shows the FY26 segments.</p>
+        <div class="notebox blue"><b>Key Competitive Advantage:</b> Not a conventional moat. The edge is <b>ownership</b>: a control stake in Aeroflex Industries that is carried at a cost of ₹18.38 Cr (₹2.32 a share) and is worth about <b>₹4,117 Cr</b> at ₹520 (9 Oct close; my arithmetic), plus a record of timing exits — MRO sold at about 3x in about 21 months (company: ~107% XIRR), and FY26 startup exits at 9.39x (Pee Safe) and 9.28x (EMO Energy). The operating moat is narrow and sits in Aeroflex Industries; the parent&rsquo;s own advantage shows up as lumpy one-off gains. Detail in §02 and §03.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Segment Revenue Mix (FY26, Consolidated)</div>
+        <svg viewBox="0 0 480 318" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 1 1 178.0,177.3 L212.9,136.1 A42,42 0 1 0 240.0,62.0 Z" fill="#1a2a4a" stroke="#fff" stroke-width="1"/><text x="304.8" y="131.7" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">61.2%</text><path d="M178.0,177.3 A96,96 0 0 1 147.3,79.1 L199.4,93.1 A42,42 0 0 0 212.9,136.1 Z" fill="#8fa3c4" stroke="#fff" stroke-width="1"/><text x="174.1" y="128.6" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">18.0%</text><path d="M147.3,79.1 A96,96 0 0 1 215.8,11.1 L229.4,63.4 A42,42 0 0 0 199.4,93.1 Z" fill="#e07c00" stroke="#fff" stroke-width="1"/><text x="191.4" y="59.0" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">16.8%</text><path d="M215.8,11.1 A96,96 0 0 1 236.9,8.1 L238.6,62.0 A42,42 0 0 0 229.4,63.4 Z" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="230.1" y="39.7" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">3.5%</text><path d="M236.9,8.1 A96,96 0 0 1 240.0,8.0 L240.0,62.0 A42,42 0 0 0 238.6,62.0 Z" fill="#6b7a93" stroke="#fff" stroke-width="1"/><text x="240" y="102" text-anchor="middle" font-size="13" font-weight="900" fill="#1a2a4a">₹698 Cr</text><text x="240" y="114" text-anchor="middle" font-size="6.5" letter-spacing="0.6" fill="#8a94a6">FY26 SEGMENT REVENUE</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Flexible flow solutions</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">₹427 Cr · Aeroflex Industries</text><rect x="250" y="222" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="267" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Flexible packaging</text><text x="267" y="245" font-size="9.3" fill="#8a94a6">₹126 Cr · Aeroflex Neu</text><rect x="26" y="252" width="11" height="11" rx="2" fill="#e07c00"/><text x="43" y="262" font-size="10.5" fill="#2a3342" font-weight="700">Engineering services</text><text x="43" y="275" font-size="9.3" fill="#8a94a6">₹117 Cr · MRO (sold 30 Apr 2026)</text><rect x="250" y="252" width="11" height="11" rx="2" fill="#2e7d32"/><text x="267" y="262" font-size="10.5" fill="#2a3342" font-weight="700">Financing</text><text x="267" y="275" font-size="9.3" fill="#8a94a6">₹25 Cr · Aeroflex Finance (NBFC)</text><rect x="26" y="282" width="11" height="11" rx="2" fill="#6b7a93"/><text x="43" y="292" font-size="10.5" fill="#2a3342" font-weight="700">Others</text><text x="43" y="305" font-size="9.3" fill="#8a94a6">₹3.6 Cr</text></svg>
+        <div class="chartcap" style="text-align:center">Source: FY26 annual report segment note (Note 43), ₹ lakh: flexible flow solutions 42,690.79; flexible packaging 12,565.46; engineering services (MRO, now sold) 11,699.28; financing 2,465.52; others 362.01; total 69,783.06 (percentages are my arithmetic; &lsquo;others&rsquo; at 0.5% is not labelled on the ring). The segment total (₹697.83 Cr) is revenue from operations; MarketSmith&rsquo;s TTM sales of ₹752 Cr cover a different period (Sep-25 to Jun-26) and are not comparable. <b>Engineering services (16.8% of FY26 revenue, 30% of segment EBIT) no longer exists in the group after 30 Apr 2026.</b></div>
+      </div>
+      <div style="flex:1.05">
+<div class="microhead">Earnings-Quality Rating: Is the Profit Repeatable?</div>
+<div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+  <div style="font-size:15px;font-weight:900;color:#1a2a4a">Rated 2 / 5 <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">■■</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">■■■</span></div>
+  <p style="font-size:11px;margin-top:5px"><b>Bull:</b> the operating base is growing — FY26 revenue +20.6%, TTM +27%, operating margin 16–18% — and debt is minimal (borrowings ₹26.5 Cr per the annual report). The hoses and liquid-cooling leg (Aeroflex Industries) grew Q1 FY27 profit 162%.</p>
+  <p style="font-size:11px;margin-top:5px"><b>Bear:</b> ₹143–144 Cr of the Jun-26 quarter&rsquo;s ₹103 Cr profit is a one-off gain on selling MRO, and the FY24 profit (EPS 24.25) was also a sale-of-stake gain — two big one-offs in three years. Free cash flow was −₹60 Cr in FY26 and Neu is barely profitable. Underlying earnings are the FY26 EPS of ₹5.68, not the 13.32 TTM.</p>
+</div>
+      </div>
+    </div>
+    <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Identity &amp; conflicts kept:</b> incorporated 1984 (Business Standard, Pocketful: 24 Nov 1984) vs 1985 (Screener &lsquo;About&rsquo;); renamed from Sat Industries <b>13 May 2025</b> (Business Standard, IIFL) vs <b>20 Jun 2025</b> (VogueStock name-change table) — both shown, unreconciled. NSE ticker AEROENTER (VogueStock lists AEROENTEREQ; NSE archive filenames still use the prefix &lsquo;SATINDUSTRIES&rsquo;); BSE 511076; ISIN INE065D01027; face value ₹2; 11,30,85,000 shares. The website satgroup.in (MarketSmith) redirects to aeroflexgroup.in. Aggregators such as Simply Wall St describe the parent as a stainless-steel hose maker — that is the subsidiary&rsquo;s business, not the parent&rsquo;s.</div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose"><tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr><tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-bear">Weak / N.A.</span></td><td style="text-align:left">No consumer brand. The group name is relabelled (Sat → Aeroflex) to borrow the operating subsidiary&rsquo;s identity. B2B certifications help in the subsidiaries (BRC/BRCGS A+ at Neu), but no pricing power is evidenced — Neu&rsquo;s segment EBIT is negative. Rating is my judgement.</td></tr><tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">None</span></td><td style="text-align:left">None of the businesses has a network. The NBFC originates through technology partners (Vartis Platforms, formerly LenDenClub; FinAGG) rather than its own platform.</td></tr><tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">Moderate (one leg)</span></td><td style="text-align:left">Liquid cooling at Aeroflex Industries: an exclusive-supplier contract with quarterly purchase orders for <b>one unnamed US customer</b> (market cap quoted three ways in the annual report and deck: $118.99 bn, ~$130 bn, ~$141 bn) — strong stickiness, but one counterparty. FIBC packaging: low switching costs against 35+ Indian makers.</td></tr><tr><td style="text-align:left">Cost Advantage / Barriers</td><td><span class="badge b-warn">Moderate (hoses)</span></td><td style="text-align:left">Hose capacity 17.5 million metres a year, 3,200+ SKUs, 90+ countries, automatic welding lines due by Dec 2026; flow-solutions segment EBIT margin 13.8% vs Neu&rsquo;s −1.9%. The parent has no cost position of its own — 19 employees.</td></tr><tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Not found</span></td><td style="text-align:left">No patents disclosed; 16 products in liquid-cooling R&amp;D only.</td></tr><tr><td style="text-align:left">Capital Allocation (Investing Model)</td><td><span class="badge b-warn">Good record, unverifiable</span></td><td style="text-align:left">MRO ~3x in ~21 months; FY26 startup exits 9.39x and 9.28x; but ₹ proceeds of the three startup exits, entry valuations and stake sizes are <b>not disclosed</b> and there is no full-portfolio return data — an investor cannot check the multiples. The Aeroflex Industries stake was built at ₹2.32 a share (carrying cost).</td></tr></table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px"><b>Single-asset dependence:</b> holding-company value rests on one listed stock (Aeroflex Industries, trading at P/E ~103 on Screener&rsquo;s TTM). <b>One-customer growth leg:</b> liquid-cooling skids were 617 units in FY26, about 5% of sales (target 20–22% — a secondary-source figure); all contracted with one US customer. <b>No recurring earnings at the parent:</b> standalone profit is other income; MRO&rsquo;s ~30% of segment EBIT (₹28.87 of ₹95.98 Cr) left on 30 Apr 2026. <b>Aeroflex Neu:</b> segment EBIT −₹2.35 Cr, Q1 FY27 profit down 91% to ~₹0.07 Cr; the parent guarantees ₹38.71 Cr of Neu&rsquo;s bank debt and owes ~₹24.3 Cr more on Neu warrants (§03). <b>Valuation opacity:</b> the startup book has no key audit matter in the auditor&rsquo;s report despite being the least observable asset. <b>Rating gap:</b> the parent has no credit rating; the AR says none was obtained.</p>
+        <p style="font-size:11.3px;margin-top:7px"><b>Raw materials:</b> stainless steel and polypropylene are named cost drivers; polypropylene rose ~60% in March 2026 on crude and West Asia supply concerns, then eased (Argus LLDPE $1,250–1,330/t cfr India in early June vs $1,430–1,500 in April; later series <i>not found</i>). Neu&rsquo;s EBIT of −1.9% shows pass-through is partial there.</p>
+      </div>
+      <div style="flex:0 0 calc(40% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Contingent Liabilities (mostly at Aeroflex Industries)</div>
+        <table class="t"><tr><th>Contingent liability (FY26 AR Note 34)</th><th>₹ Cr</th></tr><tr><td>Aeroflex Industries — income tax AY2018-19 (OTS interest waiver added to income; appeal filed 8 Apr 2026)</td><td>41.76</td></tr><tr><td>Aeroflex Industries — GST FY2023-24, ITC on IPO expenses (order 30 Mar 2026)</td><td>7.19</td></tr><tr><td>Aeroflex Industries — GST FY2019-20</td><td>1.36</td></tr><tr><td>Aeroflex Industries — property tax (Panvel Municipal Corp.)</td><td>0.72</td></tr><tr><td>Parent — GST FY2017-18 (₹2.26 Cr) and FY2018-19 (₹1.52 Cr)</td><td>3.78</td></tr><tr><td>Parent — income tax FY2022-23 (new in FY26)</td><td>0.20</td></tr><tr><td><b>Total (my sum of the line items)</b></td><td><b>55.0</b></td></tr></table>
+        <div class="chartcap">Source: FY26 annual report Note 34 (₹ lakh converted to ₹ Cr) and the 8 Apr 2026 Reg 30 filing. Streams quote the total as ~₹56 Cr; the line items sum to ₹55.0 Cr (my arithmetic). About 4% of the ₹1,395 Cr market cap. Largest item is the ₹41.76 Cr tax demand at Aeroflex Industries, under appeal. A historic one-time settlement with banks sits behind it (the AR states there was no OTS in FY26). Commitments: nil.</div>
+        <div class="notebox blue"><b>Synthesis:</b> The moat is <b>narrow and borrowed</b>: it lives in Aeroflex Industries (certified hose manufacturing, a data-centre cooling contract) and the parent owns it. The parent&rsquo;s own edge — deal sourcing and exit timing — is real but shows up only as one-off gains, with no disclosure that lets an outsider verify it. Moat ratings are mine.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>The Aeroflex Industries Stake vs Market Cap, the MRO Gain &amp; the Opaque Portfolio</h2></div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Aeroflex Industries stake</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹4,117 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">7.918 Cr sh × ₹520 · cost ₹18.38 Cr</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Stake ÷ AEROENTER mkt cap</div><div style="font-size:18px;font-weight:900;color:#2e7d32">295%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">mkt cap ₹1,395 Cr · ₹364 a share</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Mkt cap ÷ listed stakes</div><div style="font-size:18px;font-weight:900;color:#e07c00">33%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">implied discount ~67%</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q1 FY27 profit</div><div style="font-size:18px;font-weight:900;color:#c62828">₹103.2 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">₹143–144 Cr is the MRO gain</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Normalised P/E</div><div style="font-size:18px;font-weight:900;color:#c62828">~22x</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">headline 9.2x · FY26 EPS ₹5.68</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Unquoted startups &amp; funds</div><div style="font-size:18px;font-weight:900;color:#e07c00">~₹27 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">≈2% of mkt cap · 168 holdings</div></div></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Sum-of-the-Parts vs the ₹1,395 Cr Market Cap (my arithmetic)</div>
+        <table class="t"><tr><th>Sum-of-the-parts component</th><th>₹ Cr</th><th style="text-align:left">Basis</th></tr><tr><td><b>Aeroflex Industries stake</b></td><td><b>4,117.5</b></td><td style="text-align:left">7,91,81,833 shares × ₹520 (Screener, 9 Oct close); cost ₹18.38 Cr</td></tr><tr><td>Aeroflex Neu stake</td><td>99.5</td><td style="text-align:left">1,43,16,000 shares × ₹69.5 (Screener, 9 Oct; Neu mkt cap ₹179 Cr)</td></tr><tr><td><b>Listed stakes</b></td><td><b>4,217.0</b></td><td style="text-align:left">Two listed subsidiaries</td></tr><tr><td>Aeroflex Finance (NBFC)</td><td>10.1</td><td style="text-align:left">At cost (1,01,00,000 shares); loan book ₹44.49 Cr</td></tr><tr><td>Startups &amp; funds (unquoted)</td><td>~26.7</td><td style="text-align:left">Carrying amount, Mar 2026, excluding MRO / Finance / Italica (my arithmetic from AR Note 5)</td></tr><tr><td>M.R. Organisation sale proceeds</td><td>227.42</td><td style="text-align:left">Gross, pre-tax; ₹222.87 Cr received at closing, ~₹4.55 Cr deferred (press / closing filing, unverified)</td></tr><tr><td><b>Total, before tax and liabilities</b></td><td><b>~4,481</b></td><td style="text-align:left">My arithmetic; excludes standalone liabilities, tax on the MRO gain and the loans below</td></tr><tr><td><b>Market capitalisation</b></td><td><b>1,395.4</b></td><td style="text-align:left">MarketSmith / Screener, 9 Oct close (₹123.31 × 11,30,85,000)</td></tr><tr><td>Market cap ÷ listed stakes</td><td>33%</td><td style="text-align:left">A gap of about 67% on the listed stakes alone</td></tr><tr><td>Not included</td><td>—</td><td style="text-align:left">Tax on the MRO gain (the quarter&rsquo;s tax charge was ₹46.91 Cr); ₹38.71 Cr of guarantees for Neu debt; ~₹24.3 Cr owed on Neu warrants; ₹133 Cr of standalone loans (borrowers not found — an asset or a risk); standalone liabilities</td></tr></table>
+        <div class="chartcap">Stake prices: Screener, 9 Oct 2026 close (single source for AEROFLEX ₹520 and Neu ₹69.5). Share count 11,30,85,000. Startup book ~₹26.7 Cr is the unquoted carrying amount excluding MRO, Aeroflex Finance and Italica (annual report Note 5, my arithmetic). Sale proceeds are shown gross; they are cash, but tax, expenses and any use of the cash are not in the table.</div>
+        <div class="microhead" style="margin-top:10px">What the Market Price Implies — Discount Scenarios</div>
+        <table class="t"><tr><th>Holdco discount applied to the two listed stakes (₹4,217 Cr)</th><th>Implied value ₹ Cr</th><th>vs market cap</th><th>Per share ₹</th></tr><tr><td>40% — a ValuePickr write-up&rsquo;s assumption</td><td>2,530</td><td>+81%</td><td>224</td></tr><tr><td>50% — Maharashtra Scooters ~50% (secondary)</td><td>2,108</td><td>+51%</td><td>186</td></tr><tr><td>60% — near Bajaj Holdings ~56% (secondary)</td><td>1,687</td><td>+21%</td><td>149</td></tr><tr><td>70%</td><td>1,265</td><td>-9%</td><td>112</td></tr><tr><td>75% — Pilani Investment&rsquo;s quoted 72–75%</td><td>1,054</td><td>-24%</td><td>93</td></tr><tr><td><b>66.9% — what the market price implies</b></td><td><b>1,395</b></td><td><b>0%</b></td><td><b>123</b></td></tr></table>
+        <div class="chartcap">Holdco-discount ranges are secondary and conflict: Bajaj Holdings ~56% (one data site, Dec 2025) and Pilani Investment 72–75% (or 40–60% in one uncited article); Maharashtra Scooters ~50% (Gymkhana Partners). Illustrative only: ignores liabilities, taxes and the MRO cash. <b>Two-sided:</b> at the 40–60% discounts typical of Indian holdcos the stock would be worth more; at Pilani&rsquo;s 72–75% the current price is roughly fair.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">The Aeroflex Industries Stake — Explained Plainly</div>
+        <div style="border:2px solid #2e7d32;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#eaf7ea,#f6fff4)">
+          <p style="font-size:11.4px"><b>It is a subsidiary, not a financial investment.</b> Aeroflex Enterprises holds <b>7,91,81,833 shares</b> of Aeroflex Industries (unchanged FY25 to FY26) — <b>59.84%</b> directly (my arithmetic: the 65.47% group holding less 5.63% held through Italica Global FZC). The standalone balance sheet carries it <b>at cost: ₹18.38 Cr, about ₹2.32 a share</b>; the consolidated accounts add it line by line, with the minority share shown separately. It is not an associate and not carried at fair value, so the ~₹4,117 Cr never appears on the parent&rsquo;s balance sheet. The AR gives a market value of ₹2,000 Cr for <b>all</b> quoted investments at 31 Mar 2026.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>At the 9 Oct close:</b> 7,91,81,833 × ₹520 = <b>₹4,117.5 Cr</b>, about <b>295%</b> of AEROENTER&rsquo;s market cap and ~₹364 for each AEROENTER share (priced at ₹123.31). It is the dominant asset: the next-largest listed stake (Neu) is ₹99.5 Cr. The stock&rsquo;s own value is therefore mostly a bet on one other stock, and AEROFLEX itself trades at P/E ~103 and 15.4x book.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>History (press and aggregators; not filings I read):</b> Oct 2019: bought 67,01,300 shares, taking the stake from 69.39% to 98.70%. May–Jun 2023: sold ~7.6% pre-IPO for ₹76.14 Cr (incl. 4.05% to Ashish Kacholia and Bengal Finance for ₹40.56 Cr). Aug 2023: sold 1.75 Cr shares at ₹108 in the IPO offer for sale (₹189 Cr); group holding ~91% before and ~67% after. No sales found since; the 65.47% current group holding fell from 66.99% only because AEROFLEX issued new shares. Entry cost and date of the original stake: <b>not found</b>. Pledge: nil.</p>
+        </div>
+        <div class="microhead" style="margin-top:10px">Sensitivity to the AEROFLEX Price</div>
+        <table class="t"><tr><th>AEROFLEX price used</th><th style="text-align:left">Source / date</th><th>Stake value ₹ Cr</th><th>% of ₹1,395 Cr mkt cap</th><th>Per AEROENTER share ₹</th></tr><tr><td>₹437.30</td><td style="text-align:left">Reuters intraday via Zerodha page, 28 Jul 2026 (stale)</td><td>3,463</td><td>248%</td><td>306</td></tr><tr><td><b>₹520.00</b></td><td style="text-align:left"><b>Screener, 9 Oct 2026 close (base case)</b></td><td><b>4,117.5</b></td><td><b>295%</b></td><td><b>364</b></td></tr><tr><td>₹573.45</td><td style="text-align:left">MarketSmith print in the AEROFLEX report, 8 Sep 2026</td><td>4,541</td><td>325%</td><td>402</td></tr><tr><td>₹520 less 12.5% tax on the gain</td><td style="text-align:left">Illustrative haircut only; ignores other taxes</td><td>3,605</td><td>258%</td><td>319</td></tr></table>
+        <div class="chartcap">Three prices for the same stock, three vintages: Screener ₹520 (9 Oct, base case), the existing AEROFLEX report&rsquo;s ₹573.45 (8 Sep), and a Reuters ₹437.30 intraday (28 Jul) seen on a Zerodha page whose market cap (₹7,002 Cr) did not match Screener — treated as stale. The haircut row is arithmetic, not a view.</div>
+        <div style="font-size:10.3px;color:#8a6d1f;background:#fff9e0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Why the gap may be real:</b> the promoter group controls the stake and has not sold since the 2023 IPO; any sale triggers tax; the float is only 5.43 Cr shares (beta 1.75); the parent&rsquo;s own earnings are small; and the same people control three listed companies. A discount is normal — the question is whether ~67% is too wide.</div>
+      </div>
+    </div>
+
+    <div class="microhead" style="margin-top:14px">3A — Operating Subsidiaries &amp; Strategic Stakes (the portfolio table)</div>
+    <table class="t"><tr><th>Entity</th><th style="text-align:left">Sector</th><th style="text-align:left">Listed?</th><th style="text-align:left">Stake / shares</th><th>Cost ₹ Cr</th><th style="text-align:left">Accounting</th><th style="text-align:left">Latest value</th><th style="text-align:left">Notes</th></tr><tr><td><b>Aeroflex Industries</b></td><td style="text-align:left">Metal flexible hoses; liquid-cooling skids</td><td style="text-align:left">Yes (AEROFLEX)</td><td style="text-align:left">59.84% direct (65.47% with Italica); 7,91,81,833 sh</td><td>18.38</td><td style="text-align:left">Subsidiary: cost (standalone); consolidated line-by-line with minority interest</td><td style="text-align:left"><b>₹4,117.5 Cr</b> at ₹520 (9 Oct)</td><td style="text-align:left">Promoter in its own pattern; no pledge; ~224x cost</td></tr><tr><td><b>Aeroflex Neu</b> (ex-Sah Polymers)</td><td style="text-align:left">FIBC / woven packaging</td><td style="text-align:left">Yes (AERONEU, BSE 543743)</td><td style="text-align:left">55.50%; 1,43,16,000 sh</td><td>18.55 + 8.10 warrants</td><td style="text-align:left">Equity and warrants at cost</td><td style="text-align:left"><b>₹99.5 Cr</b> at ₹69.5 (9 Oct)</td><td style="text-align:left">Weak: Jun-26 profit ~₹0.08 Cr; guarantee ₹38.71 Cr; EGM 22 Oct 2026</td></tr><tr><td>Neu&rsquo;s Fibcorp Polyweave</td><td style="text-align:left">FIBC</td><td style="text-align:left">No</td><td style="text-align:left">51.01% via Neu</td><td>not disclosed</td><td style="text-align:left">—</td><td style="text-align:left">Sold ~₹1.92 Cr (8 Sep 2026)</td><td style="text-align:left">Aggregator report, not verified in a filing</td></tr><tr><td>Neu&rsquo;s Stilonn Valves</td><td style="text-align:left">Valves</td><td style="text-align:left">No</td><td style="text-align:left">19.58% (held by Neu, not the parent)</td><td>3.00</td><td style="text-align:left">Equity</td><td style="text-align:left">not disclosed</td><td style="text-align:left">2,43,400 sh at ₹123.30 (May 2026, Scanx)</td></tr><tr><td><b>M.R. Organisation</b></td><td style="text-align:left">Air-compressor parts</td><td style="text-align:left">No</td><td style="text-align:left">Held 68% (51% Jul-24, +13% Jul-25, +4% Apr-26)</td><td>~76.9</td><td style="text-align:left">Equity at cost</td><td style="text-align:left"><b>Sold 30 Apr 2026 for ₹227.42 Cr</b></td><td style="text-align:left">~3x, 107% XIRR (company); gain ≈ ₹150 Cr (my arithmetic)</td></tr><tr><td><b>Aeroflex Finance</b></td><td style="text-align:left">NBFC: SME, consumer, education loans</td><td style="text-align:left">No</td><td style="text-align:left">100%; 1,01,00,000 sh</td><td>10.10</td><td style="text-align:left">Equity at cost</td><td style="text-align:left">Loan book ₹44.49 Cr (AR) / ₹44.77 Cr (deck)</td><td style="text-align:left">RBI Type-II NBFC; FY26 disbursements ₹407.13 Cr</td></tr><tr><td>Italica Global FZC (UAE)</td><td style="text-align:left">Global trade</td><td style="text-align:left">No</td><td style="text-align:left">100%; 100 sh (AED 1,850 each)</td><td>0.34</td><td style="text-align:left">Equity at cost</td><td style="text-align:left">—</td><td style="text-align:left">Holds AEROFLEX&rsquo;s 5.63%; related-party sales to it flagged on forums</td></tr><tr><td>Hyd-Air Engineering</td><td style="text-align:left">Hydraulic fittings</td><td style="text-align:left">No</td><td style="text-align:left">Via Aeroflex Industries; stake not found</td><td>not disclosed</td><td style="text-align:left">—</td><td style="text-align:left">—</td><td style="text-align:left">Bought Apr 2024 for ₹17 Cr (press)</td></tr></table>
+    <div class="chartcap">Sources: FY26 annual report (Notes 5, 31, 35, 36, 56), Screener 9 Oct 2026, Reg 31(4) FY26 filing via press, Scanx, MoneyWorks4Me, CB Insights. Neu&rsquo;s own stakes (Fibcorp, Stilonn) are held by Neu, not the parent. Aeroflex Neu stake: 55.50% (AR) vs 91.79% in an older filing — the older figure is stale. Note 56: the parent states it is not a core investment company.</div>
+
+    <div class="cols" style="margin-top:12px">
+      <div style="flex:0 0 calc(34% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">3B — Funds (parent as limited partner)</div>
+        <table class="t"><tr><th>Fund (limited partner)</th><th>Carrying ₹ lakh</th></tr><tr><td>Z Nation Lab Growth Fund</td><td>305.26</td></tr><tr><td>India Inflection Opportunity Trust</td><td>252.18</td></tr><tr><td>9Unicorns Accelerator</td><td>97.93</td></tr><tr><td>Artha Venture Fund-1</td><td>87.88</td></tr><tr><td>Blinc Fund II</td><td>84.85</td></tr><tr><td>Real Time Angel Fund</td><td>70.90</td></tr><tr><td>Beams Fintech Fund I</td><td>59.99</td></tr><tr><td>India Quotient Fund II</td><td>56.34</td></tr><tr><td>SiriusOne Capital</td><td>25.50</td></tr><tr><td>1 Funds Trust (2 positions: Cloudworx 11, Haystack 15, Xyma 25, Maapan 15, Akasha 15)</td><td>81.00</td></tr><tr><td>Grand Anicut Angel 15; LV Angel 5.36</td><td>20.36</td></tr><tr><td>Equipact Advisory LLP (6.67% share)</td><td>100.00</td></tr></table>
+        <div class="chartcap">Carrying values from AR Note 5, ₹ lakh. Named items sum to ₹12.42 Cr (my arithmetic) vs consolidated &lsquo;funds etc.&rsquo; ₹17.12 Cr in the financial-instruments note — <b>not reconciled</b>. Rubis Capital Advisors LLP exited. Cash parked in Axis Overnight (₹250 lakh) and DSP Mutual Fund (₹250 lakh). Classification of fund units (amortised cost vs fair value) is not clearly disclosed. No AIF / PMS / sponsor registration found: the parent is a limited partner, not a fund manager.</div>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div class="microhead" style="margin-top:0">3C — Direct Startup Stakes (selected, 15 of 168)</div>
+        <table class="t"><tr><th>Company</th><th style="text-align:left">Sector</th><th>Year</th><th>Carrying ₹ lakh</th><th style="text-align:left">Instrument</th><th style="text-align:left">Status</th></tr><tr><td>Artha Energy Projects</td><td style="text-align:left">Energy</td><td>n/g</td><td>50.00</td><td style="text-align:left">CCD</td><td style="text-align:left">Current</td></tr><tr><td>Machfox Hydraulics</td><td style="text-align:left">Hydraulics</td><td>FY26</td><td>50.00</td><td style="text-align:left">Equity</td><td style="text-align:left">New in FY26</td></tr><tr><td>XETGO</td><td style="text-align:left">n/g</td><td>n/g</td><td>40.10</td><td style="text-align:left">CCPS</td><td style="text-align:left">Current</td></tr><tr><td>Eduvanz</td><td style="text-align:left">Fintech NBFC</td><td>2017</td><td>31.40</td><td style="text-align:left">Equity</td><td style="text-align:left">Partially exited</td></tr><tr><td>Zoofresh Foods</td><td style="text-align:left">Food</td><td>2021</td><td>25.97 + 1.42</td><td style="text-align:left">CCPS + equity</td><td style="text-align:left">Current</td></tr><tr><td>DCG Tech</td><td style="text-align:left">Packaging</td><td>2021</td><td>25.00</td><td style="text-align:left">CCPS</td><td style="text-align:left">Current</td></tr><tr><td>Zebralearn</td><td style="text-align:left">n/g</td><td>n/g</td><td>24.86</td><td style="text-align:left">Equity</td><td style="text-align:left">New</td></tr><tr><td>MyAashiana</td><td style="text-align:left">Tech</td><td>2016</td><td>26.31</td><td style="text-align:left">Equity</td><td style="text-align:left">Current</td></tr><tr><td>Zeva Capsol (1Crowd)</td><td style="text-align:left">Angel network</td><td>2016</td><td>20.01</td><td style="text-align:left">Equity</td><td style="text-align:left">Current</td></tr><tr><td>Riverus</td><td style="text-align:left">Legal-tech</td><td>2020</td><td>20.18</td><td style="text-align:left">CCPS</td><td style="text-align:left">Current</td></tr><tr><td>Nuve Pro</td><td style="text-align:left">Ed-tech</td><td>2017</td><td>20.00</td><td style="text-align:left">Equity</td><td style="text-align:left">Current</td></tr><tr><td>Lithasa (Arya)</td><td style="text-align:left">Deep tech</td><td>2015</td><td>19.03</td><td style="text-align:left">CCPS</td><td style="text-align:left">Current</td></tr><tr><td>Rare Planet</td><td style="text-align:left">D2C</td><td>2019</td><td>19.44</td><td style="text-align:left">Equity</td><td style="text-align:left">Partially exited</td></tr><tr><td>Broomees</td><td style="text-align:left">SaaS / D2C</td><td>2022</td><td>16.26</td><td style="text-align:left">CCPS</td><td style="text-align:left">Current</td></tr><tr><td>Toroi (Fantasy Trading League)</td><td style="text-align:left">Gaming</td><td>2021</td><td>0.04 (from 32.28)</td><td style="text-align:left">Equity</td><td style="text-align:left"><span class='neg'>Written down</span></td></tr></table>
+        <div class="chartcap">Carrying amounts, ₹ lakh, AR Note 5; year = first investment per the website portfolio page; n/g = not given. These 15 names sum to ₹3.90 Cr (my arithmetic). Many others are carried at ₹5–12 lakh each (Cloudworx, Haystack Analytics, Metashop, Super Saiyan Labs, Geoalgo, Fifty Fintech, Bugbase, Dr. Jackfruit, ThinkMetal, Lorien, Lenden Club, Sunfox, Wizzy). Markdowns: Toroi ₹32.28 lakh → ₹0.04 lakh; Tirupati Sarjan (quoted) ₹51.38 lakh → ₹24.68 lakh. Several holdings show an identical value in both years, which suggests few mark-ups (my inference). Co-investors per CB Insights (third party): 100X.VC, KRS Jamwal, Shavdia Ventures, Rakesh Amerneni. <b>Entry valuations, stake percentages and latest rounds: not disclosed.</b> Count: AR 168 (7 added in FY26); Q1 FY27 deck coverage 169; CB Insights lists only 27–28; the website page ~125 names.</div>
+      </div>
+    </div>
+
+    <div class="cols" style="margin-top:8px">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">3D — Exits &amp; Realised Returns</div>
+        <table class="t"><tr><th>Exit</th><th style="text-align:left">Multiple / period</th><th style="text-align:left">What is known</th></tr><tr><td><b>M.R. Organisation</b> (subsidiary)</td><td style="text-align:left">~3x · ~21 months · ~107% XIRR (company)</td><td style="text-align:left">₹227.42 Cr; closed 30 Apr 2026; Ingersoll-Rand Industrial US</td></tr><tr><td>Pee Safe (startup)</td><td style="text-align:left">9.39x · ~8 years</td><td style="text-align:left">FY26 annual report; <b>₹ proceeds not disclosed</b></td></tr><tr><td>EMO Energy (startup)</td><td style="text-align:left">9.28x · ~3 years</td><td style="text-align:left">The MD&amp;A calls it &lsquo;Multiple&rsquo; (looks like a text slip); <b>₹ not disclosed</b></td></tr><tr><td>PensionBox (startup)</td><td style="text-align:left">1.2x · ~3 years</td><td style="text-align:left">CB Insights: acquired by Rainmatter, 11 Feb 2026; <b>₹ not disclosed</b></td></tr><tr><td>Older exits (website list)</td><td style="text-align:left">—</td><td style="text-align:left">Beardo, ConfirmTkt, Ketto, Inc42, Stayvista, Creditas, Prescinto, Silvan, Siftr — no ₹ values</td></tr><tr><td><b>Realised, startup book (consolidated cash / P&amp;L)</b></td><td style="text-align:left">FY26 vs FY25</td><td style="text-align:left">Profit on sale of investments <b>₹0.62 Cr</b> (FY25 ₹1.55 Cr); sale proceeds ₹1.53 Cr; purchases ₹6.69 Cr</td></tr></table>
+        <div class="chartcap">Sources: FY26 annual report and MD&amp;A; CB Insights; the company&rsquo;s Q4 FY26 deck for MRO. The company has not disclosed ₹ proceeds for the three FY26 startup exits, and the realised profit on sale is only ₹0.62 Cr — so the 9x multiples are on very small cheques.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">So Is It &lsquo;Like a VC&rsquo;? — Measured</div>
+        <div style="border:2px solid #e07c00;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#fff6e8,#fffdf6)">
+          <p style="font-size:11.4px"><b>The label overstates the startup side.</b> The unquoted book ex-subsidiaries is ~₹26.7 Cr (about <b>2%</b> of market cap); the consolidated financial-instruments note shows unquoted equity ₹26.99 Cr + quoted equity ₹0.25 Cr + funds ₹17.12 Cr ≈ ₹44 Cr (about <b>3%</b>; my arithmetic). Realised profit on sales: ₹0.62 Cr in FY26. The startup book is a real habit — 168 names, mentoring, an ESG lens — but not what the share price is paying for.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>Where the venture-style value actually is:</b> the control stake in Aeroflex Industries, bought for ~₹2.32 a share and worth 224x that, and the MRO position built up in three tranches and sold at ~3x. That is closer to <b>a promoter holding company that also writes small angel cheques</b> than to a fund.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>Accounting:</b> unquoted equities are at fair value through OCI, so mark-ups never reach EPS while realised gains arrive as lumpy other income. Ind AS 113 level split: <b>not disclosed</b> (unquoted equity is likely Level 3 — my inference). Exceptional diminution: ₹42.47 lakh standalone; ₹95.67 lakh consolidated (including a ₹52.41 lakh labour-code charge). One standalone note does not tie: FVOCI equity ₹3,141.34 lakh (prior year ₹6,090.54 lakh) vs ₹2,692.81 lakh (₹2,133.36 lakh) in the table of the same note set.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="microhead" style="margin-top:14px">The MRO Gain and What Recurring Earnings Look Like</div>
+    <div class="cols">
+      <div style="flex:0 0 calc(46% - 10px);min-width:0">
+        <table class="t fit"><tr><th>₹ Cr</th><th>Q1 FY27 (Jun-26)</th><th>Q4 FY26 (Mar-26)</th><th>Q1 FY26 (Jun-25)</th></tr><tr><td>Revenue from operations</td><td>188.99</td><td>199.58</td><td>134.48</td></tr><tr><td>Other income</td><td><b class='neg'>144.17</b></td><td>7.66</td><td>7.56</td></tr><tr><td>PBT before exceptional</td><td>151.06</td><td>32.56</td><td>17.29</td></tr><tr><td>Tax</td><td>46.91</td><td>—</td><td>—</td></tr><tr><td>Profit after tax</td><td><b>103.22</b></td><td>25.67</td><td>14.42</td></tr><tr><td>EPS ₹ (MarketSmith / Screener)</td><td><b>8.54</b></td><td>2.12</td><td>0.90</td></tr><tr><td>PBT less other income (my arithmetic)</td><td>~6.9</td><td>~24.9</td><td>~9.7</td></tr></table>
+        <div class="chartcap">Unaudited consolidated results for the quarter to 30 Jun 2026 (scanned PDF read as images) and Screener. Consolidated PAT is ₹103.2 Cr (Screener, press; EPS 8.54). The ~₹96 Cr figure in the MarketSmith read-out is not consolidated PAT — it is EPS × shares (8.54 × 11.31 Cr), i.e. the owners&rsquo; share after minorities (my inference). Standalone PAT ₹91.3 Cr, EPS 8.07. Other expenses rose to ₹50.59 Cr from ₹29.73 Cr in Q4 (unexplained in the filing I read). The Q1 results and deck PDFs are image-only and not fully readable.</div>
+      </div>
+      <div style="flex:1;min-width:0">
+        <p style="font-size:11.4px"><b>The deal.</b> The 68% stake in M.R. Organisation was sold to Ingersoll-Rand Industrial US for <b>₹227.42 Cr</b> (annual report, ₹22,742 lakh; a press headline says ₹222.87 Cr — the difference matches ~₹4.55 Cr deferred to post-closing conditions, which I could not confirm). Board approval 29 Apr, shareholder approval at the EOGM of 27 Jan 2026, closing 30 Apr 2026. <b>Pre-tax gain ≈ ₹150 Cr</b> (my arithmetic: ₹227.42 Cr less cost of ~₹76.9 Cr = ₹71.35 Cr at 31 Mar plus ₹5.58 Cr paid in April for a further 4%); about ₹143–144 Cr is booked in consolidated other income; the quarter&rsquo;s tax charge was ₹46.91 Cr (31%). The annual report itself called the financial impact &lsquo;presently indeterminable&rsquo;, and I did not find the booked gain line in a filing I could read.</p>
+        <p style="font-size:11.4px;margin-top:7px"><b>Recurring earnings.</b> Normalised P/E is <b>~22x</b> (₹123.31 ÷ FY26 EPS 5.68 = 21.7x, my arithmetic; stream estimate on a normalised TTM EPS of ₹6.3–7.0: 18–20x) vs the <b>headline 9.2x</b> on TTM EPS 13.32. MRO contributed ₹28.87 Cr of ₹95.98 Cr segment EBIT (30%) and PAT of ₹19.89 Cr in FY26 — recurring earnings that are now gone. Aeroflex Neu&rsquo;s EBIT is −₹2.35 Cr (−1.9%) and its Q1 FY27 profit fell 91% to ₹0.07–0.08 Cr. The growth that remains is Aeroflex Industries (Q1 FY27 PAT ₹18.79 Cr, +162%) — of which the parent owns 59.84% and consolidates 100%.</p>
+        <p style="font-size:11.4px;margin-top:7px"><b>Twice in three years.</b> FY24 EPS was 24.25 (MarketSmith) / 22.81 (Screener consolidated) / 20.34 (standalone). Other income was ₹278 Cr in FY24 against ₹27 Cr in FY25, in the June-23 and Sep-23 quarters (₹74 Cr and ₹187 Cr). The company&rsquo;s deck attributes this to proceeds from selling Aeroflex Industries shares; the pre-IPO sales (₹76 Cr) and the IPO offer for sale (₹189 Cr) line up with the quarters (inference — the AR does not itemise). Reported EPS is lumpy by design.</p>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:1"><div class="notebox red"><b>Not found / not disclosed (so the table is incomplete by design):</b> startup entry valuations and stake percentages; ₹ proceeds of the FY26 startup exits; Ind AS 113 level split; the booked MRO gain line in a filing; board seats at investees; the borrowers behind the ₹133 Cr of standalone loans; cost and date of the original Aeroflex Industries stake (the ₹18.38 Cr is carrying cost); any plan for the ₹222–227 Cr of MRO proceeds; contingent liabilities of the parent beyond the AR note.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>Source quality:</b> FY26 annual report (parsed in full: Notes 5, 31, 34, 35, 36, 43, 56, the MD&amp;A and the related-party note); Screener, 9–10 Oct 2026; CRISIL rationale on Aeroflex Neu, 15 Jul 2026; press and aggregators for the MRO sale, the A Flex purchases and Reg 31(4) filings. The Q1 FY27 deck and results PDFs are image-only and not fully readable. <b>Items to verify on NSE/BSE:</b> the MRO gain line, the Sep-26 shareholding pattern, the 18 Sep 2026 A Flex filing, the Neu EGM notice, and the ASM status.</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border:3px solid #e67e22">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#e67e22;font-size:16px">⚠ What happens to the ₹222–227 Cr of MRO cash — and to AEROFLEX&rsquo;s price</div>
+        <p style="font-size:11.3px;margin-top:5px">Univest names deployment of the MRO proceeds as the biggest open question; <b>no plan is disclosed</b>. The other swing factor is the Aeroflex Industries share price: the parent&rsquo;s value is ~295% of its market cap on that one stock. Near-dated items: Aeroflex Neu EGM on <b>22 Oct 2026</b>; Q2 FY27 results (date <b>not found</b>; trading window closed 1 Oct; mid-November is my guess from last year).</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e07c00">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#e07c00">MIXED <span style="font-size:12px;color:#5a6475;font-weight:600">value-friendly, technically weak</span></div>
+        <p style="font-size:11.3px;margin-top:5px">For: MarketSmith Master Score B (70), EPS Rating 93, Graham 84%, Lynch 100%; promoter-group buying (A Flex Invest at ₹101–113 in June and ₹120.25 on 17 Sep); funds holding up 80%. Against: <b>no broker coverage found</b>; a Sell on the daily (1 Oct) and hourly (9 Oct); the price is ~23% below the early-Sept high; volume was 60% below average on 9 Oct. A price-movement query from NSE and BSE (23 Jun) was answered on 24 Jun as &lsquo;purely market driven&rsquo;. Forum talk (ValuePickr, anonymous) leans bullish on the holdco discount.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fdeef0);border-top:3px solid #c62828">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#c62828">CORRECTING, NOT BROKEN</div>
+        <p style="font-size:11.3px;margin-top:5px">The stock ran from ₹62.2 (23 Mar) to ₹159.6 (early Sep), +160%, then fell about 23% in a month on no identified news (my reading: a one-off profit given back). It is still ~98% above the low and ~21% above the 200-day. Hourly gauges −3 / −3, daily 0 / −1; ₹120–121 support is the line that matters (§18).</p>
+      </div>
+    </div>
+    <div class="notebox "><b>Framing note:</b> This is a <b>sum-of-the-parts story with weak earnings quality</b>, not a growth stock. The bull case is the stake (~3x the market cap), near-zero debt, promoter buying and visible exits; the bear case is two one-off gains in three years, a permanent holdco discount, three listed companies under one promoter group, an unverifiable startup book, a weak Aeroflex Neu, one-customer dependence in the growth leg, a 5.43 Cr-share float and an unverified ASM listing. Both sides are live.</div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">US$ bn</text><rect x="68.0" y="41.0" width="56.0" height="105.0" fill="#1a2a4a" rx="2"/><text x="96.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">12.50</text><text x="96.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Plastics exports FY25</text><rect x="180.0" y="128.9" width="56.0" height="17.1" fill="#2a9d8f" rx="2"/><text x="208.0" y="124.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">2.03</text><text x="208.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Films &amp; sheets</text><rect x="292.0" y="132.8" width="56.0" height="13.2" fill="#2a9d8f" rx="2"/><text x="320.0" y="128.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1.57</text><text x="320.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Woven sacks &amp; FIBC</text></svg>
+        <div class="chartcap">Plexconcil: Indian plastics exports rose 8% to US$12.5 bn in FY25; films &amp; sheets +15.9% to US$2.03 bn; woven sacks &amp; FIBC +16% to US$1.57 bn (US, China, UAE, Brazil the main markets). FY26 actual: <b>not found</b>; Feb-2026 monthly print +14.3% to US$997 mn. This is Aeroflex Neu&rsquo;s market — 18% of group revenue, loss-making at EBIT.</div>
+        <div class="microhead">Liquid Cooling (the Aeroflex Industries growth leg)</div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">US$ bn</text><rect x="96.0" y="133.7" width="56.0" height="12.3" fill="#8fa3c4" rx="2"/><text x="124.0" y="129.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">5.7</text><text x="124.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Liquid cooling 2024</text><rect x="264.0" y="41.0" width="56.0" height="105.0" fill="#1a2a4a" rx="2"/><text x="292.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">48.4</text><text x="292.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">2034E (BIS Research)</text></svg>
+        <div class="chartcap">Company-cited BIS Research: US$5.66 bn (2024) to US$48.4 bn (2034), a 24% CAGR (FY26 annual report). <b>Startup funding, the other market the parent plays in:</b> Tracxn — India tech funding US$10.3 bn in Jan–Sep 2026 (+7% YoY) but deal count −38% to 1,134; seed −37% to US$698 mn, Series A/B +27% to US$4.2 bn. Q3 conflicts: Inc42 US$2.2 bn (+5%) vs Entrackr US$2.9 bn (methodology). Money is concentrating in fewer, larger rounds — harder for a small holder of seed-stage cheques to justify mark-ups. Domestic packaging demand growth: <b>not found</b>.</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 4 Qtrs</h2></div>
+        <table class="t"><tr><th>Category</th><th>Sep'25</th><th>Dec'25</th><th>Mar'26</th><th>Jun'26</th><th>&#916;</th></tr><tr><td>Promoters</td><td>51.59%</td><td>51.59%</td><td>51.59%</td><td><b>52.30%</b></td><td class="pos">&#9650; 0.71pp</td></tr><tr><td>FIIs</td><td>0.46%</td><td>0.56%</td><td>0.54%</td><td><b>1.25%</b></td><td class="pos">&#9650; 0.79pp</td></tr><tr><td>DIIs</td><td>0.04%</td><td>0.04%</td><td>0.06%</td><td>0.07%</td><td class="pos">&#9650; 0.03pp</td></tr><tr><td>Public / others*</td><td>47.91%</td><td>47.81%</td><td>47.81%</td><td>46.38%</td><td class="neg">&#9660; 1.53pp</td></tr></table>
+        <div class="chartcap"><b>Promoters = Sat Invest Pvt Ltd 44.92% (5,08,35,000 shares; 44.95% at Mar-26) + A Flex Invest Pvt Ltd 7.38%</b> (the whole 52.30%). A Flex bought in the open market in June 2026 at ₹101–113 (7.38%) and again on 17 Sep at ₹120.25 (1,75,700 shares, to 7.54%; the <b>Sep-26 shareholding pattern was not seen</b>). Other major holders (MarketSmith, Jun-26): Space Age Polymers LLP 4.51% (link to promoters <b>not found</b>), Yusuf M Kagzi 4.49%, Da Tradetech 2.82%, Lalit J Kabra 1.33%. *Public = remainder (my arithmetic). Mutual funds: none shown by aggregators; MarketSmith counts 9 funds (+80%) holding 14.87 lakh shares (+118%) — probably FPIs, unresolved. Promoter holding is quoted as 51.58–51.59% before Jun-26. Pledge: Sat Invest and A Flex declared no encumbrance at 31 Mar 2026 (Reg 31(4)); the 30 Jun 2026 pattern says No; later purchases unseen. Common person: Asad Daud signs for both promoter companies and sits on the listed board.</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+        <table class="peer">
+          <tr><th>Source</th><th>1W</th><th>1M</th><th>6M</th><th>1Y</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; AEROENTER (Kotak Neo)</td><td class="pos">+1.13%</td><td class="neg">−13.74%</td><td class="pos">+51.69%</td><td class="pos">+38.24%</td></tr>
+          <tr><td>Nifty / sector, same date</td><td colspan="4" style="text-align:left">not found on a common date</td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">Kotak Neo performance box (page of 22 Sep 2026): its own header says +45.20% (and another snapshot +45.93% / 29.40%) for 1Y — internally inconsistent. Other 1Y points that do not match each other: Value Research (9 Jul) +23.2% vs BSE Commodities +6.5%; MarketsMojo +39.39% vs −4.95% for the legacy &lsquo;Iron &amp; Steel Products&rsquo; group. 1Y return vs sector: <b>not found</b>.</div>
+        <div class="krow"><span class="klab">52-Wk High</span><span class="kval">&#8377;159.60<small>early Sep 2026 · −22.74% from high (MarketSmith) · other sources ₹159.2 / ₹150.13 (22 Jun)</small></span></div>
+        <div class="krow"><span class="klab">52-Wk Low</span><span class="kval">&#8377;62.20<small>23 Mar 2026 · +98.25% off low</small></span></div>
+        <div class="krow"><span class="klab">Price path</span><span class="kval" style="font-size:10.5px">₹101 (4 Jun) · ₹150 (22 Jun) · ₹120 (9 Jul) · ₹129 (11 Aug) · ₹142.65 (28 Aug) · ₹120 (17 Sep) · ₹123.85 (22 Sep) · ₹123.31 (9 Oct)<small>Business Standard, Upstox, Value Research, Anand Rathi, filings</small></span></div>
+        <div class="krow"><span class="klab">Moving averages</span><span class="kval" style="font-size:10.5px">50-EMA ₹128.0 · 100-EMA ₹121.8 · 200-EMA ₹111.4<small>Kotak Neo; below the 50, above the 100 and 200</small></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — YoY &amp; QoQ (&#8377; Crore, Consolidated)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q1 FY27 (Jun'26) · Investor deck filed 11 Aug 2026 · Quality: one-off</div><div style="border:2px solid #e07c00;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#fff6e8,#fffdf6 60%,#fff9ee);box-shadow:0 2px 8px rgba(224,124,0,0.12);flex:1;margin-bottom:0">
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;189 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+41% YoY</b> · −5% QoQ</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#c62828">&#8377;17 Cr</div><div style="font-size:10.5px;color:#5a6475">Op. Profit &nbsp;<b class="neg">9% OPM</b> (vs 18% in Mar-26)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#e07c00">&#8377;143 Cr</div><div style="font-size:10.5px;color:#5a6475">Other income &nbsp;<b class="warn">MRO sale gain</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;103.2 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT &nbsp;<b class="pos">+616% YoY</b> · standalone ₹91.3 Cr</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;8.54</div><div style="font-size:10.5px;color:#5a6475">EPS (qtr) &nbsp;vs &#8377;0.90 a year ago</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#e07c00">~&#8377;7 Cr</div><div style="font-size:10.5px;color:#5a6475">PBT less other income &nbsp;<b>vs ~₹9.7 Cr</b> (Jun'25)</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#8a6d1f;margin-top:8px">Sales grew 41% on a consolidation that included MRO for one month only. Strip the one-off and the quarter is a thin one: operating margin fell to 9% (the company calls the &lsquo;operational&rsquo; EBITDA margin 10.51%, down 766 bps; headline EBITDA ₹161.43 Cr is inflated by the sale). Conflicts kept: operational EBITDA ₹35.01 Cr in one source; Arthneeti&rsquo;s Q1 FY26 PAT base ₹14 Cr vs another aggregator&rsquo;s ₹0.81 Cr.</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM Revenue</div><div class="val">&#8377;752 Cr</div><div class="note">+27% TTM growth</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val warn">9.2x</div><div class="note">EPS &#8377;13.32 incl. one-off · FY26 basis 21.7x</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Standalone P/E</div><div class="val">~14.1x</div><div class="note">TTM EPS &#8377;8.77; also inflated by the gain</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B · Book/share</div><div class="val">1.69x</div><div class="note">&#8377;73.1 a share (price ÷ book, my arithmetic)</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Borrowings</div><div class="val pos">&#8377;41 Cr</div><div class="note">Screener; AR gross debt &#8377;26.51 Cr (D/E 0.0018)</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE · ROCE</div><div class="val">8.4% · 12.6%</div><div class="note">Screener; MarketSmith ROE 8% / 7%</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Dividend</div><div class="val">&#8377;0.40</div><div class="note">20%, ex-date 1 Sep 2026 · yield 0.32% (0.33% computed) · payout ~7%</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Free Cash Flow</div><div class="val neg">−&#8377;60 Cr</div><div class="note">FY26 (FY25 −&#8377;61 Cr · FY24 −&#8377;291 Cr)</div></div>
+    </div>
+      </div>
+    </div>
+
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — Last 5 Years (Screener, Consolidated)</div>
+        <table class="t fit">
+          <tr><th>Year</th><th>Revenue</th><th>Op Profit</th><th>OPM%</th><th>Other Inc</th><th>PBT</th><th>Net Profit</th><th>EPS (&#8377;)</th></tr>
+          <tr><td>FY22</td><td>347</td><td>59</td><td>17%</td><td>5</td><td>50</td><td>39</td><td>3.14</td></tr>
+          <tr><td>FY23</td><td>466</td><td>55</td><td>12%</td><td>18</td><td>58</td><td>45</td><td>3.78</td></tr>
+          <tr><td>FY24</td><td>500</td><td>74</td><td>15%</td><td><b class="warn">278</b></td><td>332</td><td><b class="warn">274</b></td><td><b class="warn">22.81</b></td></tr>
+          <tr><td>FY25</td><td>578</td><td>103</td><td>18%</td><td>27</td><td>109</td><td>81</td><td>4.70</td></tr>
+          <tr><td><b>FY26</b></td><td><b>697</b></td><td><b>123</b></td><td><b>18%</b></td><td><b>27</b></td><td><b>111</b></td><td><b>85</b></td><td><b>5.68</b></td></tr>
+          <tr><td><b>TTM</b></td><td><b>752</b></td><td><b>121</b></td><td><b>16%</b></td><td><b class="warn">163</b></td><td><b>243</b></td><td><b>174</b></td><td><b class="warn">13.32</b></td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:3px">EPS conflicts kept: FY25 4.70 (Screener) vs 7.14 (MarketSmith); FY22 3.14 vs 3.42; FY23 3.78 vs 3.98; FY24 22.81 vs 24.25 (MarketSmith) vs 20.34 (standalone). Net profit is before minorities. Exceptional items are not shown separately by Screener.</div>
+        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 9 Quarters (Screener, Consolidated)</div>
+        <table class="t fit">
+          <tr><th>Quarter</th><th>Revenue</th><th>Op Profit</th><th>OPM%</th><th>Other Inc</th><th>PAT</th><th>EPS (&#8377;)</th></tr>
+          <tr><td>Jun-24</td><td>123</td><td>21</td><td>17%</td><td>7</td><td>18</td><td>1.16</td></tr>
+          <tr><td>Sep-24</td><td>138</td><td>25</td><td>18%</td><td>11</td><td>22</td><td>1.31</td></tr>
+          <tr><td>Dec-24</td><td>157</td><td>29</td><td>18%</td><td>4</td><td>22</td><td>1.24</td></tr>
+          <tr><td>Mar-25</td><td>161</td><td>27</td><td>17%</td><td>6</td><td>19</td><td>0.98</td></tr>
+          <tr><td>Jun-25</td><td>134</td><td>18</td><td>14%</td><td>8</td><td>14</td><td>0.90</td></tr>
+          <tr><td>Sep-25</td><td>172</td><td>30</td><td>17%</td><td>8</td><td>20</td><td>1.24</td></tr>
+          <tr><td>Dec-25</td><td>191</td><td>38</td><td>20%</td><td>5</td><td>25</td><td>1.42</td></tr>
+          <tr><td>Mar-26</td><td>200</td><td>36</td><td>18%</td><td>7</td><td>26</td><td>2.12</td></tr>
+          <tr><td><b>Jun-26</b></td><td><b>189</b></td><td><b class="neg">17</b></td><td><b class="neg">9%</b></td><td><b class="warn">143</b></td><td><b class="warn">103</b></td><td><b class="warn">8.54</b></td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:3px">Standalone (parent alone, Screener): FY26 sales ₹8 Cr, other income ₹11 Cr, net profit ₹11 Cr, EPS 0.98; FY24 other income ₹270 Cr, net profit ₹230 Cr, EPS 20.34; TTM other income ₹162 Cr, net profit ₹99 Cr, EPS 8.77. Jun-24 sales (123) and EPS (1.16) differ from MarketSmith, as do Dec-24 / Mar-25 EPS — reported, not resolved.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Revenue — 5 Years + TTM (&#8377; Cr)</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">Rs Cr</text><rect x="56.7" y="97.5" width="56.0" height="48.5" fill="#1a2a4a" rx="2"/><text x="84.7" y="93.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">347</text><text x="84.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="146.0" y="80.9" width="56.0" height="65.1" fill="#1a2a4a" rx="2"/><text x="174.0" y="76.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">466</text><text x="174.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="235.3" y="76.2" width="56.0" height="69.8" fill="#1a2a4a" rx="2"/><text x="263.3" y="72.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">500</text><text x="263.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="324.7" y="65.3" width="56.0" height="80.7" fill="#1a2a4a" rx="2"/><text x="352.7" y="61.3" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">578</text><text x="352.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="414.0" y="48.7" width="56.0" height="97.3" fill="#1a2a4a" rx="2"/><text x="442.0" y="44.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">697</text><text x="442.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="503.3" y="41.0" width="56.0" height="105.0" fill="#5b7bb5" rx="2"/><text x="531.3" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">752</text><text x="531.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="microhead" style="margin-top:9px">Operating Profit (navy) &amp; Net Profit (green) — Annual (&#8377; Cr)</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">Rs Cr</text><rect x="53.4" y="123.4" width="28.6" height="22.6" fill="#1a2a4a" rx="2"/><text x="67.7" y="119.4" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">59</text><rect x="85.0" y="131.1" width="28.6" height="14.9" fill="#2e7d32" rx="2"/><text x="99.3" y="127.1" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">39</text><text x="83.5" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="142.7" y="124.9" width="28.6" height="21.1" fill="#1a2a4a" rx="2"/><text x="157.0" y="120.9" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">55</text><rect x="174.3" y="128.8" width="28.6" height="17.2" fill="#2e7d32" rx="2"/><text x="188.6" y="124.8" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">45</text><text x="172.8" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="232.1" y="117.6" width="28.6" height="28.4" fill="#1a2a4a" rx="2"/><text x="246.4" y="113.6" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">74</text><rect x="263.7" y="41.0" width="28.6" height="105.0" fill="#2e7d32" rx="2"/><text x="277.9" y="37.0" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">274</text><text x="262.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="321.4" y="106.5" width="28.6" height="39.5" fill="#1a2a4a" rx="2"/><text x="335.7" y="102.5" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">103</text><rect x="353.0" y="115.0" width="28.6" height="31.0" fill="#2e7d32" rx="2"/><text x="367.3" y="111.0" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">81</text><text x="351.5" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="410.7" y="98.9" width="28.6" height="47.1" fill="#1a2a4a" rx="2"/><text x="425.0" y="94.9" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">123</text><rect x="442.3" y="113.4" width="28.6" height="32.6" fill="#2e7d32" rx="2"/><text x="456.6" y="109.4" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">85</text><text x="440.8" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="500.1" y="99.6" width="28.6" height="46.4" fill="#1a2a4a" rx="2"/><text x="514.4" y="95.6" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">121</text><rect x="531.7" y="79.3" width="28.6" height="66.7" fill="#2e7d32" rx="2"/><text x="545.9" y="75.3" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">174</text><text x="530.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="chartcap" style="text-align:center">&#9644; <b style="color:#1a2a4a">Operating Profit</b> &nbsp;&nbsp; &#9644; <b style="color:#2e7d32">Net Profit (FY24 and TTM include sale gains)</b></div>
+        <div class="chartcap" style="margin-top:3px">Balance sheet (Mar-26, Screener): equity ₹23 Cr, reserves ₹804 Cr, borrowings ₹41 Cr, total assets ₹1,156 Cr (fixed assets ₹345 Cr, CWIP ₹23 Cr, investments ₹27 Cr). Debtor days 112, inventory days 149, cash conversion cycle 166. Cash flow FY26: operating ₹18 Cr, investing −₹25 Cr, financing ₹13 Cr. D&amp;A ₹32.96 Cr vs ₹15.27 Cr a year before (capex). Standalone investments ₹154 Cr (Mar-26). Post-MRO cash and the Jun-26 balance sheet: not found.</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1"><div class="notebox green"><b>&#9733; The operating base is growing:</b> FY26 revenue +20.6%, TTM +27%, operating margin 16–18% for four years on a bigger base, and 61% of revenue comes from Aeroflex Industries (segment EBIT margin 13.8%, Q1 FY27 PAT +162%). Net profit before minorities was ₹85 Cr in FY26 against ₹39 Cr in FY22. Debt is negligible, so none of this depends on lenders.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>&#9733; But cash and one-offs tell the other story:</b> the three biggest profit lines (FY24, TTM, Jun-26) are sale gains, not operations. Free cash flow has been negative three years running; depreciation doubled to ₹33 Cr as capacity is built; debtor plus inventory days total 261 (the cash cycle is 166 days after payables). Consolidated profit is also shared: ₹21.11 Cr of FY26&rsquo;s ₹85.33 Cr belongs to minorities in Aeroflex Industries and Neu.</div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fffbe8;border-color:#f9a825">
+        <div class="plab">P/CFO &nbsp;·&nbsp; Market Cap ÷ Cash Flow from Operations <span class="badge b-warn">Elevated</span></div>
+        <div class="pval" style="font-size:26px">~77x <span style="font-size:13px;font-weight:600;color:#5a6475">(&#8377;1,395 Cr ÷ &#8377;18 Cr FY26 CFO)</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> My arithmetic on Screener&rsquo;s consolidated operating cash flow of ₹18 Cr (standalone −₹69 Cr; investing +₹72 Cr). The headline P/E of 9 looks cheap, but earnings of ₹85 Cr in FY26 converted to only ₹18 Cr of operating cash, and free cash flow was −₹60 Cr: growth is eating cash (capex, receivables, inventory). For a holding company the cash that matters is the MRO sale — ₹222.87 Cr received on closing — which sits in investing and, for FY27, is a one-time inflow.</p>
+      </div>
+      <div class="panel" style="background:#fdf0f0;border-color:#c62828">
+        <div class="plab">Cash Conversion Cycle &nbsp;·&nbsp; Debtor + Inventory Days <span class="badge b-bear">Long</span></div>
+        <div class="pval" style="font-size:26px">166 days <span style="font-size:13px;font-weight:600;color:#5a6475">(debtors 112 · inventory 149)</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> Group trade receivables were ₹213.72 Cr on ₹697.83 Cr revenue (about 112 days if all sales were on credit — my arithmetic; the note gives no days). Neu&rsquo;s CRISIL data show inventory 80–90 days and credit given 60–70 days, with bank-limit use at 72%. The long cycle is typical of an exporter-manufacturer but is a weight on a company that wants to scale skids and FIBC. Group-level customer concentration: <b>not found</b>.</p>
+      </div>
+      <div class="panel" style="background:#eef4fc;border-color:#1565c0">
+        <div class="plab">Price vs Look-Through Value &nbsp;·&nbsp; Holdco Gauge <span class="badge b-bull">Deep discount</span></div>
+        <div class="pval" style="font-size:26px">0.33x <span style="font-size:13px;font-weight:600;color:#5a6475">(₹1,395 Cr ÷ ₹4,217 Cr listed stakes)</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> Peers on Screener, 9 Oct: Bajaj Holdings trades at 1.65x book, Pilani Investment at 0.27x; AEROENTER at 1.69x book and 9.2x P/E. The look-through ratio ignores liabilities, tax and the MRO cash; with them the answer moves but not the direction. See §03 for the sum-of-the-parts and the scenarios.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
+<div class="tiles">
+  <div class="tile">
+    <div class="lab">Mgmt Remuneration as % of PAT</div>
+    <div class="val pos">~1% (7% standalone)</div>
+    <div class="note"><b>FY26 AR related-party note:</b> Harikant Turgalia ₹27.67 lakh, Shehnaz D. Ali ₹34.33 lakh, company secretary Alka Gupta ₹20.05 lakh = ₹82.05 lakh, vs consolidated PAT ₹85.33 Cr (~1%) and standalone PAT ₹11.03 Cr (~7%) — my arithmetic. Low pay for a small team; a lean board is the other side of that coin.</div>
+  </div>
+  <div class="tile">
+    <div class="lab">Management Tenure</div>
+    <div class="val warn" style="font-size:15px">Two whole-time directors</div>
+    <div class="note"><b>Turgalia</b> is Whole-time Director <b>and</b> CFO <b>and</b> sits on the Audit Committee; <b>Shehnaz D. Ali</b> is the other WTD (status unverified on one aggregator). No separate CEO or chair appears in the corporate list; the investment team is &lsquo;an experienced internal team&rsquo;. Asad Daud (non-executive, non-independent) signs for both promoter companies. 19 employees at the parent; 2,000+ in the group. Promoter UBOs behind Sat Invest and A Flex: <b>not found</b>.</div>
+  </div>
+  <div class="tile">
+    <div class="lab">Tax Paid as % of PBT</div>
+    <div class="val">17–26%</div>
+    <div class="note">FY24 17% · FY25 26% · FY26 23% (Screener, consolidated); the Jun-26 quarter charge was ₹46.91 Cr, 31% of PBT, on the MRO gain. <b>Contingent tax items:</b> ₹41.76 Cr income-tax demand at Aeroflex Industries (AY2018-19) and ₹7.19 Cr GST on IPO ITC, both under appeal; auditor Ajay Paliwal &amp; Co is a single-proprietor firm (unqualified; no key audit matters).</div>
+  </div>
+  <div class="tile">
+    <div class="lab">Capital Allocation &amp; Related Parties</div>
+    <div class="val" style="font-size:15px">GOOD RECORD, THIN DISCLOSURE</div>
+    <div class="note">MRO sold at ~3x; promoter-group buying in June and September at ₹101–120; no promoter sales found. Related parties: Sat Foundation (CSR; a director is a trustee) ₹126.82 lakh in the note vs ₹128.13 lakh in the auditor&rsquo;s report; rent to A Flex ₹14.17 lakh; dividend ₹152.51 lakh to Sat Invest. <b>No plan for the MRO proceeds is disclosed.</b></div>
+  </div>
+</div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance — Last 3 Quarters &amp; Credibility Checklist</h2></div>
+    <div class="microhead">Commitments Made vs Delivered (parent and subsidiaries)</div>
+<div class="notebox" style="margin-top:0;margin-bottom:8px"><b>Reading note:</b> the parent gives no numeric revenue or profit guidance that I could find. Concall transcripts exist (Aug 2026, May 2026, Feb 2026, Nov 2025, Aug 2025 and earlier) but were <b>not read</b>; the table uses the annual report, the Q4 FY26 deck, and press.</div>
+<div class="cols" style="margin-top:6px">
+  <div style="flex:1.25">
+    <table class="t">
+      <tr><th style="text-align:left">Commitment</th><th style="text-align:left">Outcome</th><th>&#10003;/&#10007;</th></tr>
+      <tr><td style="text-align:left">Sell the 68% of MRO (shareholders approved 27 Jan 2026); the company claimed ~3x in ~21 months</td><td style="text-align:left">Board 29 Apr, closed 30 Apr 2026 for ₹227.42 Cr; gain booked in Q1 FY27 (≈₹150 Cr pre-tax, my arithmetic)</td><td><span class="pos">&#10003;</span></td></tr>
+      <tr><td style="text-align:left">Aeroflex Neu: take 36,00,000 warrants at ₹90 (25 Jul 2025); 18-month conversion window; ~54.3% post-conversion</td><td style="text-align:left">25% paid; balance ≈ ₹24.3 Cr due by ~25 Jan 2027 (my arithmetic) — a pending outflow into a BB-rated, barely profitable business; Neu EGM 22 Oct 2026</td><td><span class="warn">&#8776; pending</span></td></tr>
+      <tr><td style="text-align:left">Neu: exit Fibcorp Polyweave (board nod reported June 2025; Mar-26 deck still showed 51.01%)</td><td style="text-align:left">Sale of ~₹1.92 Cr reported completed 8 Sep 2026 (aggregator; not verified) — 15 months later</td><td><span class="warn">&#8776; late</span></td></tr>
+      <tr><td style="text-align:left">Aeroflex Industries: skid capacity 6,000 → 15,000 units a year (AR: by Q2 FY27; the AEROFLEX report says Q3 FY27) and skids at 20–22% of sales</td><td style="text-align:left">FY26 skids: 617 units, ~5% of sales (secondary source). Q1 FY27 skid revenue ~23% of AEROFLEX&rsquo;s revenue per one source. FY27 revenue guide of +35% reported on track (company, 8 Sep). Conflicting sources — verify</td><td><span class="warn">&#8776;</span></td></tr>
+      <tr><td style="text-align:left">Dividend</td><td style="text-align:left">₹0.30 (Sep 2025) → ₹0.40 (ex 1 Sep 2026); payout ~7% of EPS</td><td><span class="pos">&#10003;</span></td></tr>
+      <tr><td style="text-align:left">Deploy the MRO cash</td><td style="text-align:left">No plan disclosed</td><td><span class="neg">?</span></td></tr>
+    </table>
+  </div>
+  <div style="flex:1">
+    <div class="microhead" style="margin-top:0">Management-Quality Red-Flag Checklist</div>
+    <table class="t">
+      <tr><th style="text-align:left">Warning Sign</th><th>Present?</th></tr>
+      <tr><td style="text-align:left">Lack of capital-allocation clarity (cash use)</td><td><span class="badge b-bear">&#10003; Yes</span></td></tr>
+      <tr><td style="text-align:left">Related-party dealings</td><td><span class="badge b-warn">&#10003; Watch</span></td></tr>
+      <tr><td style="text-align:left">Unrelated diversification (hoses, FIBC, NBFC, startups)</td><td><span class="badge b-warn">&#10003; Partial</span></td></tr>
+      <tr><td style="text-align:left">Same promoters controlling several listed entities</td><td><span class="badge b-bear">&#10003; Yes (3)</span></td></tr>
+      <tr><td style="text-align:left">Key-person / thin board (CFO on Audit Committee)</td><td><span class="badge b-warn">&#10003; Watch</span></td></tr>
+      <tr><td style="text-align:left">Regulatory penalty last 3 years</td><td><span class="badge b-bull">&#10007; None found</span></td></tr>
+      <tr><td style="text-align:left">Promoter pledge</td><td><span class="badge b-bull">&#10007; No (31 Mar &amp; 30 Jun)</span></td></tr>
+    </table>
+    <div class="chartcap" style="margin-top:6px">Surveillance: NSE and BSE asked for a price-movement clarification on 23 Jun 2026; the company replied on 24 Jun that the move was &lsquo;purely market driven&rsquo;. One third-party source (Trendlyne) puts the stock on long-term ASM Stage 1 from 24 Jun — <b>unverified against the exchange circulars</b>. No SEBI order against the company found; Aeroflex Industries has a history of a bank one-time settlement (2018) that still drives a tax demand.</div>
+  </div>
+</div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">Analysts Covering</span><span class="kval">None found<small>No broker rating or target on any page read</small></span></div>
+        <div class="krow"><span class="klab">Buy / Hold / Sell</span><span class="kval">n/a<small>Univest (4 Sep): no published consensus, no target</small></span></div>
+        <div class="krow"><span class="klab">Quant Scores</span><span class="kval">Master Score B (70)<small>MarketSmith · EPS 93 · Price 83 · Acc/Dis B · MarketsMojo score behind a sign-up wall</small></span></div>
+        <div class="krow"><span class="klab">Kotak Neo Technicals</span><span class="kval" style="font-size:11px">RSI 44.98 · MFI 49.5 · ADX 19.4<small>MACD −1.84 vs signal −2.06 · 4 moving averages bullish, 12 bearish</small></span></div>
+        <div class="krow"><span class="klab">Pivots</span><span class="kval" style="font-size:11px">₹124.37<small>Resistance ₹126.23 / 129.15 / 131.01 · support ₹121.45 / 119.59 / 116.67</small></span></div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Forums:</b> ValuePickr (posts 7 May–29 Jun 2026, anonymous) is mostly bullish on the holdco discount — one poster pegged the holdco at ~₹1,200 Cr against an Aeroflex Industries stake of ~₹3,500 Cr; another flagged related-party sales to Italica Global FZC and governance issues over 10 years old. Whether the usual discount is 40% or 50% went unanswered. Reddit and X: nothing found.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+        <div class="krow"><span class="klab">Volume — 9 Oct</span><span class="kval">3,19,734<small>60.48% below average (MarketSmith); 3.43 lakh BSE+NSE (MarketsMojo)</small></span></div>
+        <div class="krow"><span class="klab">Free Float</span><span class="kval">5.43 Cr shares<small>of 11.31 Cr · thin; beta 1.75</small></span></div>
+        <div class="krow"><span class="klab">Delivery</span><span class="kval">43.3% · 43.8% · 42.8%<small>day · week · month (Kotak Neo, 9 Oct) — mid-range</small></span></div>
+        <div class="krow"><span class="klab">Institutions</span><span class="kval" style="color:#2e7d32">Small but rising<small>FPI 0.46% → 1.25% in four quarters · 9 funds (+80%) · 14.87 lakh shares (+118.41%)</small></span></div>
+        <div class="krow"><span class="klab">Bulk / Block · F&amp;O</span><span class="kval">None found<small>2025–26 · F&amp;O not found (almost certainly not eligible at ₹1,400 Cr)</small></span></div>
+        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828"><b>&#9888; Liquidity is a practical risk:</b> a ₹1,395 Cr market cap, a 5.43 Cr-share float, beta 1.75 and volume 60% below average mean positions are hard to size and exit. The move from ₹62 (23 Mar) to ₹160 (early Sep) and back to ₹123 shows how thin the book is.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">Aeroflex Enterprises is mapped to the <b>Financials</b> wedge (holding &amp; investment), with <b>Industrials</b> as the stated secondary — a judgement call. Why: TTM other income is <b>₹163 Cr of ₹243 Cr PBT</b>, so the earnings now come from investment gains, while the operating base (hoses and liquid cooling, packaging) is Industrials. <b>Classification conflict:</b> Screener tags it Industrials &gt; Capital Goods &gt; Industrial Products &gt; &lsquo;Iron &amp; Steel Products&rsquo; (a legacy tag, wrong today; its peer panel lists oil-and-gas-services names); MarketSmith&rsquo;s group is &lsquo;NSE-Elec-Misc Products&rsquo; (rank 29 of 197, 26 in the narrative); the NSE basic-industry tag was <b>not found</b>. The wedge says rates and lending growth lead for Financials; for a holdco the more relevant swing is the Aeroflex Industries price and the startup-funding cycle (§05), not the credit cycle.</p>
+<div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; spending</text></g></g><g><path d="M 131.8704657112688 79.8810063218874 A 235 235 0 0 1 269.99999999999994 34.99999999999996 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; lending growth.</text></g></g><path d="M 131.8704657112688 79.8810063218874 A 235 235 0 0 1 269.99999999999994 34.99999999999996 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">AEROFLEX</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">ENTERPRISES</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to Financials —</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">holding &amp; investment</text><path d="M -36.96,-87.85 L -34.29,-105.54 L -21.73,-92.80 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        <div class="chartcap" style="text-align:center;margin-top:2px">NSE: AEROENTER · BSE: 511076 · mapped: Financials (secondary Industrials) — Screener: Industrials &gt; Iron &amp; Steel; MarketSmith: Elec-Misc Products</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+        <table class="peer"><tr><th>Company</th><th>Mcap ₹ Cr</th><th>P/E (TTM EPS)</th><th>P/B</th><th>ROE %</th><th>ROCE %</th><th>Sales gr.</th><th>OPM</th><th>TTM NP ₹ Cr</th></tr>
+<tr style="background:#eef4fc"><td>★ AEROENTER (₹123)</td><td><b>1,395</b></td><td><b>9.19 (13.32)</b></td><td><b>1.69</b></td><td><b>8.41</b></td><td><b>12.6</b></td><td><b>+27%</b></td><td><b>16%</b></td><td><b>174</b></td></tr>
+<tr><td>Aeroflex Industries (₹520) <i>investee, not a peer</i></td><td>6,888</td><td>103 (5.13)</td><td>15.4</td><td class="pos">14.1</td><td class="pos">18.9</td><td>+36%</td><td>23%</td><td>67</td></tr>
+<tr><td>Time Technoplast (₹176)</td><td>8,705</td><td>17.8 (10.12)</td><td>2.13</td><td>13.1</td><td>16.5</td><td>+16%</td><td>14%</td><td>498</td></tr>
+<tr><td>Bajaj Holdings (₹10,820)</td><td>1,20,416</td><td>13.6 (795.79)</td><td>1.65</td><td>11.9</td><td>11.0</td><td>+30%</td><td>85%*</td><td>8,993</td></tr>
+<tr><td>Pilani Investment (₹3,938)</td><td>4,360</td><td>n/m (−11.00)</td><td class="pos">0.27</td><td class="neg">0.20</td><td>1.41</td><td class="neg">−15%</td><td>87%*</td><td class="neg">−12</td></tr></table>
+        <div class="chartcap" style="margin-top:4px">Screener consolidated, fetched 10 Oct 2026 (9 Oct close) — one source, one date. P/B is price ÷ Screener book value (my arithmetic). AEROENTER P/E: Screener 9.19; recompute 123.31 ÷ 13.32 = 9.26. P/E for Aeroflex Industries 103 (recompute 101), Time Technoplast 17.8 (17.4), Bajaj Holdings 13.6. *The 85–87% OPM of the two holdcos is financial-company accounting and is not comparable with a manufacturer&rsquo;s. Screener&rsquo;s own peer panel for AEROENTER lists oil-and-gas services names because of the legacy tag, and was not used.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Why these:</b> Time Technoplast is the closest listed polymer-packaging maker (operating comparator; no investment arm). Bajaj Holdings and Pilani Investment are the holdco references — Bajaj Holdings trades near 1.65x book, Pilani at 0.27x, which brackets how an Indian holdco can price. Aeroflex Industries is shown as the <b>investee</b>: at 15.4x book and ~103x P/E it is far richer than its holder, so part of the holder&rsquo;s discount is the market refusing to capitalise that stake. A closer listed holdco with unlisted startup stakes: <b>not found</b>.</div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Holdco-discount ranges (secondary, conflicting):</b> Bajaj Holdings ~56% (one data site, Dec 2025; NAV dates differ); Pilani Investment 72–75% (or 40–60% in an uncited article); Maharashtra Scooters ~50%. AEROENTER&rsquo;s own implied discount to its listed stakes is <b>~67%</b> (§03, my arithmetic). Sector relative one-year return: <b>not found</b> on a single source and date.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+    <table class="t prose"><tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr><tr><td style="text-align:left">Earnings Quality</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Two big one-off gains in three years: FY24 (EPS 24.25 / 22.81 / 20.34 by source) and Q1 FY27 (EPS 8.54, ₹143–144 Cr in other income). Normalised P/E is ~22x on FY26 EPS 5.68, not 9. MRO&rsquo;s recurring ~30% of segment EBIT (₹28.87 of ₹95.98 Cr) is gone. The AR called the financial impact &lsquo;presently indeterminable&rsquo; and I did not find the gain line in a filing.</td></tr><tr><td style="text-align:left">Holdco Discount / Value Gap</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">The ~295% stake-to-market-cap ratio is real only if it can be realised. A sale triggers tax (illustratively ~₹512 Cr at 12.5% on the gain), the group does not appear to be a seller, and listed Indian holdcos commonly trade at 40–75% discounts. The price could stay at a third of the stakes for years. AEROFLEX itself is at P/E ~103 and 15.4x book, so the stake value is only as firm as that price (₹437 → ₹573 across sources).</td></tr><tr><td style="text-align:left">Concentration / Single-Asset</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">One stake is ~98% of the listed look-through value; the next, Neu, is ₹99.5 Cr. Inside Aeroflex Industries the growth leg is liquid cooling for <b>one unnamed US customer</b> (market cap quoted three ways: $118.99 bn / ~$130 bn / ~$141 bn); skids were only ~5% of FY26 sales.</td></tr><tr><td style="text-align:left">Portfolio Opacity</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">168 startup holdings carried at roughly ₹27–44 Cr, with no investee-level stakes, valuations, Ind AS 113 levels or exit proceeds; FVOCI marks bypass EPS; a standalone note does not tie; the auditor reports no key audit matter on the book. The &lsquo;VC&rsquo; label cannot be tested from disclosures.</td></tr><tr><td style="text-align:left">Aeroflex Neu (Weak Subsidiary)</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">Segment EBIT −₹2.35 Cr (−1.9%); Q1 FY27 PAT −91% to ~₹0.07 Cr; CRISIL BB/Stable and A4+ reaffirmed and then <b>withdrawn</b> on 15 Jul 2026 (earlier &lsquo;Issuer Not Cooperating&rsquo; flags, Jun 2025); CARE BB+/Stable (9 Jul, title only). The parent guarantees ₹38.71 Cr of Neu debt and owes ~₹24.3 Cr more on warrants by ~25 Jan 2027 (my arithmetic).</td></tr><tr><td style="text-align:left">Governance / Related Parties</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">One promoter group (Sat Invest 44.92% + A Flex 7.38%) controls <b>three listed companies</b>; Asad Daud signs for both; two whole-time directors, the CFO also on the Audit Committee; a single-proprietor auditor; 19 parent employees; CSR via a related trust (₹126.82 vs ₹128.13 lakh); Space Age Polymers LLP (4.51%) not explained. Positives: no pledge at 31 Mar or 30 Jun, no penalty in three years, promoter buying.</td></tr><tr><td style="text-align:left">Tax / Legal</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Contingent liabilities ₹55.0 Cr (my sum; ~₹56 Cr quoted) — ₹41.76 Cr income-tax demand at Aeroflex Industries (an OTS interest waiver treated as income; s.270A penalty proceedings begun; appeal filed) and ₹7.19 Cr GST on IPO ITC. About 4% of market cap.</td></tr><tr><td style="text-align:left">Liquidity / Surveillance</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Float 5.43 Cr shares; beta 1.75; volume 60% below average; NSE/BSE price-movement query (23 Jun, answered 24 Jun); ASM Stage 1 since 24 Jun per one third-party source (unverified). F&amp;O: not found.</td></tr><tr><td style="text-align:left">Technical / Count</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Sells on 1D (1 Oct) and 1H (9 Oct); hourly gauges −3 / −3; failed to hold the ₹131–133 band; a break of ₹120–121 puts ₹108, then ₹99.41 and ₹83.10 in play. Counts are interpretations, not forecasts.</td></tr></table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1.1">
+        <div class="microhead" style="margin-top:0">Credit-Rating Check (India Ratings and others)</div>
+        <table class="t"><tr><th>Entity</th><th style="text-align:left">Agency · rating</th><th style="text-align:left">Date / status</th></tr><tr><td>Aeroflex Enterprises (parent)</td><td style="text-align:left">None — the AR says no rating was obtained</td><td style="text-align:left">FY26 annual report</td></tr><tr><td>Parent (history)</td><td style="text-align:left">Brickwork BBB- / Stable on ₹20 Cr proposed bank loan, withdrawn</td><td style="text-align:left">5 Mar 2019 (facility not availed; summary only)</td></tr><tr><td>Parent — India Ratings</td><td style="text-align:left"><b>Not found</b> (site search done, not exhausted)</td><td style="text-align:left">India Ratings&rsquo; Jul 2026 IND A+ actions are for Satia Industries, a different company</td></tr><tr><td>Aeroflex Neu</td><td style="text-align:left">CRISIL BB/Stable, A4+ on ₹36 Cr (UCO Bank)</td><td style="text-align:left">15 Jul 2026: reaffirmed, then <b>withdrawn</b> at company request; interest cover 2.35x (1.26x); net worth ₹100.80 Cr; gearing &lt;0.17x</td></tr><tr><td>Aeroflex Neu</td><td style="text-align:left">CARE BB+/Stable, A4+</td><td style="text-align:left">9 Jul 2026 (filing title only; contents not read)</td></tr><tr><td>Aeroflex Industries</td><td style="text-align:left">CRISIL BB/Stable ₹55 Cr · Infomerics BBB-/Stable ₹37 Cr</td><td style="text-align:left">CRISIL withdrawn Oct 2022 · Infomerics watch-positive Aug 2023, withdrawn Oct 2023 (facilities surrendered)</td></tr><tr><td>Aeroflex Finance, Fibcorp, MRO</td><td style="text-align:left">Nothing found</td><td style="text-align:left">—</td></tr></table>
+        <div class="chartcap">CRISIL on Neu was read through a summarising fetch tool (not verbatim; the history table was partly scrambled); the other rating lines come from search summaries. India Ratings was searched on its own site (nothing for Aeroflex, Sat Industries, Aeroflex Finance or M.R. Organisation) but its full rated-entity database was not browsed — absence is not proof.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox green"><b>Bull case in one line:</b> a ~₹4,117 Cr stake in a fast-growing, net-cash subsidiary, ~₹227 Cr of fresh sale cash, near-zero debt, promoter buying at ₹101–120, visible exits at 3x–9x, and a market cap that is a third of the listed stakes.</div>
+        <div class="notebox red"><b>Bear case in one line:</b> the profit that makes the P/E look like 9 is a sale gain that will not repeat, the holdco discount may be permanent, the startup book cannot be verified, Neu is weak and guaranteed by the parent, and one promoter group controls all three listed companies.</div>
+        <div class="notebox "><b>Not found:</b> group customer concentration; investee-wise carrying values; EV/EBITDA (post-MRO cash unknown); patents; the NSE basic-industry tag; ASM status confirmed against circulars; the parent&rsquo;s contingent liabilities beyond the AR note.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">MarketSmith India Ratings (10 Oct 2026)</div>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #cfd6e2;margin-bottom:10px"><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Master Score</div><div style="font-size:24px;font-weight:900;color:#2e7d32">70</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Letter B</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Rating</div><div style="font-size:24px;font-weight:900;color:#2e7d32">93</div><div style="font-size:9px;font-weight:700;color:#8a94a6">GREAT</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:24px;font-weight:900;color:#2e7d32">83</div><div style="font-size:9px;font-weight:700;color:#8a94a6">GOOD · RS rating 85 in narrative</div></td></tr><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Acc / Dis Rating</div><div style="font-size:24px;font-weight:900;color:#2e7d32">B</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Buyer Demand GOOD B</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Group Rank</div><div style="font-size:24px;font-weight:900;color:#e07c00">29</div><div style="font-size:9px;font-weight:700;color:#8a94a6">of 197 · GOOD (narrative: 26)</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Beta</div><div style="font-size:24px;font-weight:900;color:#c62828">1.75</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Alpha 0.24</div></td></tr></table>
+        <p style="font-size:11.5px">A strong-looking profile: Master Score <b>B (70)</b>, EPS Rating 93 GREAT, Price Strength 83 GOOD, Acc/Dis B, Group Rank 29 of 197 (&lsquo;Elec-Misc Products&rsquo;). Narrative: annual revenue growth +20% (&lsquo;outstanding&rsquo;), pre-tax margin 16% (&lsquo;great&rsquo;), ROE 7% (&lsquo;fair but needs improvement&rsquo;), &lsquo;debt free&rsquo; with a strong balance sheet; below the 50-day and ~21% above the 200-day; the stock recently broke out of a weekly base but failed to hold momentum; institutional holding rose last quarter. Chart tags: OH −22.74%, OL +98.25%, &lsquo;−17% from pivot in 25 days&rsquo; (narrative ~−15%). Other panel data: EPS growth rate 30%, Earnings Stability 94, P/E 9 (5-year range 4–23), cash flow 1.62, book value 1.69x, yield 0.32%, float 5.43 Cr shares, market cap ₹1,395.43 Cr, sales ₹752.35 Cr.</p>
+        <p style="font-size:11.2px;margin-top:6px"><b>Conflicts kept:</b> Group Rank 29 (grid) vs 26 (narrative); Price Strength 83 vs RS rating 85; ROE 8% (Summary) vs 7% (narrative); &lsquo;debt free&rsquo; vs LTDebt/Equity 1% (the AR shows D/E 0.0018, Screener borrowings ₹41 Cr). <b>Read with care:</b> the EPS Rating of 93 is driven by the one-off quarter (Jun-26 EPS +849%) and the 24.25 FY24 outlier; Earnings Stability 94 sits oddly beside a sale-gain EPS history.</p>
+        <table class="t fit"><tr><th>MarketSmith EPS (₹)</th><th>EPS</th><th>Price hi / lo</th><th style="text-align:left">Note</th></tr><tr><td>FY26</td><td>5.68</td><td>160 / 62</td><td style="text-align:left">= sum of Jun-25..Mar-26 quarters</td></tr><tr><td>FY25</td><td>7.14</td><td>124 / 72</td><td style="text-align:left">Screener 4.70</td></tr><tr><td>FY24</td><td><b class='warn'>24.25</b></td><td>152 / 83</td><td style="text-align:left">sale-of-stake gain (§03)</td></tr><tr><td>FY23</td><td>3.98</td><td>146 / 55</td><td style="text-align:left">Screener 3.78</td></tr><tr><td>FY22</td><td>3.42</td><td>75 / 28</td><td style="text-align:left">Screener 3.14</td></tr><tr><td>FY21</td><td>0.83</td><td>42 / 14</td><td style="text-align:left">—</td></tr><tr><td>FY20</td><td>0.25</td><td>35 / 15</td><td style="text-align:left">—</td></tr><tr><td>FY19</td><td>1.44</td><td>38 / 22</td><td style="text-align:left">—</td></tr></table>
+        <table class="t fit"><tr><th>Quarter</th><th>EPS</th><th>EPS YoY</th><th>Sales ₹ Cr</th><th>Sales YoY</th></tr><tr><td>Jun-26</td><td><b class='warn'>8.54</b></td><td>+849%</td><td>189.0</td><td>+41%</td></tr><tr><td>Mar-26</td><td>2.12</td><td>+29%</td><td>199.6</td><td>+24%</td></tr><tr><td>Dec-25</td><td>1.42</td><td>−26%</td><td>191.4</td><td>+22%</td></tr><tr><td>Sep-25</td><td>1.24</td><td>−37%</td><td>172.3</td><td>+25%</td></tr><tr><td>Jun-25</td><td>0.90</td><td>−43%</td><td>134.5</td><td>+10%</td></tr><tr><td>Mar-25</td><td>1.64</td><td>+29%</td><td>160.8</td><td>+39%</td></tr><tr><td>Dec-24</td><td>1.93</td><td>+48%</td><td>157.3</td><td>+33%</td></tr><tr><td>Sep-24</td><td>1.98</td><td>−87%</td><td>137.8</td><td>+1%</td></tr></table>
+        <div class="chartcap">MarketSmith, actuals only (no estimate rows). Quarterly EPS here differs from Screener for Sep-24 to Mar-25 (Screener 1.31 / 1.24 / 0.98) and Jun-24 — reported, not resolved. TTM EPS (Sep-25 to Jun-26) = 1.24 + 1.42 + 2.12 + 8.54 = ₹13.32 → P/E 9.26 at ₹123.31 (my arithmetic; MarketSmith shows 9). Mkt cap ÷ price ≈ 11.3 Cr shares.</div>
+        <div class="notebox blue"><b>Synthesis:</b> Master Score <b>70 (B)</b> — strong ratings built on a one-off-flattered EPS and a price that is still above its 200-day. It describes the past year&rsquo;s earnings and price strength, not whether the sum-of-the-parts gap closes.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Fund Activity</div>
+        <div style="display:flex;gap:8px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">9</div><div style="font-size:8.6px;color:#8a94a6">Funds holding · +80%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">14.87 lakh</div><div style="font-size:8.6px;color:#8a94a6">Shares held by funds · +118.41%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.2</div><div style="font-size:8.6px;color:#8a94a6">U/D Volume Ratio</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.75</div><div style="font-size:8.6px;color:#8a94a6">Beta</div></div></div>
+        <p style="font-size:11.2px;margin-top:8px">Small numbers on a small base: 14.87 lakh shares is ~1.3% of the 11.31 Cr shares (my arithmetic). Aggregators show no mutual funds, so the &lsquo;funds&rsquo; are probably foreign portfolio investors (FPI 0.46% → 1.25%) — unresolved. Beta 1.75 with alpha 0.24: the stock amplifies market moves.</p>
+        <div class="microhead" style="margin-top:12px">MarketSmith Guru Screens — Strategy Fit (all six)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px"><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WILLIAM J. O'NEIL</b><b style="color:#7b1fa2">77%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:77%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">BENJAMIN GRAHAM</b><b style="color:#7b1fa2">84%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:84%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">JAMES P. O'SHAUGHNESSY</b><b style="color:#7b1fa2">80%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:80%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WARREN BUFFETT</b><b style="color:#7b1fa2">75%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:75%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">PETER LYNCH</b><b style="color:#7b1fa2">100%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:100%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">CUSTOM</b><b style="color:#8a94a6">not set</b></div><div style="background:#e6e9ef;border-radius:2px;height:5px;margin-top:2px"></div></div></div>
+        <div class="chartcap" style="margin-top:8px">All five set screens fit 75–100% (Lynch 100%, Graham 84%, O&rsquo;Shaughnessy 80%, O&rsquo;Neil 77%, Buffett 75%). The Custom screen is not set (empty bar, not 0%). The screens read the headline P/E of 9 and the EPS growth; they do not see that the profit is a sale gain.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Source note:</b> MarketSmith India screenshots (evaluation page and Summary page) supplied by the author on 10 Oct 2026. Snapshot-time differences versus other vendors are flagged in §08 and §13.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img src="AEROENTER_chart.jpg" alt="AEROENTER MotiveWave 1H and 1D Elliott Wave chart, 10 Oct 2026" /></div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose"><tr><th style="text-align:left">Item</th><th>Stance</th><th style="text-align:left">Read</th></tr><tr><td style="text-align:left">1D Chart</td><td><span class="badge b-neut">Neutral / slightly bearish</span></td><td style="text-align:left">Price ~₹123.31 (a label at ₹127.29 above). Trend Momentum Buy 0 / Sell 1; gauges <b>0 short-term / −1 long-term</b>. Resistance <b>₹131</b>, support <b>₹121</b>. Daily Sell on 1 Oct 2026. The labels (approximate levels, my read of the user&rsquo;s labels) show a circled-<b>1</b> top with (5) near ₹150–155, an (A) low ~₹75–80, a (B) high ~₹105–110 (mid-2025) and a (C) low ~₹62 (spring 2026) completing a circled-<b>2</b>; then a five-wave rally to ~₹160 (Sep 2026, &lsquo;wave (1)&rsquo; 5). RSI tags: 80 at ₹159.6 on the daily. Drawn targets: <b>&lsquo;2 vs 1&rsquo; 61.8% = ₹99.41</b>; <b>&lsquo;C vs A&rsquo; 100% = ₹83.10</b>. (The ₹150–155 top fits MarketSmith&rsquo;s FY24 high of ₹152, i.e. early 2024 rather than the &lsquo;late 2024&rsquo; in the read-out — approximate.)</td></tr><tr><td style="text-align:left">1H Chart</td><td><span class="badge b-bear">Bearish −3 / −3</span></td><td style="text-align:left">Buy 1 / Sell 2; gauges <b>−3 / −3</b>. Signals: Sell 10 Sep 10:00; Buy 22 Sep 10:00; Sell 9 Oct 11:00 (hourly). Resistance <b>₹133</b>, support <b>₹120</b>. A possible A-B-C: hourly (A) low <b>₹108</b> (RSI 5, mid-Sep), (B) high <b>₹134.7</b> (RSI 89), price ₹123 inside the (C) leg. Other RSI tags: 83 at ₹159.6 (top), 77 at ₹149.0, 84 at ₹135.0, 74 at ₹129.7, 24 at ₹118.8.</td></tr><tr><td style="text-align:left">Price &amp; Volume</td><td><span class="badge b-neut">−1.71%</span></td><td style="text-align:left">9 Oct: close ₹123.31 (−₹2.14) on 3,19,734 shares, 60% below average; day range ₹122.51–127.29. Below the 50-day, ~21% above the 200-day.</td></tr><tr><td style="text-align:left">Count Status</td><td><span class="badge b-neut">One count</span></td><td style="text-align:left">This is <b>one labelled count</b>; the wave labels are the user&rsquo;s own, approximate, unconfirmed. An alternative: the Sep top was not a wave (1) but the end of a bounce, and the decline from ₹160 is a larger correction. It is an interpretation, not a forecast, and not a signal to trade.</td></tr><tr><td style="text-align:left">Bull Case</td><td><span class="badge b-bull">If ₹120 holds</span></td><td style="text-align:left">The rally from ₹62 to ₹160 (+160%) reads as a five-wave impulse; ₹120–121 support has held; a close above <b>₹131 / ₹133</b> would reopen <b>₹135</b>, then ₹149–160. Promoter-group buying at ₹120.25 on 17 Sep sits at the same support.</td></tr><tr><td style="text-align:left">Bear Case</td><td><span class="badge b-bear">Pullback in C?</span></td><td style="text-align:left">RSI 89 at the (B) high, then a Sell on 9 Oct with hourly gauges −3 / −3; the drawn targets <b>₹99.41</b> (61.8%) and <b>₹83.10</b> (100% C = A) are both below the market. A break of <b>₹120</b> shifts the risk to the <b>₹108</b> (A) low.</td></tr><tr><td style="text-align:left">Invalidation</td><td><span class="badge b-warn">Levels</span></td><td style="text-align:left">Downside count: a close below <b>₹120</b>, then <b>₹108</b>, confirms the correction. Upside count: a move above <b>₹134.7 / ₹135</b> invalidates the C-leg-down reading. Unconfirmed; <b>no buy call</b>.</td></tr></table>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff6e8;border-color:#e07c00;flex:1.2">
+        <div class="plab" style="color:#e07c00">★ Recommendation</div>
+        <div class="pval" style="color:#e07c00;font-size:19px">NO BUY CALL — TWO-SIDED; WATCH THE STAKE AND ₹120</div>
+        <p style="font-size:11.4px;margin-top:6px">Not a buy call. The sum-of-the-parts case is strong on paper: a ~₹4,117 Cr stake in Aeroflex Industries (~295% of the market cap), ~₹227 Cr of MRO cash, near-zero debt, promoter buying and 3x–9x exits. The earnings and structure case is weaker: the headline P/E of 9 becomes ~22x without the sale gain, the holdco discount may not close, the startup book is small and unverifiable, Neu is weak, and one promoter group runs three listed companies. The chart is neutral to bearish on both timeframes.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">● Constructive:</b> ₹120–121 holding, then a close above <b>₹131 / ₹133</b> with the hourly gauges recovering; further A Flex buying; evidence of how the MRO cash is used; AEROFLEX holding ₹520.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#c62828">● Caution:</b> a break of <b>₹120</b> (then ₹108); a falling AEROFLEX price (the stake is ~295% of the market cap); the Sep-26 shareholding pattern showing promoter selling or a pledge; ASM confirmation.</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Catalysts:</b> Q2 FY27 results (date not found; trading window closed 1 Oct); Aeroflex Neu EGM <b>22 Oct 2026</b> and the ~₹24.3 Cr warrant balance (by ~25 Jan 2027); deployment of the MRO proceeds; further A Flex Invest purchases; AEROFLEX&rsquo;s own results and price.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px"><tr><td>&#8377;121 / &#8377;120</td><td style="text-align:left">1D / 1H support <small style="color:#8a94a6">(-1.9% / -2.7%)</small></td><td><span class='badge b-neut'>Near</span></td></tr><tr><td>&#8377;118.8</td><td style="text-align:left">RSI 24 hourly low <small style="color:#8a94a6">(-3.7%)</small></td><td><span class='badge b-bull'>Key</span></td></tr><tr><td>&#8377;108</td><td style="text-align:left">Hourly (A) low · RSI 5 <small style="color:#8a94a6">(-12.4%)</small></td><td><span class='badge b-bear'>Floor</span></td></tr><tr><td>&#8377;99.41</td><td style="text-align:left">&lsquo;2 vs 1&rsquo; 61.8% target <small style="color:#8a94a6">(-19.4%)</small></td><td><span class='badge b-bear'>Target</span></td></tr><tr><td>&#8377;83.10</td><td style="text-align:left">&lsquo;C vs A&rsquo; 100% target <small style="color:#8a94a6">(-32.6%)</small></td><td><span class='badge b-bear'>Floor</span></td></tr></table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px"><tr><td>&#8377;127.29</td><td style="text-align:left">Day high / chart label <small style="color:#8a94a6">(+3.2%)</small></td><td><span class='badge b-neut'>Near</span></td></tr><tr><td>&#8377;131 / &#8377;133</td><td style="text-align:left">1D / 1H resistance <small style="color:#8a94a6">(+6.2% / +7.9%)</small></td><td><span class='badge b-bull'>Signal</span></td></tr><tr><td>&#8377;134.7 / &#8377;135</td><td style="text-align:left">(B) high · RSI 89 <small style="color:#8a94a6">(+9.2% / +9.5%)</small></td><td><span class='badge b-bull'>Signal</span></td></tr><tr><td>&#8377;149.0</td><td style="text-align:left">RSI 77 tag <small style="color:#8a94a6">(+20.8%)</small></td><td><span class='badge b-neut'>Target</span></td></tr><tr><td>&#8377;159.6</td><td style="text-align:left">Sep 2026 top · 52-wk high <small style="color:#8a94a6">(+29.4%)</small></td><td><span class='badge b-bull'>Major</span></td></tr></table>
+      </div>
+    </div>
+    <div class="notebox "><b>Source quality:</b> primary: FY26 annual report (parsed), the CRISIL rationale on Aeroflex Neu (15 Jul 2026, read through a summarising tool), the FY26 Reg 31(4) disclosure as quoted by an aggregator. Secondary: Screener (9–10 Oct 2026), MarketSmith India and MotiveWave screenshots supplied by the author, Kotak Neo, Univest, MarketsMojo, Scanx, Whalesbook, ValuePickr. The Q1 FY27 results and deck PDFs are image-only and were not fully readable. <b>Verify on NSE/BSE:</b> the MRO gain line, the Sep-26 shareholding pattern, the 18 Sep 2026 A Flex filing, ASM status, the Neu EGM notice and the Q2 results date. Items I computed are marked &lsquo;my arithmetic&rsquo;.</div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, the company&rsquo;s FY26 annual report, a CRISIL rating rationale (15 Jul 2026), Kotak Neo, Univest, MarketsMojo, Scanx, Whalesbook, ValuePickr and other public web sources as of 10 Oct 2026, and from the author&rsquo;s own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified; where sources conflict, both figures are shown. Aeroflex Enterprises Limited is a small-cap holding company with a thin free float and a profit history dominated by one-off gains; sum-of-the-parts and holdco-discount figures are the author&rsquo;s illustrative arithmetic, not a valuation, forecast or recommendation. Elliott Wave counts are interpretations, not predictions. This is not investment advice.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
