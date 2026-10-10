@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCC Limited (NCC) — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+  <div class="brand-bar"></div>
+  <div class="main">
+    <div class="logo-wrap"><div class="text-logo">NCC <span>LIMITED</span></div></div>
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">NCC Limited</h1>
+    <div class="divider"></div>
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: NCC</div>
+      <div class="ticker-chip">BSE: 500294</div>
+      <div class="ticker-chip">Mkt Cap: ₹7,852 Cr</div>
+      <div class="ticker-chip">Master Score: D (38)</div>
+    </div>
+    <div class="sector-line">Industrials — EPC &amp; Civil Construction: Buildings, Transportation, Mining, Electrical T&amp;D, Water &amp; Railways, Irrigation; Smart-Meter SPVs (Hyderabad)</div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">10 October 2026</span>
+    </div>
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>10/10/26</td><td class="rev-note">v1 — initial report</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+  <div class="bottom-band"></div>
+</div>
+</div>
+<div class="page-wrap">
+<div class="page">
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 500294 &nbsp;·&nbsp; NSE: NCC &nbsp;·&nbsp; EPC &amp; construction, smart-meter SPVs &nbsp;·&nbsp; Hyderabad, Telangana</div>
+      <h1>NCC Limited</h1>
+      <div class="tagline">Order book ₹81,214 Cr (~3.9x FY26 revenue) &nbsp;·&nbsp; Promoters 23.19% &nbsp;·&nbsp; FY26 revenue −6%, Q1 FY27 +12% &nbsp;·&nbsp; ~42% below 52-week high (₹217)</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">₹125.06 <span class="chg" style="color:#a5d6a7">▲ +4.28%</span></div>
+      <div class="sub">Report date: 10 Oct 2026 (close of Fri 9 Oct) &nbsp;|&nbsp; Mkt Cap: ₹7,852 Cr &nbsp;|&nbsp; Book Value: 1.00x &nbsp;|&nbsp; MarketSmith Master Score: D (38)</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#c62828;background:#fdeef0">● Sentiment: Depressed; stale broker targets</div>
+    <div style="color:#c62828;background:#fdeef0">● Momentum: Gauges −4 / −3 (1D), −1 / +1 (1H); RSI 10.5</div>
+    <div style="color:#2e7d32;background:#eef7ee">● Valuation: Low (P/E ~11, P/B ~1.0, EV/EBITDA ~5.9x) — ROE ~9%</div>
+    <div style="color:#c62828;background:#fdeef0">● EPS 56 · Price 20 · Group 128/197</div>
+    <div style="color:#e07c00;background:#fff6e6">● Governance: pledge report unverified; NHAI status unknown</div>
+  </div>
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Event</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p><b>NCC Limited</b> (formerly Nagarjuna Construction Company), Hyderabad, is an <b>EPC and construction contractor</b> with more than 40 years in business. It builds <b>buildings, transportation (roads, bridges, metro), mining, electrical T&amp;D, water and railways, and irrigation</b> projects, mostly for government and state-linked clients, across 18 states. It also holds equity in three <b>smart-meter SPVs</b> (three projects, ₹5,011 Cr; ~7–8 mn meters, ~45% installed). International work is negligible: FY26 revenue outside India was ₹13.69 Cr of ₹20,823 Cr.</p>
+        <p style="margin-top:7px">FY26 (company-reported, consolidated) revenue was <b>₹20,823 Cr (−6%)</b>, EBITDA ₹1,836 Cr (8.82%) and PAT ₹724 Cr, EPS ₹10.76. Whalesbook shows <b>attributable</b> profit of ₹675.32 Cr (−17.4% from ₹819.88 Cr): Screener’s ₹724 Cr is before minority interests (same pattern in FY25: ₹868 Cr vs ₹819.88 Cr). Q1 FY27 (reported 6 Aug 2026): turnover ₹5,842 Cr per the call (Screener sales ₹5,812 Cr), EBITDA ₹545 Cr (9.38%), PAT ₹216.40 Cr attributable (Screener ₹229 Cr before minorities). <b>Consolidated order book ₹81,214 Cr at 30 Jun 2026</b> (standalone ₹71,312 Cr; subsidiaries ₹9,902 Cr; opening ₹83,004 Cr at 31 Mar 2026) — about 3.9x FY26 revenue (my arithmetic).</p>
+        <div class="notebox blue"><b>Key Competitive Advantage:</b> Scale and balance-sheet capacity to pre-qualify for large state and central tenders, plus lender trust: <b>CARE AA-/Stable and India Ratings AA-/Stable</b>, with ₹20,984 Cr of non-fund-based limits. The edge is <b>qualification and financing capacity, not cost</b> — tenders are awarded competitively and margins sit around 9%. Concentration is built into the book: ~79% is state or state-linked clients, and CARE caps any single agency at 25% of the book. Detail in §02.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Order-Book Mix by Segment (30 Jun 2026)</div>
+        <svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 0 1 334.8,119.2 L281.5,110.6 A42,42 0 0 0 240.0,62.0 Z" fill="#1a2a4a" stroke="#fff" stroke-width="1"/><text x="292.5" y="63.2" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">28%</text><path d="M334.8,119.2 A96,96 0 0 1 254.1,199.0 L246.2,145.5 A42,42 0 0 0 281.5,110.6 Z" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="288.5" y="157.1" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">20%</text><path d="M254.1,199.0 A96,96 0 0 1 165.4,164.5 L207.4,130.5 A42,42 0 0 0 246.2,145.5 Z" fill="#e07c00" stroke="#fff" stroke-width="1"/><text x="215.0" y="172.3" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">16%</text><path d="M165.4,164.5 A96,96 0 0 1 149.8,71.2 L200.5,89.7 A42,42 0 0 0 207.4,130.5 Z" fill="#5b7bb5" stroke="#fff" stroke-width="1"/><text x="172.0" y="119.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">16%</text><path d="M149.8,71.2 A96,96 0 0 1 205.1,14.6 L224.7,64.9 A42,42 0 0 0 200.5,89.7 Z" fill="#8fa3c4" stroke="#fff" stroke-width="1"/><text x="190.6" y="59.8" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">14%</text><path d="M205.1,14.6 A96,96 0 0 1 240.0,8.0 L240.0,62.0 A42,42 0 0 0 224.7,64.9 Z" fill="#6b7a93" stroke="#fff" stroke-width="1"/><text x="227.2" y="40.2" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">6%</text><text x="240" y="102" text-anchor="middle" font-size="13" font-weight="900" fill="#1a2a4a">₹81,214 Cr</text><text x="240" y="114" text-anchor="middle" font-size="6.5" letter-spacing="0.6" fill="#8a94a6">ORDER BOOK (CONSOLIDATED)</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Buildings</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">₹22,357 Cr</text><rect x="26" y="252" width="11" height="11" rx="2" fill="#2e7d32"/><text x="43" y="262" font-size="10.5" fill="#2a3342" font-weight="700">Transportation</text><text x="43" y="275" font-size="9.3" fill="#8a94a6">₹16,344 Cr</text><rect x="26" y="282" width="11" height="11" rx="2" fill="#e07c00"/><text x="43" y="292" font-size="10.5" fill="#2a3342" font-weight="700">Mining</text><text x="43" y="305" font-size="9.3" fill="#8a94a6">₹13,400 Cr</text><rect x="26" y="312" width="11" height="11" rx="2" fill="#5b7bb5"/><text x="43" y="322" font-size="10.5" fill="#2a3342" font-weight="700">Electrical T&amp;D</text><text x="43" y="335" font-size="9.3" fill="#8a94a6">₹13,312 Cr</text><rect x="26" y="342" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="43" y="352" font-size="10.5" fill="#2a3342" font-weight="700">Water &amp; Railways</text><text x="43" y="365" font-size="9.3" fill="#8a94a6">₹10,994 Cr · JJM book ₹5,881 Cr (no O&amp;M)</text><rect x="26" y="372" width="11" height="11" rx="2" fill="#6b7a93"/><text x="43" y="382" font-size="10.5" fill="#2a3342" font-weight="700">Irrigation</text><text x="43" y="395" font-size="9.3" fill="#8a94a6">₹4,806 Cr</text></svg>
+        <div class="chartcap" style="text-align:center">Segment mix of the consolidated order book at 30 Jun 2026 (company disclosure via the Q1 FY27 presentation/call): Buildings 28 / Transportation 20 / Mining 16 / Electrical T&amp;D 16 / Water &amp; Railways 14 / Irrigation 6 (%). Clients: central govt 14%, state govt 19%, PSUs and state entities 60%, multilateral/bank-funded 5% (call) vs ‘others’ 3% (ICICI), private 4% — the call and ICICI differ on the residual and are both shown. Book-to-bill ~3.5x (call) / 3.8x (ICICI) / 3.96x (standalone) — three bases, not reconciled. One source puts the standalone book at ₹72,259 Cr at 31 Mar 2026 (CARE) vs consolidated ₹83,004 Cr — different perimeters.</div>
+      </div>
+      <div style="flex:1.05">
+<div class="microhead">Earnings-Quality Rating: Where The Profit Comes From</div>
+<div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+  <div style="font-size:15px;font-weight:900;color:#1a2a4a">Quality rated 2 / 5 <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">■■</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">■■■</span></div>
+  <p style="font-size:11px;margin-top:5px"><b>Bull:</b> an order book of ~3.9x revenue; Q1 FY27 operating margin 9.4% and PAT up on a +12% revenue year-on-year; interest cover back to 2.7x (CARE, Q1 FY27); JJM collections easing (JJM receivables ₹3,700 Cr at Dec-25 → ₹2,771 Cr at Jun-26).</p>
+  <p style="font-size:11px;margin-top:5px"><b>Bear:</b> operating cash flow was <b>−₹459 Cr in FY26</b> (consolidated, Screener) and free cash flow −₹1,401 Cr, despite PAT of ₹724 Cr; receivables plus unbilled revenue are ~₹12,983 Cr (~74% of revenue, CARE); gross current asset days 378; trade receivables and contract assets are also the auditor’s single key audit matter (~55–56% of total assets).</p>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose"><tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr><tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">Moderate</span></td><td style="text-align:left">Forty-plus years in business and <b>AA- from two agencies</b> (CARE, India Ratings), with CARE also rating the smart-meter SPVs (A/Stable, A-/Stable). That is lender trust, not pricing power: no brand-premium evidence was found and aggressive bidding restricts margins. Rating is my judgement from the evidence.</td></tr><tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">Not applicable to a contractor.</td></tr><tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">Low</span></td><td style="text-align:left">Work is tender-awarded, so customers can switch each time. Some stickiness exists in smart-meter and O&amp;M contracts that run 5–10 years (O&amp;M ~₹1 Cr per 1 lakh meters), but JJM carries no O&amp;M in the ₹5,881 Cr book.</td></tr><tr><td style="text-align:left">Cost Advantage / Barriers</td><td><span class="badge b-warn">Low–Moderate</span></td><td style="text-align:left">Barriers are bid-qualification scale and balance-sheet capacity, not cost. Direct cost ratio 85.04% vs 85.17% a year earlier; margins of ~8.3–9% sit below PNC Infratech (9M FY26 12.8%) and Afcons (FY26 11.68%) per secondary sources (different business mixes). About 81% of contracts carry price escalation, but part of the JJM escalation is sub judice. Steel (Sept 2026: TMT ₹65,298/t, +21% YoY) is the live cost risk on fixed-price work. Subcontractor work bills were ₹6,232 Cr in FY26 (₹7,018 Cr), ~36% of standalone revenue; material cost ₹6,938 Cr.</td></tr><tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">None found</span></td><td style="text-align:left">No patents or proprietary technology found. Competitors named in sources: PNC Infratech (order book ₹19,343 Cr, Q3 FY26), Afcons (₹32,495.65 Cr at Mar-26; FY26 PAT −48.5%), KEC International (₹66 bn Q1 FY27 T&amp;D inflow), H.G. Infra, KNR; L&amp;T, Ahluwalia (as a buildings competitor) and IRB: not found in sources.</td></tr></table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px"><b>Customer concentration:</b> ~79% of the book is state or state-linked (19% state govt + 60% PSUs/state entities); one customer was ₹2,709.82 Cr (&gt;10%) of FY26 consolidated revenue (FY25: two customers, ₹6,110.09 Cr). The latest state-wise split was not found (Jun 2025 per India Ratings: Maharashtra 30%, Andhra Pradesh 17%, MP 15%; top-10 projects 39.3%). <b>Stuck dues:</b> NCC Vizag Urban ₹271 Cr at Jun-26 (₹291 Cr Mar-26; full recovery expected by Dec 2026); AP Capital City old projects ~₹142 Cr; Telangana Mission Bhagiratha ~₹180 Cr (an analyst’s figure, not management’s; ~₹50 Cr received; ‘sub judice’); UP water projects ₹1,043 Cr outstanding; HIHMC amount: not found. Claims/arbitration receivables and quantified cost overruns: not found. <b>Disputes:</b> NHAI v OB Infrastructure — NHAI claims ₹493.66 Cr, OBIL counter-claims ₹103.09 Cr, NCC provision ₹44.82 Cr; OBIL won an arbitration award on 20 Nov 2024 (land-handover delays), NHAI challenged it in the Delhi HC (pending); NHAI debarred NCC and OBIL from NHAI tenders for two years from 17 Feb 2026 (Delhi HC held it in abeyance to 10 Mar 2026; Telangana HC interim suspension 26 Feb 2026); <b>status after Feb/Mar 2026: NOT FOUND</b>. NCC says no impact on the existing book. SEIL Energy (Nellore): the tribunal award of 14 Sep 2023 went largely against NCC (of ~₹1,557 Cr claimed ~₹1,456 Cr was rejected; NCC received ₹101 Cr; SEIL counter-claims ~₹700 Cr allowed — law-firm press release); current status not found. Nagarjuna Contracting LLC (Dubai) lawsuit pending; TAQA settlement ₹175 Cr (2024 note) status not found; Savitra Agri Industrial Park (Sompeta, AP) has High Court cases on land alienation and environmental clearance. <b>Related-party Dubai advance</b> ₹233.61 Cr (NCC Infrastructure Holdings Mauritius; AED 162 mn; favourable order AED 162 mn + 5% interest; management says ‘fully recoverable’ — unverified). <b>Exceptional items:</b> FY26 ₹54.65 Cr (₹33.15 Cr labour codes, ₹21.5 Cr loan to a subsidiary); FY25 ₹38.63 Cr investment impairment. <b>Safety (annual report):</b> FY26 one employee and one worker fatality; LTIFR 0.06 employees, 0.12 workers (0.23 prior year); older incidents (e.g. a 2023 Bengaluru metro pillar case) unverified. <b>Regulatory:</b> no SEBI/exchange action in 3 years per the annual report; ASM/GSM lists not checked.</p>
+      </div>
+      <div style="flex:0 0 calc(40% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Litigation &amp; Contingent Liabilities</div>
+        <table class="t fit"><tr><th>Contingent liability (₹ Cr, 31 Mar 2026)</th><th>Standalone</th><th>Consolidated (FY25)</th></tr><tr><td>Sales / entry tax</td><td>136.94</td><td>136.94 (151.79)</td></tr><tr><td>Excise</td><td>0.46</td><td>—</td></tr><tr><td>GST</td><td>54.77</td><td>154.78 (98.05)</td></tr><tr><td>Service tax</td><td>35.33</td><td>—</td></tr><tr><td>Others</td><td>23.03</td><td>(19.02)</td></tr><tr><td>NHAI disputes</td><td>n/a</td><td>512.13 incl. ₹18.46 Cr in escrow (63.29)</td></tr><tr><td><b>Total</b></td><td><b>250.53</b></td><td><b>862.67 (367.94)</b></td></tr><tr><td>Capital commitments</td><td>152.46</td><td>(270.56)</td></tr></table>
+        <div class="chartcap">Source: annual report FY26. NHAI-related contingent liability rose from ₹63.29 Cr to ₹512.13 Cr on a consolidated basis. Consolidated total ₹862.67 Cr is ~11% of the ₹7,852 Cr market cap (my arithmetic).</div>
+        <div class="notebox blue"><b>Synthesis:</b> A qualification and financing moat in a competitively bid, low-margin business — real enough to hold AA- ratings, not strong enough to protect margins or collections. Ratings: <b>CARE AA-/Stable (27 Aug 2026) and India Ratings AA-/Stable (8 Sep 2025)</b>, both read in full (§16). The group also carries a <b>CRISIL non-cooperating</b> rating on its 80% subsidiary NCC Urban Infrastructure. Moat ratings are mine.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Cash Conversion, the Smart-Meter Net-Debt Rise &amp; the NHAI / Pledge Unknowns</h2></div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q1 Revenue</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹5,812 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">+12% YoY (Screener); call ₹5,842 Cr</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q1 EBITDA margin</div><div style="font-size:18px;font-weight:900;color:#2e7d32">9.38%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">vs 8.81%; guide 8.5–9% for FY27</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Net Debt</div><div style="font-size:18px;font-weight:900;color:#c62828">₹3,513 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">30 Jun 2026 vs ₹1,574 Cr a year ago</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">FY26 Op. Cash Flow</div><div style="font-size:18px;font-weight:900;color:#c62828">−₹459 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">vs +₹742 Cr in FY25 (Screener)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Order Book</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹81,214 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">~3.9x FY26 revenue</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Promoter Holding</div><div style="font-size:18px;font-weight:900;color:#e07c00">23.19%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">pledge reports conflict (UNVERIFIED)</div></div></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Theme 1 — Working Capital and Cash Conversion: Read It Two Ways</div>
+        <div style="border:2px solid #e07c00;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#fff6e8,#fffdf6)">
+          <p style="font-size:11.4px"><b>Bull:</b> Q1 FY27 profit rose on +12% revenue and a 9.4% margin; JJM receivables fell to ₹2,771 Cr (21% of total) at 30 Jun 2026 from ₹3,700 Cr (29%) at 31 Dec 2025, with collections of ~₹1,500 Cr in Q4 FY26 and ₹1,013 Cr Apr–Jul 2026; standalone receivable days improved to 68 from 73; working capital ex-cash was 27% of turnover vs 28%.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>Bear:</b> CARE’s gross current asset days rose to <b>378 from 297</b> (its downgrade trigger is &gt;320 sustained), receivables plus unbilled revenue are ₹12,983 Cr (~74% of revenue; ₹11,661 Cr a year earlier), unbilled revenue grew to ₹7,414 Cr, unencumbered liquidity fell to ₹402 Cr from ₹585 Cr, and ~60% of the order book had &lt;10% progress. Operating cash flow was negative in FY26 on Screener’s consolidated numbers.</p>
+          <div style="font-size:10.3px;color:#8a6d1f;background:#fff9e0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Conflicts kept:</b> working-capital days are 81 (Screener FY26; FY25 48), 80 (India Ratings FY25; FY24 41), and the company reported 119 days at Q3 FY26 and 97 at Q4 (multibagg) — different definitions. Standalone operating cash flow is ₹201 Cr (ICICI Direct) vs company ‘cash from operations’ ₹883 Cr — <b>unresolved</b>. Q1 JJM collections: ₹610 Cr per the call vs the ₹1,013 Cr Apr–Jul figure (different windows).</div>
+        </div>
+        <div class="microhead">Standalone Working-Capital Build (Jun-26 vs Mar-26)</div>
+        <table class="t fit"><tr><th>Standalone (₹ Cr)</th><th>Jun-26</th><th>Mar-26</th></tr><tr><td>Receivables (days)</td><td>3,055 (68)</td><td>3,336 (73)</td></tr><tr><td>Unbilled revenue</td><td>7,414</td><td>6,675</td></tr><tr><td>Retention money</td><td>2,396</td><td>2,256</td></tr><tr><td>Mobilisation advances (liability)</td><td>3,163</td><td>3,386</td></tr><tr><td>Inventory</td><td>1,815</td><td>1,787</td></tr><tr><td>Payables</td><td>7,071</td><td>—</td></tr><tr><td>Cash</td><td>402</td><td>585</td></tr><tr><td>Margin-money deposits</td><td>633</td><td>631</td></tr><tr><td><b>Working capital ex-cash</b></td><td><b>5,334 (27% of turnover; 95 days)</b></td><td>4,887 (28%; 97 days)</td></tr></table>
+        <div class="chartcap">Finance cost, standalone FY26 ₹645 Cr: loan interest ~₹220 Cr, interest on mobilisation advances ~₹154 Cr (about 60% of advances bear ~9.1%), BG/LC commissions ~₹162 Cr; ₹163 Cr in Q1 FY27 (ICICI). Roughly two-thirds of the finance cost is not bank-loan interest.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Theme 2 — Net Debt More Than Doubled on Smart Meters</div>
+        <table class="t fit"><tr><th>Consolidated debt (₹ Cr)</th><th>Gross</th><th>Net</th></tr><tr><td>30 Jun 2025</td><td>1,986</td><td>1,574</td></tr><tr><td>31 Mar 2026</td><td>3,457</td><td>2,815</td></tr><tr><td><b>30 Jun 2026</b></td><td><b>4,020</b></td><td><b>3,513</b></td></tr><tr><td>Standalone 30 Jun 2026</td><td>2,410</td><td>2,008</td></tr></table>
+        <div class="chartcap">Source: Q1 FY27 call. About ₹1,350 Cr of the rise is smart-meter SPV debt (cumulative ₹1,461 Cr). Net debt up from ₹1,574 Cr to ₹3,513 Cr = +123% (my arithmetic). CARE: total debt/PBILDT 4.90x FY26 (2.98x FY25), 3.87x Q1 FY27; interest cover 2.24x FY26, 2.71x Q1 FY27. Management expects standalone debt roughly flat by Mar-27, subject to collections.</div>
+        <p style="font-size:11.2px;margin-top:8px"><b>Smart meters:</b> three SPVs, ₹5,011 Cr, target IRR 18%; they contributed ₹1,267 Cr (~6%) of FY26 revenue; ~₹460 Cr of equity invested by Mar-26 (CARE: ₹565 Cr committed); management says no more equity is needed. Strategic partners did not come, so NCC funds it fully. <b>Letters of comfort</b> to SBI of ₹1,514.27 Cr (Ray) and ₹1,040.00 Cr (Marathwada) appear in the annual report: a letter of comfort is not a corporate guarantee, but the amounts are large. FY26 revenue booked from the SPVs: ₹530.42 Cr (Ray), ₹483.49 Cr (Marathwada).</p>
+        <div class="microhead">Theme 3 — The Unknowns: NHAI Debarment and the Reported Pledge</div>
+        <p style="font-size:11.2px"><b>NHAI:</b> debarment from NHAI tenders for two years (from 17 Feb 2026) was held in abeyance by the Delhi HC to 10 Mar 2026 and suspended on an interim basis by the Telangana HC on 26 Feb 2026; the stock fell ~10% to ~₹135 on 19 Feb. <b>The status since then was not found.</b> NCC says no impact on the existing book; CARE notes NCC exploring road HAM bids.</p>
+        <p style="font-size:11.2px;margin-top:6px"><b>Pledge — three accounts that do not agree:</b> (1) NCC’s 3 Apr 2026 declaration says no promoter shares were encumbered at 31 Mar 2026 (ScanX/DSIJ); (2) Whalesbook and ScanX report Sirisha Projects pledged 55 lakh shares (0.88% of equity) to Bajaj Finance on ~15–16 Jun 2026 under SAST Reg 31 — I did not see the filing; (3) Trendlyne text says ‘pledges of 3.80% of holdings’ (unconfirmed). <b>UNVERIFIED — check the NSE/BSE filing.</b></p>
+      </div>
+    </div>
+    <div class="notebox "><b>Source-quality note:</b> primary reads: the Integrated Annual Report FY26 (NSE, 27 Jul 2026), the CARE Ratings release of 27 Aug 2026 and the India Ratings release of 8 Sep 2025 (both read in full). Secondary: ICICI Direct Q1 FY27 note (10 Aug 2026), the AlphaStreet Q1 FY27 call transcript, Screener (10 Oct 2026). News items — the pledge, AGM vote results, NHAI status and Q2 FY27 order tallies — came from secondary outlets and <b>must be checked against exchange filings</b>. Items I computed are marked ‘my arithmetic’.</div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border:3px solid #e67e22">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#e67e22;font-size:16px">⚠ Does the 9 Oct volume spike mark a low — or a pause?</div>
+        <p style="font-size:11.3px;margin-top:5px">Volume of 17.92M shares (+437% vs average) came with a +4.28% bounce from ₹119.93. <b>Why: NOT FOUND</b> — no announcement, order, block/bulk deal, result or broker call dated 9 Oct was found; a similar 1.06 Cr-share day on 29 Sep had no news either. ‘Capitulation bounce’ is a hypothesis only. Check the NSE/BSE bulk and block report. Q2 FY27 results are not yet dated (Q1 was 6 Aug; early-to-mid Nov is my inference).</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fdeef0);border-top:3px solid #c62828">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#c62828">DEPRESSED <span style="font-size:12px;color:#5a6475;font-weight:600">value-screen friendly</span></div>
+        <p style="font-size:11.3px;margin-top:5px">MarketSmith Master Score D (38), EPS 56, Price Strength 20, Group Rank 128 of 197; the stock lost 43% in calendar 2025 and is ~42% off its 52-week high. Every broker target is stale against ₹125: Prabhudas Lilladher Buy ₹195 (8 Aug), ICICI Hold ₹165 (10 Aug); MarketsMOJO quant Sell. Supports: Graham screen 84%, P/E ~11, P/B ~1.0, 18.32 Cr shares held by funds (+2.33%).</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fdeef0);border-top:3px solid #c62828">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#c62828">BEARISH TREND → OVERSOLD EXTREME</div>
+        <p style="font-size:11.3px;margin-top:5px">Daily Trend Momentum gauges −4 / −3, 1H −1 / +1, price below all key moving averages, RSI 10.5 at the ₹119.0 low. The labelled count has the ₹119 area as a candidate wave-2 low at the 61.8% C-vs-A target (₹121.98) — early and unconfirmed. First hurdles ₹130 (1D) and ₹139 (1H).</p>
+      </div>
+    </div>
+    <div class="notebox "><b>Framing note:</b> This is a depressed, low-multiple stock in a downtrend that has just printed an extreme oversold reading on heavy volume, not a confirmed reversal. The bull case (cheap on P/E, P/B and EV/EBITDA, ~3.9x order cover, Q1 execution beat) and the bear case (cash conversion, rising net debt, guidance cut, unknown NHAI status, reported pledge, FII exit from 27% to 10%) are both live; the August results rally has fully reversed (stock ~−15% since 7 Aug).</div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">₹ lakh Cr</text><rect x="54.0" y="41.0" width="56.0" height="105.0" fill="#1a2a4a" rx="2"/><text x="82.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">12.20</text><text x="82.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Central capex</text><rect x="138.0" y="71.2" width="56.0" height="74.8" fill="#2a9d8f" rx="2"/><text x="166.0" y="67.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">8.69</text><text x="166.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">JJM 2.0 outlay</text><rect x="222.0" y="140.2" width="56.0" height="5.8" fill="#2a9d8f" rx="2"/><text x="250.0" y="136.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">0.68</text><text x="250.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">JJM FY27 BE</text><rect x="306.0" y="144.0" width="56.0" height="2.0" fill="#8fa3c4" rx="2"/><text x="334.0" y="140.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">0.17</text><text x="334.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">JJM FY26 RE</text></svg>
+        <div class="chartcap">Union Budget FY27 gross central capex ₹12.2 lakh Cr (+~11.5% over FY26 RE; Jefferies via Asianet — a Deccan Chronicle live blog says ₹12.02 lakh Cr, conflict; Budget documents not checked). About 40% of the increase is 50-year interest-free capex loans to states (₹2.0 trn BE vs ₹1.5 trn RE). Central capex +18% YoY Apr–Aug 2026 vs 14% budgeted, but −30% YoY in August alone. <b>JJM:</b> FY27 allocation ₹67,670 Cr (PRS; one source ₹67,300 Cr); FY26 RE was cut to ₹16,944 Cr from ₹66,770 Cr BE, with no funds released to states in FY26 per PRS; ~₹50,000 Cr unspent (Down To Earth); JJM extended to Dec 2028 as JJM 2.0 (₹8.69 lakh Cr outlay, ₹3.59 lakh Cr central share; Cabinet, Mar 2026). India Ratings (27 Aug 2026) says JJM receivables ‘remain elusive’. Bars mix FY27 and FY26 bases and different scopes.</div>
+        <div class="microhead">Listed Infra Order Inflow (₹ bn)</div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">₹ bn</text><rect x="68.0" y="41.0" width="56.0" height="105.0" fill="#8fa3c4" rx="2"/><text x="96.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">747</text><text x="96.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Q2 FY26</text><rect x="180.0" y="65.6" width="56.0" height="80.4" fill="#1a2a4a" rx="2"/><text x="208.0" y="61.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">572</text><text x="208.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Q1 FY27</text><rect x="292.0" y="114.9" width="56.0" height="31.1" fill="#c62828" rx="2"/><text x="320.0" y="110.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">221</text><text x="320.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Q2 FY27*</text></svg>
+        <div class="chartcap">Prabhudas Lilladher (6 Oct 2026): infra-universe inflow ~₹221 bn in Q2 FY27 (*estimate) vs ₹747 bn a year earlier and ₹572 bn in Q1; road EPC inflow ~₹31 bn vs ₹111 bn. ICRA expects 9,000–9,500 km of road construction in FY27. India Ratings, Q1 FY27 sector: revenue +2% YoY (ninth straight single-digit quarter), order book +18%, order cover 3.1x vs 2.7x, EBITDA margin 9.5% (multi-quarter low), CFO/EBITDA ~30% in FY25–26 vs 55–65% to FY24, interest cover 2.9x vs 3.2x. Buildings revenue +15% YoY (low base); private share of the buildings book 40% vs 27% at Q4 FY26; T&amp;D revenue +7% with a &gt;₹2 trn tender pipeline. <b>Macro:</b> RBI raised the repo rate 25 bps to 5.50% on 7 Oct 2026 (first hike since Feb 2023; ‘calibrated tightening’; verify against the RBI release; next MPC 2–4 Dec). <b>Steel (Sept 2026):</b> 10 mm TMT ₹65,298/t (+12.6% MoM, +21% YoY), HR coil ₹76,085/t (+8% MoM, +26.8% YoY) — a margin risk on fixed-price contracts. <b>Not found:</b> state capex FY27, data-centre and mining demand, cement/bitumen prices, a clean one-year sector relative return (index figures conflict across dates — Nifty Infra −1.5% 1Y at 12 Jun; Nippon fact sheet 30 Jun 2026 Nifty Infra TRI +0.70% vs Nifty 50 TRI −5.42%; ICICI Pru Nifty Infra ETF −1.42% at 18 Sep — never combined).</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 4 Qtrs</h2></div>
+        <table class="t"><tr><th>Category</th><th>Dec'25</th><th>Mar'26</th><th>Jun'26</th><th>Sep'26*</th><th>Δ (3 qtrs)</th></tr><tr><td>Promoters</td><td>22.25%</td><td>22.81%</td><td>23.09%</td><td><b>23.19%</b></td><td class="pos">▲ 0.94pp</td></tr><tr><td>FIIs</td><td>11.49%</td><td>12.11%</td><td>11.29%</td><td><b>10.44%</b></td><td class="neg">▼ 1.05pp</td></tr><tr><td>DIIs</td><td>15.30%</td><td>16.40%</td><td>17.88%</td><td><b>18.17%</b></td><td class="pos">▲ 2.87pp</td></tr><tr><td>Public / others</td><td>50.96%</td><td>48.68%</td><td>47.75%</td><td><b>48.20%</b></td><td class="neg">▼ 2.76pp</td></tr><tr><td>Mutual funds (MarketSmith)</td><td>13.24%</td><td>14.30%</td><td>14.13%</td><td>14.38%</td><td class="pos">▲ 1.14pp</td></tr></table>
+        <div class="chartcap">Source: Screener. *The Sep'26 column is labelled that way by Screener and MarketSmith, but the Sep-2026 shareholding pattern is normally filed by ~21 Oct 2026 — the label looks early; verify. FIIs were 27.33% in Mar 2024 (→ 10.44%); DIIs 10.63% → 18.17%. Annual report, 31 Mar 2026: FPI 12.11%, mutual funds 15.92% (Trendlyne 14.30% — conflict; MarketSmith MF 14.30/14.13/14.38), banks/insurance 0.48%, public 44.47%, bodies corporate 2.61%. Promoter group 22.81% (Mar-26), 23.09% (Jun-26; MarketSmith 23.08%), 23.19% (Sep-26*). <b>Pledge:</b> reported but UNVERIFIED — see §03 and §10.</div>
+        <div class="microhead">Major Holders (MarketSmith, Sep-26*)</div>
+        <table class="peer"><tr><th>Holder</th><th>Stake</th></tr><tr><td>AVSR Holdings Pvt Ltd (promoter)</td><td>11.06%</td></tr><tr><td>Rekha Jhunjhunwala</td><td>10.63%</td></tr><tr><td>ICICI Prudential Smallcap Fund</td><td>5.80%</td></tr><tr><td>Quant Mutual Fund Multi Cap</td><td>4.99%</td></tr><tr><td>Sirisha Projects Pvt Ltd (promoter)</td><td>4.03%</td></tr><tr><td>Tata AIA Life Pension Equity</td><td>2.30%</td></tr></table>
+        <div class="chartcap">Sirisha Projects is 3.66% in the annual report’s promoter table but 4.03% in MarketSmith — different dates or definitions. U. Sunil 1.12% (annual report). A S N Raju sold 4.36 lakh shares (0.07%) in FY26; DSIJ reports promoter entity ‘Srihas Projects’ bought 2,17,236 shares on 5 Jun 2026 at ~₹149.20 (~₹3.24 Cr), likely a naming difference for Sirisha. Director Utpal Sheth holds 12.74 lakh shares (0.2%).</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+        <table class="peer"><tr><th>Return</th><th>Source</th><th>Value</th></tr>
+<tr><td>1 year</td><td>Screener</td><td class="neg">≈ −41%</td></tr>
+<tr><td>Calendar 2025</td><td>Press</td><td class="neg">−43%</td></tr>
+<tr><td>3 years (CAGR)</td><td>Screener</td><td class="neg">−7%</td></tr>
+<tr><td>5 years (CAGR)</td><td>Screener</td><td class="pos">+8%</td></tr>
+<tr><td>10 years (CAGR)</td><td>Screener</td><td class="pos">+4%</td></tr>
+<tr><td>Since 7 Aug (₹146.34)</td><td>My arithmetic</td><td class="neg">−14.5%</td></tr></table>
+        <div class="chartcap">Different vendors and dates; not averaged. No clean sector-relative return exists in the sources (§05). Sensex fell 3.20% in the week to 2 Oct.</div>
+        <div class="krow"><span class="klab">52-Wk High</span><span class="kval">₹217<small>Screener; ICICI Direct (10 Aug) shows ₹225, Value Research (to 21 Jun) ₹236.89 — conflict, all shown. Price is ~42% below ₹217 (MarketSmith OH −42.43%)</small></span></div>
+        <div class="krow"><span class="klab">52-Wk Low</span><span class="kval">₹119<small>Screener (₹119.93 close on 8 Oct; ₹119.0 intraday per the user’s chart); ICICI Direct shows ₹130. Price is ~5% above (MarketSmith OL +5.08%)</small></span></div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Path:</b> 17–19 Feb ~₹136 (−9–10% on the NHAI debarment) → ₹130.00 (30 Mar) → ₹163.84 (30 Apr) → ₹130–236.89 range at 21 Jun (mcap ~₹9,782 Cr) → ~₹146.34 (7 Aug, +1.8% on Q1) → ₹147.10 (1 Sep) → ~₹150.67 (Trendlyne, Sep, date unclear) → 28 Sep low ~₹130 → 29 Sep new low ₹128.25 or ₹129.20 (MarketsMOJO inconsistent) → 1 Oct ₹130.10 vs ₹128.88 (ICICI Direct) → 7–8 Oct new lows ₹125.75 / ₹125.6 → ₹119.93 close (8 Oct) → <b>₹125.06 (9 Oct, +4.28%; opened ₹125.00, a 3.18% gap-up; high ₹127.74)</b>. Down ~24% from 30 Apr (my arithmetic).</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — YoY &amp; QoQ (₹ Crore, Consolidated)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">★ Latest Quarter — Q1 FY27 (Jun'26) · Q2 FY27 (Sep'26) not yet reported</div><div style="border:2px solid #e07c00;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#fff6e8,#fffdf6 60%,#fff8ec);flex:1">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹5,812 Cr</div><div style="font-size:10.5px;color:#5a6475">Sales (Screener) <b class="pos">+12% YoY</b> · −7% QoQ · call ₹5,842 Cr</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹545 Cr</div><div style="font-size:10.5px;color:#5a6475">Op. profit vs ₹456 Cr <b class="pos">+19.5%</b> · company EBITDA ₹545.12 Cr</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">9.38%</div><div style="font-size:10.5px;color:#5a6475">EBITDA margin (call) vs 8.81% a year ago</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹229 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT (Screener, before minorities) vs ₹205 Cr <b class="pos">+12%</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹216.40 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT attributable (call) vs ₹192.14 Cr · Sahi ₹220 Cr</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹3.45</div><div style="font-size:10.5px;color:#5a6475">EPS (Screener / MarketSmith) vs ₹3.06</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#8a6d1f;margin-top:8px">PBT ₹312 Cr (call: ₹311.64 Cr before exceptional items vs ₹268.36 Cr, +16%); interest ₹198 Cr. The ₹30 Cr gap between ₹5,842 Cr and ₹5,812 Cr is probably other income (unverified). Standalone Q1: turnover ₹4,952 Cr (+12%) (ICICI/CARE say ₹4,912 Cr — unresolved), EBITDA ₹442.45 Cr (9.01%), PAT ₹187.31 Cr, EPS ₹2.98. Screener shows Dec-25 other income as ₹0 and Q2 FY26 sales ₹4,543 Cr vs ₹4,585 Cr in the company chart — anomalies noted.</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch"><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM Sales</div><div class="val ">₹21,456 Cr</div><div class="note">Screener; MarketSmith ₹21,455.84 Cr (consistent)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val ">~10.9x</div><div class="note">Screener 10.9 · MarketSmith 11 · mcap ÷ TTM profit 10.5 (my arithmetic) · TTM EPS ₹11.14</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Forward P/E</div><div class="val ">~7.9x–12.0x</div><div class="note">₹125 ÷ MarketSmith FY27e ₹15.87 = 7.9x (looks aggressive) · ÷ ICICI FY27E ₹10.4 (standalone) = 12.0x · ÷ ICICI FY28E ₹13.9 = 9.0x</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val ">1.00x</div><div class="note">Screener (BV ₹125); MarketSmith book value 1x</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE / ROCE</div><div class="val ">9.19% / 16.8%</div><div class="note">Screener; MarketSmith ROE 9% / 8%; ICICI FY26 standalone ROCE est. 14.6%</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Dividend Yield</div><div class="val ">1.76%</div><div class="note">₹2.20 FY26 final ÷ ₹125 (MarketSmith 1.76%)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">EV / EBITDA</div><div class="val ">~5.9x</div><div class="note">(₹7,852 Cr + net debt ₹3,513 Cr at 30 Jun 2026) ÷ TTM EBITDA ₹1,925 Cr (my arithmetic); ICICI FY27E 6.0x</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Debt / Equity</div><div class="val ">0.44x</div><div class="note">Consolidated borrowings ₹3,457 Cr ÷ equity ₹7,869 Cr, Mar-26 (my arithmetic); MarketSmith 19%; CARE gearing 0.88x Q1; ICICI standalone 0.31x</div></div></div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — FY22–FY26 + TTM (Screener, consolidated)</div>
+        <table class="t fit"><tr><th>Year</th><th>Sales</th><th>Op Profit</th><th>OPM%</th><th>PBT</th><th>Net Profit</th><th>EPS (₹)</th></tr><tr><td>FY22</td><td>11,138</td><td>1,028</td><td>9%</td><td>635</td><td>494</td><td>7.91</td></tr><tr><td>FY23</td><td>15,553</td><td>1,459</td><td>9%</td><td>885</td><td>646</td><td>9.70</td></tr><tr><td>FY24</td><td>20,845</td><td>1,769</td><td>8%</td><td>1,061</td><td>740</td><td>11.32</td></tr><tr><td>FY25</td><td>22,199</td><td>1,918</td><td>9%</td><td>1,187</td><td>868</td><td>13.06</td></tr><tr><td><b>FY26</b></td><td>20,823</td><td>1,836</td><td>9%</td><td>952</td><td>724</td><td>10.76</td></tr><tr><td><b>TTM</b></td><td>21,456</td><td>1,925</td><td>9%</td><td>995</td><td>748</td><td>11.14</td></tr></table>
+        <div class="chartcap">Interest 478/515/595/680/745/780 and depreciation 187/203/212/216/235/249 (FY22–FY26, TTM). Payout 25/23/19/17/20%. Screener’s net profit is <b>before minority interests</b>: FY26 attributable profit was ₹675.32 Cr (−17.4% from ₹819.88 Cr, Whalesbook) vs ₹724 Cr here (−16.6% from ₹868 Cr). FY26 vs FY25: sales −6.2%, operating profit −4.3%, EPS −17.6% (my arithmetic). Company-reported FY26: revenue ₹20,823.00 Cr, EBITDA ₹1,836.08 Cr (8.82%), PAT ₹723.96 Cr, EPS ₹10.76 (multibagg, 17 May 2026); Whalesbook turnover ₹20,944.40 Cr. <b>Standalone FY26:</b> revenue ₹17,463.49 Cr (−9%), EBITDA ₹1,448.34 Cr (8.29%), PAT ₹576.76 Cr, EPS ₹9.19 (ICICI’s own table shows ₹12.1 in one FY26 column — mislabelled). MarketSmith’s annual EPS differs for FY23 (9.77 vs Screener 9.70).</div>
+        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 9 Quarters</div>
+        <table class="t fit"><tr><th>Quarter</th><th>Sales</th><th>Op Profit</th><th>OPM%</th><th>Net Profit</th><th>EPS (₹)</th></tr><tr><td>Jun-24</td><td>5,528</td><td>478</td><td>9%</td><td>223</td><td>3.34</td></tr><tr><td>Sep-24</td><td>5,196</td><td>443</td><td>9%</td><td>175</td><td>2.60</td></tr><tr><td>Dec-24</td><td>5,345</td><td>441</td><td>8%</td><td>206</td><td>3.08</td></tr><tr><td>Mar-25</td><td>6,131</td><td>555</td><td>9%</td><td>265</td><td>4.04</td></tr><tr><td>Jun-25</td><td>5,179</td><td>456</td><td>9%</td><td>205</td><td>3.06</td></tr><tr><td>Sep-25</td><td>4,543</td><td>393</td><td>9%</td><td>167</td><td>2.46</td></tr><tr><td>Dec-25</td><td>4,868</td><td>436</td><td>9%</td><td>135</td><td>1.95</td></tr><tr><td>Mar-26</td><td>6,233</td><td>550</td><td>9%</td><td>217</td><td>3.28</td></tr><tr><td><b>Jun-26</b></td><td>5,812</td><td>545</td><td>9%</td><td>229</td><td>3.45</td></tr></table>
+        <div class="chartcap">Interest ₹155/167/166/193/164/172/196/213/198 Cr and PBT ₹300/250/270/367/268/209/182/294/312 Cr in the same order. Trailing four quarters: sales ₹21,456 Cr, profit ₹748 Cr, EPS ₹11.14 (all tie to the TTM column).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Sales (₹ Cr) — FY22–FY26 + TTM</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">₹ Cr</text><rect x="48.4" y="93.3" width="39.2" height="52.7" fill="#1a2a4a" rx="2"/><text x="68.0" y="89.3" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">11,138</text><text x="68.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="104.4" y="72.4" width="39.2" height="73.6" fill="#1a2a4a" rx="2"/><text x="124.0" y="68.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">15,553</text><text x="124.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="160.4" y="47.4" width="39.2" height="98.6" fill="#1a2a4a" rx="2"/><text x="180.0" y="43.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">20,845</text><text x="180.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="216.4" y="41.0" width="39.2" height="105.0" fill="#1a2a4a" rx="2"/><text x="236.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">22,199</text><text x="236.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="272.4" y="47.5" width="39.2" height="98.5" fill="#1a2a4a" rx="2"/><text x="292.0" y="43.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">20,823</text><text x="292.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="328.4" y="44.5" width="39.2" height="101.5" fill="#5b7bb5" rx="2"/><text x="348.0" y="40.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">21,456</text><text x="348.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="microhead" style="margin-top:9px">Operating Profit (navy) &amp; Net Profit (green) — ₹ Cr</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">₹ Cr</text><rect x="53.4" y="89.9" width="28.6" height="56.1" fill="#1a2a4a" rx="2"/><text x="67.7" y="85.9" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,028</text><rect x="85.0" y="119.1" width="28.6" height="26.9" fill="#2e7d32" rx="2"/><text x="99.3" y="115.1" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">494</text><text x="83.5" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="142.7" y="66.4" width="28.6" height="79.6" fill="#1a2a4a" rx="2"/><text x="157.0" y="62.4" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,459</text><rect x="174.3" y="110.8" width="28.6" height="35.2" fill="#2e7d32" rx="2"/><text x="188.6" y="106.8" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">646</text><text x="172.8" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="232.1" y="49.5" width="28.6" height="96.5" fill="#1a2a4a" rx="2"/><text x="246.4" y="45.5" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,769</text><rect x="263.7" y="105.6" width="28.6" height="40.4" fill="#2e7d32" rx="2"/><text x="277.9" y="101.6" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">740</text><text x="262.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="321.4" y="41.4" width="28.6" height="104.6" fill="#1a2a4a" rx="2"/><text x="335.7" y="37.4" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,918</text><rect x="353.0" y="98.7" width="28.6" height="47.3" fill="#2e7d32" rx="2"/><text x="367.3" y="94.7" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">868</text><text x="351.5" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="410.7" y="45.9" width="28.6" height="100.1" fill="#1a2a4a" rx="2"/><text x="425.0" y="41.9" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,836</text><rect x="442.3" y="106.5" width="28.6" height="39.5" fill="#2e7d32" rx="2"/><text x="456.6" y="102.5" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">724</text><text x="440.8" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="500.1" y="41.0" width="28.6" height="105.0" fill="#1a2a4a" rx="2"/><text x="514.4" y="37.0" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,925</text><rect x="531.7" y="105.2" width="28.6" height="40.8" fill="#2e7d32" rx="2"/><text x="545.9" y="101.2" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">748</text><text x="530.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="chartcap" style="text-align:center">▬ <b style='color:#1a2a4a'>Operating Profit</b> &nbsp;&nbsp; ▬ <b style='color:#2e7d32'>Net Profit</b></div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1"><div class="notebox green"><b>★ Margin and growth read (my arithmetic):</b> operating margin has held at 8–9% for five years while revenue went from ₹11,138 Cr (FY22) to ₹22,199 Cr (FY25) and then fell 6% in FY26. Interest cost has risen every year (₹478 Cr → ₹780 Cr TTM) and absorbed the gains: interest cover (PBT + interest) ÷ interest is ~2.3x on TTM numbers, consistent with CARE’s 2.24x for FY26. Net profit fell 17% in FY26 on lower sales, higher interest and ₹54.65 Cr of exceptional items. The Q4 quarter is the largest each year (Mar-26 ₹6,233 Cr, 30% of FY26).</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>★ Conflicts:</b> MarketSmith market cap ₹7,851.85 Cr ÷ ₹125.06 implies ~62.8 Cr shares (equity capital ₹126 Cr at face value ₹2) — consistent. P/E: Screener 10.9 vs my mcap ÷ TTM total profit 10.5 — the gap is the minority-interest effect, since attributable profit is lower than the Screener figure. Annual revenue growth is shown as −6% by MarketSmith (‘needs improvement’), pre-tax margin 5% (‘okay’), D/E 19%. MarketSmith EPS growth rate 16%, Earnings Stability 17, 5-year P/E range 7–28, cash flow −7.30. The annual EPS table shows FY27e ₹15.87 (+47.49%) and FY28e ₹14.38 — an estimate that falls in FY28 and who made it is unknown.</div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff6e8;border-color:#e07c00">
+        <div class="plab">P/CFO &nbsp;·&nbsp; Market Cap ÷ Operating Cash Flow <span class="badge b-warn">NOT COMPUTED (negative FY26)</span></div>
+        <div class="pval" style="font-size:22px">FY26 operating cash flow −₹459 Cr</div>
+        <p style="font-size:11.3px;margin-top:6px">Screener consolidated cash flow FY25 / FY26: operating +742 / −459; investing −59 / −766; financing −247 / +878; free cash flow +477 / −1,401. A P/CFO on FY26 is meaningless (negative); on FY25 it would be 7,852 ÷ 742 = 10.6x (my arithmetic, a stale year). TTM cash flow: not found. Standalone operating cash flow is a conflict: ₹201 Cr (ICICI Direct) vs company ‘cash from operations’ ₹883 Cr — unresolved. ICICI standalone capex −302 / −901 (FY25 / FY26). CARE adds that FY26 gross current asset days rose to 378 from 297 and total debt/PBILDT to 4.90x from 2.98x.</p>
+        <p style="font-size:11.3px;margin-top:6px"><b>Working-capital days:</b> Screener FY26 81 (FY25 48); India Ratings FY25 80 (FY24 41); company 119 at Q3 FY26 and 97 at Q4 (multibagg) — three bases, not reconciled. Cash from the JJM release cycle drives the swing.</p>
+      </div>
+      <div class="panel" style="background:#eef7ee;border-color:#2e7d32">
+        <div class="plab">P/B &amp; Return Ratios <span class="badge b-bull">Cheap vs book; weak returns</span></div>
+        <div class="pval" style="font-size:26px">1.00x <span style="font-size:13px;font-weight:600;color:#5a6475">(ROE 9.19% · ROCE 16.8%)</span></div>
+        <p style="font-size:11.3px;margin-top:6px">Price equals book value (₹125) on a ~9% ROE: the market is paying nothing for the order book or franchise. ROCE 16.8% (Screener) vs ICICI’s FY26 standalone estimate of 14.6% — definitions differ. MarketSmith ROE 9% in the summary and 8% in the narrative (‘fair but needs improvement’).</p>
+        <p style="font-size:11.3px;margin-top:6px"><b>Leverage, four bases that differ:</b> consolidated borrowings ₹3,457 Cr (Mar-26) → gross ₹4,020 Cr / net ₹3,513 Cr at 30 Jun 2026; standalone gross ₹2,410 Cr, net ₹2,008 Cr, D/E 0.31x (0.30x Mar); CARE gearing 0.88x at Q1 FY27; India Ratings FY25 net leverage 0.4x (‘&lt;1x’); MarketSmith D/E 19%. These use different perimeters (SPV debt, adjusted debt) and dates, not a contradiction to resolve here. CARE: TOL/TNW 2.02x (1.67x). India Ratings FY25: interest cover 2.7x, TOL/EBITDA 7.1x; FY26 interest cover 2.24x (CARE) vs the 2.7–3.0x India Ratings expected — a conflict.</p>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1"><div class="notebox "><b>Balance sheet (₹ Cr, FY22 → FY26, consolidated, Screener):</b> borrowings 1,302 / 974 / 980 / 1,594 / 3,457; reserves 5,481 / 6,041 / 6,514 / 7,198 / 7,743; other liabilities 7,553 / 9,409 / 10,475 / 12,083 / 14,639; equity capital ₹126 Cr (face value ₹2; 62.78 Cr shares). Borrowings more than doubled in FY26 (+117%, my arithmetic). Equity at ₹7,869 Cr is ~100% of the market cap.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>Capex and dividends:</b> FY27 capex guided at ₹500 Cr (₹170 Cr spent in Q1). Dividend: FY26 final ₹2.20 per share (110%) recommended 15 May 2026, record date 14 Aug, approved 100% at the 36th AGM on 27 Aug 2026 (vote per a secondary source). Cash cost ~₹138 Cr, about 24% of standalone PAT (my arithmetic). FY25 per-share dividend: not found. No numeric payout policy found. Capital raises: none found (no GDRs, warrants, convertibles, preferential issue or QIP in FY26).</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
+<div class="tiles">
+  <div class="tile"><div class="lab">Promoter Pay vs Profit</div><div class="val warn">₹25.17 Cr</div><div class="note">Five promoter executives’ total pay, incl. MD commission ₹7.13 Cr — ≈4.4% of FY26 standalone PAT (my arithmetic). MD pay is 148x median employee pay; A G K Raju / A S N Raju / A V N Raju ~75x; J V Ranga Raju 36x. KMP short-term benefits ₹32.88 Cr (FY25 ₹40.10 Cr); independents ₹30–38 lakh each; the annual report shows no pay rise for KMP or employees in FY26.</div></div>
+  <div class="tile"><div class="lab">Independent Directors</div><div class="val warn" style="font-size:15px">5 of 11 (~45%)</div><div class="note">Board at 31 Mar 2026: 5 executive promoters, 1 non-executive non-independent (Utpal Sheth), 5 independent. CARE says ‘50% independent’ — <b>conflict</b> (5 of 11 is ~45%).</div></div>
+  <div class="tile"><div class="lab">Managing Director</div><div class="val " style="font-size:15px">A A V Ranga Raju</div><div class="note">Three-plus decades with the group; MD pay ₹9.11 Cr (annual report note). No separately titled CEO. CFO Sanjay Pusarla. A V N Raju reappointed 30 May 2026–29 May 2031 (99.68% in favour).</div></div>
+  <div class="tile"><div class="lab">Implied Tax Paid % of PBT</div><div class="val " style="font-size:15px">~24% (FY26)</div><div class="note">(PBT − net profit) ÷ PBT, Screener consolidated, my arithmetic: FY22 22.2%, FY23 27.0%, FY24 30.3%, FY25 26.9%, FY26 23.9%, TTM 24.8%. Net profit is before minorities and PBT may include exceptional items; no tax red flag identified, none verified.</div></div>
+</div>
+<div class="cols" style="margin-top:10px">
+  <div style="flex:1">
+    <div class="microhead">Board &amp; Key Management</div>
+    <p style="font-size:11.3px">Executive/whole-time directors, all promoters: A A V Ranga Raju (MD), A G K Raju (ED), A S N Raju, J V Ranga Raju, A V N Raju. Smt Kausalya Bhupathi Raju joins as Director (Commercial) from 1 Sep 2026. <b>Chair:</b> Dr A S Durga Prasad’s term ended 23 May 2026 and Rajender Mohan Malla became independent Chairman from 24 May 2026; the annual report cover and Directors’ Report (signed 15 May 2026) still name Durga Prasad, and MarketSmith lists <b>both</b> as ‘Chairman &amp; Ind.Director’ — a timing explanation, not a real conflict. Malla holds ~10 other directorships incl. Religare Enterprises per the annual report table (not investigated). Other independents: Smt Uma Shankar (woman director), Ramesh Kailasam, Sumit Banerjee (1 Jan 2026–31 Dec 2030, postal ballot 27 Jan 2026). Utpal Sheth is ex-CEO of Rare Enterprises. <b>Churn:</b> Company Secretary Sisir K Mishra resigned 6 Apr 2026 and A Karthik was appointed 15 May 2026; K Krishna Rao (Sr EVP F&amp;A) superannuated 5 Aug 2025; V Radhakrishna (Director, Projects) retired 31 Jan 2026; N Bangar Raju (Sr EVP Commercial) died 15 Feb 2026. A formal succession plan was not found. No independent director resigned before term-end in FY26; three directors left in Sep 2024 (H M Nerurkar, Renu Challu, Om Prakash Jagetiya — apparently term completions; reason not stated).</p>
+    <div class="microhead">Auditor</div>
+    <p style="font-size:11.3px">S R Batliboi &amp; Associates LLP (FRN 101049W/E300004; 32nd–37th AGM, five-year term); fees ₹2.48 Cr consolidated (₹2.34 Cr audit + ₹0.14 Cr certification). Opinion unmodified, standalone and consolidated, with no Emphasis of Matter. <b>One key audit matter:</b> trade receivables and contract assets — standalone ₹3,335.93 Cr and ₹9,552.30 Cr (~56.34% of total assets); consolidated holding company ₹3,975.65 Cr and ₹10,343.11 Cr (~55.06%) — judgement on expected credit loss, litigation and unbilled-revenue measurement. Pachhwara is audited by K. P. Rao &amp; Co; the internal-financial-controls review is by Deloitte Touche Tohmatsu India LLP. The FY26 secretarial compliance report (filed 18 May 2026) reportedly shows zero deviations (ScanX).</p>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Promoter Holding, Pledge &amp; Insider Activity</div>
+    <p style="font-size:11.3px">Promoter group 22.81% (Mar 2026), 23.09% (Jun 2026), 23.19% (Sep 2026 per Screener, label early — filings due by 21 Oct 2026). AVSR Holdings 11.06% (+0.39% of equity in FY26), Sirisha Projects 3.66% per the annual report’s promoter table (+0.31%; MarketSmith lists 4.03%), U. Sunil 1.12%. <b>Pledge CONFLICT — UNVERIFIED:</b> (1) NCC’s 3 Apr 2026 declaration says no promoter shares were encumbered at 31 Mar 2026; (2) Whalesbook and ScanX say Sirisha Projects pledged 55 lakh shares (0.88% of equity) to Bajaj Finance on ~15–16 Jun 2026 (SAST Reg 31) — I did not see the filing; (3) Trendlyne text says ‘pledges of 3.80% of holdings’, unconfirmed. Check the NSE/BSE filing. Separately, 1,23,460,000 (12.35 Cr) subsidiary shares are pledged with SBICAP Trustee for the working-capital consortium (a company-level pledge, not a promoter pledge).</p>
+    <div class="microhead">Related-Party Transactions (annual report notes 35 and 12.1)</div>
+    <p style="font-size:11.3px">Loans to subsidiaries/associates at 31 Mar 2026: NCC Quantum Technologies ₹204.37 Cr (new in FY26; plus ₹185.76 Cr equity), J Kumar-NCC ₹35.70 Cr, NCC Infra Holdings Mauritius ₹25.49 Cr, Nagarjuna Construction Company International LLC (Oman) ₹26.93 Cr, UHPFRC Nagpur LLP ₹21.16 Cr, Savitra ₹2.77 Cr. Dividend income from Pachhwara ₹39.37 Cr and OBIL ₹37.76 Cr. Rent to Sirisha Projects (promoter entity) ₹13.63 Cr and to KMP relatives ₹2.09 Cr; CSR to NCC Foundation ₹3.75 Cr. Restructuring: NCC Infrastructure Holdings amalgamated into NCC w.e.f. 28 Feb 2026 (NCLT order 30 Jan 2026, no shares issued); OB Infrastructure, Savitra Agri Industrial Park and NCC Infra became direct subsidiaries from 1 Mar 2026.</p>
+    <div class="notebox "><b>36th AGM (27 Aug 2026; scrutinizer figures via ScanX, primary Reg 44(3) filing not seen — UNVERIFIED):</b> dividend 100% for; standalone accounts 99.70% for; A G K Raju reappointment 84.49% for / 15.49% against; Utpal Sheth 89.62% / 10.36%; Smt Kausalya Bhupathi Raju’s remuneration 70.06% for / 25.68% against / 4.26% abstained — meaningful dissent on promoter-family pay and reappointments.</div>
+    <div class="notebox blue"><b>Not found (not the same as clean):</b> ASM/GSM status (surveillance lists not checked); SFIO/ED/CBI/income-tax searches (no dedicated search done). The annual report says no penalties or strictures in 3 years, BRSR shows nil fines, CARE reports no penalties on the entity/directors/KMP, whistle-blower complaints nil, insider-trading code in place.</div>
+  </div>
+</div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance — Last 3 Quarters &amp; Credibility Checklist</h2></div>
+<div class="microhead">What Has Been Said — FY27 Guidance (Aug 2026 Call) and Rating-Agency Expectations</div>
+<table class="t"><tr><th>Item</th><th style="text-align:left">Stated</th><th style="text-align:left">Source</th><th>Status</th></tr><tr><td>FY27 order inflow</td><td style="text-align:left">₹22,000–25,000 Cr</td><td style="text-align:left">Q1 FY27 call (AlphaStreet)</td><td><span class="badge b-warn">H1 well short</span></td></tr><tr><td>FY27 revenue growth</td><td style="text-align:left">8–10% (Q1 delivered +12%, above the guide; ICICI called the guide underwhelming)</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-bull">Q1 ahead</span></td></tr><tr><td>FY27 EBITDA margin</td><td style="text-align:left">8.5–9% consolidated (Q1: 9.38%)</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-bull">Q1 ahead</span></td></tr><tr><td>FY27 capex</td><td style="text-align:left">₹500 Cr (₹170 Cr spent in Q1)</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-neut">On plan</span></td></tr><tr><td>Standalone debt</td><td style="text-align:left">Roughly flat by Mar-27, subject to collections</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-warn">Pending</span></td></tr><tr><td>FY28 guidance</td><td style="text-align:left">None given</td><td style="text-align:left">—</td><td><span class="badge b-neut">Not found</span></td></tr><tr><td>CARE expectations</td><td style="text-align:left">PBILDT margin 9–10%; upgrade needs scale + margins with GCA &lt;200 days</td><td style="text-align:left">CARE 27 Aug 2026</td><td><span class="badge b-neut">Agency view</span></td></tr><tr><td>Ind-Ra expectation</td><td style="text-align:left">Margin 8.5–9.5%; negative if TOL/EBITDA &gt;6.0x sustained</td><td style="text-align:left">India Ratings 8 Sep 2025</td><td><span class="badge b-neut">Agency view</span></td></tr></table>
+<div class="chartcap">Q2 FY27 inflow tally: ~₹3,100 Cr and H1 ~₹7,100 Cr from BSE filings compiled in a 6 Oct brokerage preview (not reported numbers; includes ₹1,052.71 Cr July, ₹500.22 Cr Sept, and the ₹1,076.71 Cr Andhra Pradesh Yeleru Reservoir water-supply LoA dated 26 Sep 2026, 24-month timeline). Q1 FY27 inflow ₹3,889 Cr (Free Press Journal ₹3,882 Cr; ₹4,542 Cr including July). H1 is ~29–32% of the ₹22,000–25,000 Cr guide, so H2 needs ₹14,900–17,900 Cr (my arithmetic) — a steep ramp. Other orders: Aug ₹430.19 Cr (buildings), 30 Jun ₹534.85 Cr (transportation), April ₹1,703 Cr. Bidding pipeline ~₹2.5 lakh Cr for FY27. Ken-Betwa: ₹3,390 Cr order with ₹116 Cr executed; local protests reported.</div>
+<div class="microhead" style="margin-top:12px">Guidance Track Record — FY26 Guide vs Actual (FY26 guide per the Q2 call of 7 Nov 2025 via ScanX/Nuvama; transcript not read)</div>
+<table class="t"><tr><th>Item</th><th style="text-align:left">Guided</th><th style="text-align:left">Actual</th><th>Result</th></tr><tr><td>FY26 revenue</td><td style="text-align:left">+10% growth (guidance <b>withdrawn</b> at Q2 FY26: monsoon, approval delays, JJM payment cycle)</td><td style="text-align:left">₹20,823 Cr, −6%</td><td><span class="badge b-bear">Missed (~16 pts)</span></td></tr><tr><td>FY26 EBITDA margin</td><td style="text-align:left">9–9.25%</td><td style="text-align:left">8.82%</td><td><span class="badge b-bear">Missed</span></td></tr><tr><td>FY26 order inflow</td><td style="text-align:left">₹22,000–25,000 Cr</td><td style="text-align:left">₹31,884 Cr (company, 15 May 2026) · ₹26,636 Cr (CARE) · FY25 ₹32,888 Cr</td><td><span class="badge b-bull">Beat</span></td></tr><tr><td>H2 FY26 commentary</td><td style="text-align:left">No qualitative H2 guidance at Q3</td><td style="text-align:left">—</td><td><span class="badge b-warn">Withheld</span></td></tr><tr><td>FY27 guidance timing</td><td style="text-align:left">Withheld in May 2026; issued after Q1 (Aug 2026)</td><td style="text-align:left">—</td><td><span class="badge b-warn">Late</span></td></tr><tr><td>Ind-Ra FY25 revenue estimate</td><td style="text-align:left">+10%</td><td style="text-align:left">+4%</td><td><span class="badge b-bear">Missed</span></td></tr></table>
+<div class="chartcap">Gaps are my arithmetic. A measured miss on revenue and margin, a beat on inflow — and the inflow ‘beat’ is itself sensitive to the definition (three FY26 inflow figures above). FY25 guidance record: not found. Two years do not make a pattern; the FY26 revenue shortfall is the clearest data point.</div>
+<div class="cols" style="margin-top:12px">
+  <div style="flex:1.2">
+    <div class="microhead">Project Commitments — Promised vs Achieved</div>
+    <table class="t"><tr><th>Commitment</th><th style="text-align:left">Outcome found</th><th>✓/✗</th></tr><tr><td>Smart meters: 3 SPVs, ₹5,011 Cr, ~7–8 mn meters</td><td style="text-align:left">~45% installed; ₹1,267 Cr (~6%) of FY26 revenue; ~₹460 Cr equity in vs ₹565 Cr committed; partners never joined</td><td><span class="warn">≈</span></td></tr><tr><td>SPV equity ‘fully infused’ (CARE) / ‘no more equity needed’ (management)</td><td style="text-align:left">Matches CARE’s note; the downgrade trigger is equity above plan or any corporate guarantee</td><td><span class="pos">✓</span></td></tr><tr><td>Collect JJM receivables</td><td style="text-align:left">₹3,700 Cr (Dec-25) → ₹2,771 Cr (Jun-26); ~₹1,500 Cr in Q4 FY26, ₹1,013 Cr Apr–Jul 2026; still 21% of receivables</td><td><span class="warn">≈</span></td></tr><tr><td>FY26 revenue growth of 10%</td><td style="text-align:left">Withdrawn at Q2; actual −6%</td><td><span class="neg">✗</span></td></tr><tr><td>FY26 order inflow ₹22–25k Cr</td><td style="text-align:left">₹31,884 Cr (company) / ₹26,636 Cr (CARE)</td><td><span class="pos">✓</span></td></tr><tr><td>NHAI debarment ‘no impact on existing book’</td><td style="text-align:left">Status after Feb/Mar 2026 not found</td><td><span class="warn">?</span></td></tr><tr><td>BharatNet projects</td><td style="text-align:left">Balance ~₹6,500 Cr per project (as stated); fixed price, so OFC price rises may cut margins</td><td><span class="warn">?</span></td></tr><tr><td>Ken-Betwa ₹3,390 Cr</td><td style="text-align:left">₹116 Cr executed; local protests reported</td><td><span class="warn">?</span></td></tr><tr><td>Strategic partners for smart meters</td><td style="text-align:left">Did not come; NCC funds it fully</td><td><span class="neg">✗</span></td></tr></table>
+    <div class="notebox "><b>Gap:</b> FY28 guidance does not exist; Q2 FY27 inflow is a broker tally; the FY26 Q2 and Q3 call transcripts were not read (guide taken from ScanX/Nuvama and multibagg summaries). Associates: Brindavan Infrastructure (33.33%), Apollonius Coal and Energy (share of associates’ profit ₹8.76 Cr FY26, ₹9.67 Cr FY25). NCC Urban Infrastructure (80%, NCC invested ₹216 Cr): FY26 revenue ₹276 Cr, PAT ₹29 Cr (FY25 ₹267 Cr / ₹45 Cr), Q4 PAT ₹1 Cr, net worth ₹449 Cr, debt ₹124 Cr (company presentation). Pachhwara Coal Mining (51%): FY26 revenue ₹2,711 Cr, PBT ₹107 Cr. Oman/UAE subsidiary losses: amounts not found; Nagarjuna Contracting LLC Dubai ceased operations.</div>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Management-Quality Red-Flag Checklist</div>
+    <table class="t"><tr><th>Warning Sign</th><th>Present?</th></tr><tr><td>FY26 revenue guidance missed, then withdrawn</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Cash flow negative despite profit (FY26 OCF −₹459 Cr)</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Gross current asset days rising (297 → 378)</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Debt up sharply (net debt +123% YoY)</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Auditor key audit matter on receivables / contract assets</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Promoter pledge</td><td><span class="badge b-warn">Reported, UNVERIFIED</span></td></tr><tr><td>Board independence below half (5 of 11)</td><td><span class="badge b-warn">Watch</span></td></tr><tr><td>Recurring exceptional items (₹54.65 Cr FY26; ₹38.63 Cr FY25)</td><td><span class="badge b-warn">Watch</span></td></tr><tr><td>Significant dissent votes at AGM</td><td><span class="badge b-warn">Watch (unverified)</span></td></tr><tr><td>Regulatory penalties / SEBI action (3 yrs)</td><td><span class="badge b-neut">None per annual report</span></td></tr><tr><td>Capital raised at depressed prices</td><td><span class="badge b-neut">None found</span></td></tr></table>
+    <div class="chartcap" style="margin-top:6px">‘Not found’ means the search did not surface it, not that it does not exist.</div>
+  </div>
+</div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">Analysts Covering</span><span class="kval">Many, but stale<small>Sharpely (~8 Jul): 11 analysts, 8 Buy / 2 Hold / 1 Sell, median ₹195 (range ₹160–256); Simply Wall St average ₹243–274 from 12–13 analysts (28 Jul snapshot cut from ₹297 to ₹274). <b>All stale against ₹125</b>; no post-9 Oct broker action found</small></span></div>
+        <div class="krow"><span class="klab">Prabhudas Lilladher</span><span class="kval" style="color:#2e7d32">BUY, target ₹195<small>8 Aug 2026; 15x FY28E; NCC one of two top picks (with PSP) in its 6 Oct sector note</small></span></div>
+        <div class="krow"><span class="klab">ICICI Securities / Direct</span><span class="kval">HOLD, target ₹165<small>10 Aug 2026; cut from ₹180; CMP ₹145 then; ‘guidance below expectations’. Earlier ICICI Direct Buy ₹180 (Feb 2026) — stale. FY27E standalone sales ₹18,946 Cr, EBITDA ₹1,619 Cr, PAT ₹655 Cr, EPS ₹10.4; FY28E ₹21,768 Cr / ₹1,970 Cr / ₹875 Cr / ₹13.9</small></span></div>
+        <div class="krow"><span class="klab">JM Financial / Kotak</span><span class="kval">Buy ₹170 / Neutral ₹158<small>Per Univest, 11 Jun 2026 — stale; Univest June consensus ₹164</small></span></div>
+        <div class="krow"><span class="klab">Trendlyne</span><span class="kval">Buy, mean ~₹196<small>September consensus vs price ₹150.67 then — date unclear</small></span></div>
+        <div class="krow"><span class="klab">TipRanks</span><span class="kval">₹248 (1 analyst)<small>Last price shown ₹202.55 — stale</small></span></div>
+        <div class="krow"><span class="klab">MarketsMOJO</span><span class="kval">SELL (quant, score 47.0)<small>A quant score, not a broker rating</small></span></div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Reading it:</b> targets of ₹158–₹274 sit 26–119% above ₹125 but pre-date the ~15% fall since 7 Aug and the new lows; treat them as history, not a floor. Simply Wall St fair values of ₹123 and ₹191 appear in different snapshots. Bulk/block deals 2025–26: none found (the NSE/BSE reports were not reached).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+        <div class="krow"><span class="klab">Volume — 9 Oct</span><span class="kval">17,923,816<small>+437.37% vs average (MarketSmith, full day); ~89.6 lakh shares by 09:44 IST</small></span></div>
+        <div class="krow"><span class="klab">Why the spike</span><span class="kval" style="color:#c62828">NOT FOUND<small>No announcement, order, block/bulk deal, result or broker call dated 9 Oct was found; MarketsMOJO’s headline (‘exceptional volume surge amid trend reversal’) names no cause; a similar 1.06 Cr-share day on 29 Sep had no news. ‘Capitulation bounce’ is a hypothesis only — check the NSE/BSE bulk-block report</small></span></div>
+        <div class="krow"><span class="klab">Float</span><span class="kval">48.34 Cr shares<small>~77% of ~62.8 Cr shares, consistent with 23.19% promoters (my arithmetic)</small></span></div>
+        <div class="krow"><span class="klab">Funds Holding</span><span class="kval">183<small>−2.66% (MarketSmith)</small></span></div>
+        <div class="krow"><span class="klab">Shares Held by Funds</span><span class="kval">18.32 Cr<small>+2.33% — fewer funds, more shares each; narrative text says institutional holding ‘declined’ — internal conflict kept</small></span></div>
+        <div class="krow"><span class="klab">Institutional Flow</span><span class="kval">FII down, DII up<small>FII 27.33% (Mar 2024) → 10.44%; DII 10.63% → 18.17%</small></span></div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Not found:</b> F&amp;O status, delivery % (29 Sep delivery volume was 15.87% below its 5-day average, MarketsMOJO), ValuePickr/Reddit/X, ScoutQuest/FinQ alerts. Technicals: below all key moving averages (MarketsMOJO); RSI 10.5 and bearish daily gauges (user’s chart); U/D volume ratio 1.1.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">NCC is mapped to the <b>Industrials</b> wedge (capital investment &amp; infrastructure) — a genuine fit. Screener files it under Industrials &gt; Construction &gt; Civil Construction; MarketSmith’s group tag is ‘NSE-Bldg-Heavy Construction’. <b>NSE’s own classification was not found.</b> Earnings follow government and state capex, JJM payment cycles and tender flow — the capital-investment cycle — so the other wedges (Utilities for the water work, Energy for mining) fit only parts of the book. The wheel marks the sector slot only; it is not a view on this stock’s timing.</p>
+<div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; lending growth.</text></g></g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">NCC</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">LIMITED</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to Industrials —</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">EPC &amp; construction</text><path d="M 94.97,-8.00 L 110.97,0.00 L 94.97,8.01 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        <div class="chartcap" style="text-align:center;margin-top:2px">NSE: NCC · BSE: 500294 · mapped: Industrials (Screener: Industrials &gt; Construction &gt; Civil Construction)</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+        <table class="peer"><tr><th>Company</th><th>Mcap ₹ Cr</th><th>P/E (Scr / mcap÷TTM)</th><th>P/B</th><th>ROE %</th><th>ROCE %</th><th>TTM Sales ₹ Cr</th><th>Sales gr. / OPM</th></tr>
+<tr style="background:#eef4fc"><td>★ NCC (₹125)</td><td><b>7,852</b></td><td><b>10.9 (10.5)</b></td><td><b>1.00</b></td><td><b>9.2</b></td><td><b>16.8</b></td><td><b>21,456</b></td><td><b>n/f / 9%</b></td></tr>
+<tr><td>KEC International (₹370)</td><td>9,845</td><td>16.4 (17.8)</td><td>1.60</td><td class="pos">11.4</td><td>16.5</td><td>23,506</td><td>5% / 7%</td></tr>
+<tr><td>Ahluwalia Contracts (₹558)</td><td>3,735</td><td>16.6 (16.6)</td><td>1.81</td><td class="pos">13.8</td><td class="pos">20.4</td><td>4,686</td><td>12% / 8%</td></tr>
+<tr><td>H.G. Infra (₹402)</td><td>2,618</td><td>10.1 (14.1)</td><td>0.80</td><td>8.5</td><td>11.3</td><td>4,853</td><td>−3% / 22%*</td></tr></table>
+        <div class="chartcap" style="margin-top:4px">Screener consolidated, fetched 10 Oct 2026 at the 9 Oct close — one source, one date. P/E is Screener’s stock P/E, with my market cap ÷ TTM total profit in brackets. *H.G. Infra’s Jun-26 quarter EPS was −₹6.93 on sales −25.7%, so its TTM is volatile, and its OPM and P/B are not comparable (HAM accounting). NCC TTM sales growth on a comparable basis: not found.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Why these three:</b> KEC International is the scale/diversified EPC peer (leans T&amp;D); Ahluwalia Contracts is the buildings peer; H.G. Infra is the transport (HAM) peer. Business mix differs for all three. <b>Excluded:</b> PNC Infratech (P/E 5.70, ROE 2.41%, TTM profit ₹732 Cr on mcap ₹3,457 Cr — its Jun-26 EPS of ₹12.94 looks like a one-off gain, so not used); L&amp;T is too large; Afcons, Power Mech, Techno and KNR were not fetched.</div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Reading it:</b> NCC is the cheapest on P/E (10.9 vs 16.4 and 16.6) and cheaper on P/B than KEC and Ahluwalia, but with a lower ROE than both. <b>P/E conflicts unresolved:</b> for KEC (16.4 vs 17.8) and H.G. Infra (10.1 vs 14.1) Screener’s P/E and market cap ÷ TTM total profit disagree — the minority-interest trap; attributable profit was not retrieved. H.G. Infra looks as cheap as NCC on Screener’s P/E but 14.1x on my arithmetic.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+    <table class="t prose"><tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr><tr><td style="text-align:left">Working Capital / Cash Conversion</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">CARE: gross current asset days 297 → 378 (downgrade trigger &gt;320 sustained); receivables + unbilled ₹12,983 Cr (~74% of revenue, ₹11,661 Cr a year earlier); FY26 operating cash flow −₹459 Cr (Screener); unencumbered liquidity ₹402 Cr (30 Jun 2026) vs ₹585 Cr (31 Mar); fund-based utilisation 65% on average. ~60% of the order book had &lt;10% progress (54% at Jun 2025 per India Ratings).</td></tr><tr><td style="text-align:left">Leverage / Smart-Meter Funding</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Net debt ₹3,513 Cr vs ₹1,574 Cr a year earlier; CARE total debt/PBILDT 4.90x FY26 (2.98x), 3.87x Q1 FY27; interest cover 2.24x FY26 (2.71x Q1); TOL/TNW 2.02x (1.67x). Three SPVs: ₹5,011 Cr, promoter equity ₹565 Cr, term debt ₹2,442 Cr; sponsor undertakings, no corporate guarantee per management, but letters of comfort to SBI of ₹1,514.27 Cr and ₹1,040.00 Cr appear in the annual report. CARE downgrade trigger: equity above plan or any corporate guarantee.</td></tr><tr><td style="text-align:left">Government Payments / JJM</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">JJM receivables ₹2,771 Cr (21% of total) at Jun-26 vs ₹3,700 Cr (29%) at Dec-25; JJM FY26 revised estimate was cut to ₹16,944 Cr from ₹66,770 Cr with no funds released to states per PRS; ~₹50,000 Cr unspent; India Ratings says receivables ‘remain elusive’. JJM order book ₹5,881 Cr has no O&amp;M; part of the escalation is sub judice. UP water projects ₹1,043 Cr outstanding.</td></tr><tr><td style="text-align:left">Litigation / NHAI / Disputes</td><td><span class="badge b-warn">Medium–High (status unknown)</span></td><td style="text-align:left">NHAI two-year tender debarment from 17 Feb 2026 — suspended/in abeyance in court as of March; <b>later status not found</b>. NHAI v OBIL claim ₹493.66 Cr vs counter-claim ₹103.09 Cr, provision ₹44.82 Cr; SEIL tribunal award largely against NCC (status not found); Dubai advance ₹233.61 Cr ‘fully recoverable’ per management (unverified); contingent liabilities ₹862.67 Cr consolidated.</td></tr><tr><td style="text-align:left">Governance / Promoter</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Reported Sirisha Projects pledge of 55 lakh shares (0.88%) to Bajaj Finance versus NCC’s 3 Apr 2026 no-encumbrance declaration — <b>UNVERIFIED</b>; board 5 of 11 independent (~45%); AGM dissent on promoter-family pay (25.68% against one remuneration vote, unverified); promoter-entity rent and related-party loans (NCC Quantum Technologies ₹204.37 Cr).</td></tr><tr><td style="text-align:left">Order Inflow / Execution</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">H1 FY27 inflow ~₹7,100 Cr (broker tally) vs ₹22,000–25,000 Cr guided; infra-universe Q2 inflow ~₹221 bn vs ₹747 bn a year earlier; road EPC inflow ~₹31 bn vs ₹111 bn; NHAI tenders closed to NCC if the debarment stands. Ken-Betwa has only ₹116 Cr of ₹3,390 Cr executed, with local protests.</td></tr><tr><td style="text-align:left">Margin / Input Costs / Rates</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Steel TMT +21% YoY and HR coil +26.8% YoY in Sept 2026 on fixed-price work (~81% of contracts carry escalation); CARE downgrade trigger is PBILDT margin &lt;9% sustained (Q1: 9.01% standalone); RBI repo hike to 5.50% on 7 Oct 2026 raises funding cost on ₹4,020 Cr gross debt and mobilisation advances.</td></tr><tr><td style="text-align:left">Technical / Count</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Both daily momentum gauges −4 / −3; price below all key moving averages; the labelled wave-2 low near ₹119 is unconfirmed. A close below ₹113 extends the decline. Counts are interpretations, not forecasts.</td></tr></table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1.1">
+        <div class="microhead" style="margin-top:0">Credit Rating Details — CARE (27 Aug 2026)</div>
+        <table class="t fit"><tr><th>Item</th><th style="text-align:left">CARE Ratings — press release 27 Aug 2026 (read in full)</th></tr><tr><td>Ratings</td><td style="text-align:left">LT <b>AA-/Stable</b>; ₹20,983.99 Cr non-fund-based LT/ST AA-/Stable/A1+; ₹578.01 Cr new LT/ST; ₹3,325 Cr WC limits and ₹998 Cr term loan AA-/Stable; CP ₹1,000 Cr A1+. <b>Reaffirmed</b>; same on 26 Dec 2025, 8 Apr 2025, 17 Sep 2024, 26 Mar 2024</td></tr><tr><td>Approach</td><td style="text-align:left">Standalone + equity commitment to the smart-meter SPVs</td></tr><tr><td>Positives</td><td style="text-align:left">40+ years; order book ₹72,259 Cr (standalone, 31 Mar 2026) = 4.08x FY26 revenue across 18 states, 25% single-agency cap; FY26 order additions ₹26,636 Cr; Q1 FY27 revenue ₹4,912 Cr (+12%), PBILDT margin 9.01% (CARE expects 9–10%); SPV equity fully infused</td></tr><tr><td>Negatives</td><td style="text-align:left">GCA days 297 → 378; receivables + unbilled ₹12,983 Cr; JJM receivables ₹2,771 Cr; TOL/TNW 2.02x; debt/PBILDT 4.90x; interest cover 2.24x; liquidity ₹402 Cr; ~60% of book &lt;10% progress; SPV partners did not come</td></tr><tr><td>SPV ratings</td><td style="text-align:left">NCC AMISP Marathwada and Ray: CARE A/Stable; J Kumar NCC: CARE A-/Stable</td></tr><tr><td>Upgrade trigger</td><td style="text-align:left">Scale + margins with GCA &lt;200 days</td></tr><tr><td>Downgrade triggers</td><td style="text-align:left">Margin &lt;9% sustained or execution delays; GCA &gt;320 days sustained; equity above plan for SPVs or any corporate guarantee</td></tr><tr><td>Other</td><td style="text-align:left">ESG ‘credit neutral’; no penalties on entity/directors/KMP</td></tr></table>
+      </div>
+      <div style="flex:1.1">
+        <div class="microhead" style="margin-top:0">Credit Rating Details — India Ratings (8 Sep 2025), ICRA, CRISIL, Acuite</div>
+        <table class="t fit"><tr><th>Item</th><th style="text-align:left">India Ratings — 8 Sep 2025 (read in full), plus other agencies</th></tr><tr><td>Ratings</td><td style="text-align:left">IND <b>AA-/Stable</b> issuer rating; bank lines ₹152 bn IND AA-/Stable/A1+; affirmed. History: A+/Stable Dec 2022, A+/Positive Jan 2023, upgraded to AA-/Stable in Jun 2024 (<b>one source says Jan 2024 — conflict, both shown</b>)</td></tr><tr><td>Approach</td><td style="text-align:left">Standalone; support to subsidiaries factored in</td></tr><tr><td>Strengths</td><td style="text-align:left">Order book ₹618 bn at Jun 2025 (3.2x FY25 revenue); FY25 net leverage 0.4x, interest cover 2.7x, TOL/EBITDA 7.1x</td></tr><tr><td>Weaknesses</td><td style="text-align:left">Working-capital cycle 80 days FY25 vs 41 FY24; unbilled revenue ₹66 bn of which ₹10 bn &gt;90 days; JJM / HIHMC recovery a ‘key monitorable’; smart-meter outflow of about ₹700 Cr equity plus ~₹2,400 Cr debt; FY25 operating cash flow ~₹300 Cr, free cash flow −₹150 Cr; Maharashtra 30%, AP 17%, MP 15%, top-10 projects 39.3%; 54% of unexecuted book &lt;10% progress</td></tr><tr><td>Sensitivities</td><td style="text-align:left">Negative: lower operating cash flow/profitability, higher WC lock-up, outflows to SPVs with TOL/EBITDA &gt;6.0x sustained. Positive: sustained cash flow, profitability, diversification. Expected margin 8.5–9.5%</td></tr><tr><td>Recency</td><td style="text-align:left">No India Ratings action newer than Sep 2025 was found — an annual review may be due; not found</td></tr><tr><td>ICRA</td><td style="text-align:left">Last action [ICRA]A (Stable) 17 Jun 2021, withdrawn 2 Feb 2022 — stale</td></tr><tr><td>CRISIL</td><td style="text-align:left">None on NCC Ltd. <b>NCC Urban Infrastructure</b> (80% subsidiary): CRISIL BB+/Stable ‘Issuer Not Cooperating’ 19 Jan 2026, migrated from BBB-/Stable (22 Oct 2024); ₹56 Cr lines; non-cooperation ‘may be a result of deterioration in credit risk profile’</td></tr><tr><td>Acuite</td><td style="text-align:left">None found</td></tr></table>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1"><div class="notebox blue"><b>Conflicts to show:</b> interest cover 2.24x (CARE, FY26) vs the 2.7–3.0x India Ratings expected; India Ratings net leverage &lt;1x vs CARE gearing 0.88x at Q1 FY27 vs ICICI standalone D/E 0.31x (different definitions); CARE ‘50% independent’ vs the annual report’s 5 of 11 (~45%); CARE standalone Q1 revenue ₹4,912 Cr (and ICICI) vs ₹4,952 Cr on the call — unresolved.</div></div>
+      <div style="flex:1"><div class="notebox green"><b>Caveat on the bear case:</b> two agencies hold AA- with Stable outlooks, liquidity is adequate on CARE’s view, and CARE expects margins to stay in 9–10%. The risk is cash conversion, debt and the unknown legal/pledge items, not near-term solvency. The ratings are standalone, so the CRISIL non-cooperation on an 80% subsidiary is a small-scale signal, not a group event.</div></div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">MarketSmith India Ratings (10 Oct 2026)</div>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #cfd6e2;margin-bottom:10px"><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Master Score</div><div style="font-size:24px;font-weight:900;color:#c62828">38</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Letter D · poor</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Rating</div><div style="font-size:24px;font-weight:900;color:#c62828">56</div><div style="font-size:9px;font-weight:700;color:#8a94a6">POOR</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:24px;font-weight:900;color:#c62828">20</div><div style="font-size:9px;font-weight:700;color:#8a94a6">POOR · RS rating 17</div></td></tr><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Acc / Dis Rating</div><div style="font-size:24px;font-weight:900;color:#e07c00">C+</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Buyer Demand grid C+ (text says D)</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Group Rank</div><div style="font-size:24px;font-weight:900;color:#c62828">128</div><div style="font-size:9px;font-weight:700;color:#8a94a6">of 197 · POOR</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Beta</div><div style="font-size:24px;font-weight:900;color:#1a2a4a">1.42</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Alpha −0.16</div></td></tr></table>
+        <p style="font-size:11.5px">A weak profile across the board: Master Score <b>D (38)</b>, EPS Rating 56 POOR, Price Strength 20 POOR (RS rating 17 in the narrative), Group Rank 128 of 197 (Bldg-Heavy Construction) POOR. <b>Internal conflict kept:</b> the Buyer Demand grid shows ‘FAIR C+’ and the Acc/Dis Rating is C+, but the narrative text says ‘Buyer Demand at D’. Narrative: annual revenue de-growth −6% (‘needs improvement’), pre-tax margin 5% (okay), ROE 8% (‘fair but needs improvement’; the Summary panel shows 9%), debt/equity 19% (reasonable), trading below key moving averages and needing to retake them. Chart readout: OH −42.43%, OL +5.08%. Ratings table: EPS growth rate 16%, Earnings Stability 17, P/E 11 (5-year range 7–28), ROE 9%, cash flow −7.30.</p>
+        <table class="t fit"><tr><th>MarketSmith EPS (₹)</th><th>EPS</th><th>Price hi / lo</th><th style="text-align:left">Note</th></tr><tr><td>FY28e</td><td>14.38</td><td>est.</td><td style="text-align:left">9.39% shown with a down marker</td></tr><tr><td>FY27e</td><td>15.87</td><td>est.</td><td style="text-align:left">+47.49% — looks aggressive vs FY26</td></tr><tr><td>FY26</td><td>10.76</td><td>172 / 119</td><td style="text-align:left">−17.6%*</td></tr><tr><td>FY25</td><td>13.06</td><td>281 / 152</td><td style="text-align:left">+15.4%*</td></tr><tr><td>FY24</td><td>11.32</td><td>365 / 165</td><td style="text-align:left">+15.9%*</td></tr><tr><td>FY23</td><td>9.77</td><td>183 / 84</td><td style="text-align:left">—</td></tr><tr><td>FY22</td><td>7.91</td><td>97 / 52</td><td style="text-align:left">—</td></tr><tr><td>FY21</td><td>4.40</td><td>100 / 57</td><td style="text-align:left">—</td></tr><tr><td>FY20</td><td>5.59</td><td>61 / 16</td><td style="text-align:left">—</td></tr><tr><td>FY19</td><td>9.63</td><td>119 / 45</td><td style="text-align:left">—</td></tr></table>
+        <table class="t fit"><tr><th>Quarter</th><th>EPS</th><th>EPS YoY</th><th>Sales ₹ Cr</th><th>Sales YoY</th></tr><tr><td>Jun-26</td><td>3.45</td><td>+13%</td><td>5,811.8</td><td>+12%</td></tr><tr><td>Mar-26</td><td>3.28</td><td>−19%</td><td>6,232.7</td><td>+2%</td></tr><tr><td>Dec-25</td><td>1.95</td><td>−37%</td><td>4,868.3</td><td>−9%</td></tr><tr><td>Sep-25</td><td>2.46</td><td>−5%</td><td>4,543.0</td><td>−13%</td></tr><tr><td>Jun-25</td><td>3.06</td><td>−8%</td><td>5,179.0</td><td>−6%</td></tr><tr><td>Mar-25</td><td>4.04</td><td>+6%</td><td>6,130.9</td><td>−5%</td></tr><tr><td>Dec-24</td><td>3.08</td><td>−12%</td><td>5,344.5</td><td>+2%</td></tr><tr><td>Sep-24</td><td>2.60</td><td>+111%</td><td>5,196.0</td><td>+10%</td></tr></table>
+        <div class="chartcap">*My arithmetic from the MarketSmith EPS column. FY27e EPS ₹15.87 is +47% on FY26’s ₹10.76 and above FY28e ₹14.38 — the estimate looks aggressive against trend, and who made it is unknown. TTM EPS (Sep-25 to Jun-26) = 2.46 + 1.95 + 3.28 + 3.45 = ₹11.14 → P/E ≈ 11.2 at ₹125.06 (my arithmetic; MarketSmith P/E 11). Minor differences versus Screener’s FY23 EPS (9.70) are rounding or definition.</div>
+        <div class="notebox blue"><b>Synthesis:</b> Master Score <b>38 (D)</b> — technicals and earnings both poor, with the low P/E the one bright spot. The profile is consistent with a stock at a fresh low after a 43% fall in 2025 and a further ~24% since 30 Apr; it describes the damage already done, not what happens next.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Fund Activity</div>
+        <div style="display:flex;gap:8px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">183</div><div style="font-size:8.6px;color:#8a94a6">Funds holding · −2.66%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">18.32 Cr</div><div style="font-size:8.6px;color:#8a94a6">Shares held by funds · +2.33%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.1</div><div style="font-size:8.6px;color:#8a94a6">U/D Volume Ratio</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.42</div><div style="font-size:8.6px;color:#8a94a6">Beta</div></div></div>
+        <p style="font-size:11.2px;margin-top:8px">The count of funds fell while shares held by funds rose (a conflict with the narrative that institutional holding ‘declined’). Other MarketSmith data: market cap ₹7,851.85 Cr, sales ₹21,455.84 Cr, float 48.34 Cr shares, yield 1.76%, book value 1x, LTDebt/Equity 19%, alpha −0.16, price ₹125.06 (+₹5.13, +4.28%), volume 17,923,816 (+437.37% vs average). Mkt cap ÷ price ≈ 62.8 Cr shares (my arithmetic).</p>
+        <div class="microhead" style="margin-top:12px">MarketSmith Guru Screens — Strategy Fit (all six)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px"><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WILLIAM J. O'NEIL</b><b style="color:#7b1fa2">33%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:33%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">BENJAMIN GRAHAM</b><b style="color:#7b1fa2">84%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:84%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">JAMES P. O'SHAUGHNESSY</b><b style="color:#7b1fa2">20%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:20%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WARREN BUFFETT</b><b style="color:#7b1fa2">62%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:62%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">PETER LYNCH</b><b style="color:#7b1fa2">62%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:62%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">CUSTOM</b><b style="color:#8a94a6">not set</b></div><div style="background:#e6e9ef;border-radius:2px;height:5px;margin-top:2px"></div></div></div>
+        <div class="chartcap" style="margin-top:8px">Graham 84% is the one strong fit (the value screen); Buffett and Lynch 62%, O’Neil 33% (the growth/momentum screen) and O’Shaughnessy 20% are weak. The Custom screen is not set (empty bar, not 0%). The pattern matches a cheap, falling stock with poor price strength.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Source note:</b> MarketSmith India screenshots supplied by the author on 10 Oct 2026 (rating panel and summary panel). Snapshot-time differences versus other vendors are flagged in §08.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img src="NCC_chart.jpg" alt="NCC MotiveWave 1H and 1D Elliott Wave chart, 10 Oct 2026" /></div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose"><tr><th style="text-align:left">Item</th><th>Stance</th><th style="text-align:left">Read</th></tr><tr><td style="text-align:left">1D Chart</td><td><span class="badge b-bear">Bearish −4 / −3</span></td><td style="text-align:left">Price ₹125.06. Trend Momentum Buy 0 / Sell 0 with gauges <b>−4 short-term / −3 long-term</b> (deeply bearish). RSI <b>10.5</b> at the ₹119.0 low. Resistance <b>₹130</b>, support <b>₹113</b>. The labels show a circled-<b>1</b> top (5) near <b>₹360</b> (mid-2024), then (A) low ~<b>₹175</b> (late 2024), (B) high ~<b>₹245</b> (mid-2025) and (C) down to ~<b>₹119</b> (Oct 2026), whose sub-wave 5 completes a candidate <b>circled-2</b>. The “C vs A (Zig Zag)” 61.8% level is <b>₹121.98</b>; price tagged ₹119.0, just through it. The “2 vs 1” 61.8% retracement at <b>₹149.03</b> (+19%) is the first upside target if a wave-3 rally begins. Higher-degree labels at the right — (1) ~₹340, (2) ~₹200, (ii) ~₹100 area — are projections, low confidence.</td></tr><tr><td style="text-align:left">1H Chart</td><td><span class="badge b-warn">Mixed −1 / +1</span></td><td style="text-align:left">Gauges <b>−1 / +1</b>: not bearish, not confirmed. Resistance <b>₹139</b>; price labels 127.74 (the 9 Oct high), 125.06 and 122.36; the (C) wave-5 low sits near ₹119 with the circled 2 below it. An RSI marker shows the oversold extreme.</td></tr><tr><td style="text-align:left">Volume &amp; Price</td><td><span class="badge b-neut">Bounce +4.3%</span></td><td style="text-align:left">9 Oct: opened ₹125.00 (3.18% gap-up), high ₹127.74, close ₹125.06 (+4.28%) on 17.92M shares (+437% vs average). <b>The cause is not found</b> (§13) — a ‘capitulation bounce’ is a hypothesis, not a finding.</td></tr><tr><td style="text-align:left">Count Status</td><td><span class="badge b-neut">One count</span></td><td style="text-align:left">This is <b>one labelled count</b> and the wave labels are the user’s own; it is an interpretation, not a forecast. MarketSmith shows a 2025 high of ₹281, above the labelled (B) ~₹245 — either the ₹281 print preceded the (A) low or the label is approximate; I cannot tell from the chart. Alternative: the decline is not finished and the ₹119 low is only an interim pause inside a larger wave (C) or a different count.</td></tr><tr><td style="text-align:left">Bull Case</td><td><span class="badge b-bull">Early</span></td><td style="text-align:left">RSI 10.5 is an extreme oversold reading; the low coincides with the 61.8% C-vs-A target; a +4.3% bounce on ~437% volume fits a wave-2 low; stock at P/B 1.0, P/E ~11. Recovery through <b>₹130</b>, then <b>₹139</b>, would be the first sign; ₹149.03 is the first retracement target.</td></tr><tr><td style="text-align:left">Bear Case</td><td><span class="badge b-bear">Unconfirmed</span></td><td style="text-align:left">Both daily gauges are deeply bearish, price is below the moving averages, resistance is close overhead at ₹130 and ₹139, and the ₹119 low is only ~4.8% below the price. Heavy volume can mark capitulation or distribution — one day cannot tell them apart. The longer-run damage (43% fall in 2025, FIIs 27% → 10%) is intact.</td></tr><tr><td style="text-align:left">Invalidation</td><td><span class="badge b-warn">Levels</span></td><td style="text-align:left">A move <b>below ₹113</b> (daily support, −9.6%) — and the ~₹119 low failing first — would extend the decline and void the wave-2 reading. Above: a daily close over <b>₹130</b>, then <b>₹139</b>, is needed before the count gains credibility.</td></tr></table>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff6e8;border-color:#e07c00;flex:1.2">
+        <div class="plab" style="color:#e07c00">★ Recommendation</div>
+        <div class="pval" style="color:#e07c00;font-size:19px">NO BUY CALL — OVERSOLD, EARLY, UNCONFIRMED; DEFINE LEVELS</div>
+        <p style="font-size:11.4px;margin-top:6px">Not a buy call. On valuation the stock is cheap (P/E ~11, P/B ~1.0, EV/EBITDA ~5.9x, ~3.9x order cover, Graham screen 84%) and the chart shows an extreme oversold reading (RSI 10.5) at a 61.8% target with a heavy-volume bounce. Against that, the trend is down (daily gauges −4 / −3), cash conversion is poor (FY26 operating cash flow −₹459 Cr), net debt more than doubled, the guide was cut once and the NHAI and pledge items are unresolved. Both sides are live; the setup rewards defined levels over conviction.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">● Constructive:</b> a recovery through <b>₹130</b>, then <b>₹139</b>, is the first sign; ₹149.03 (‘2 vs 1’ 61.8%) is the first retracement target; holding the ~₹119 low keeps the wave-2 reading alive.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#c62828">● Caution:</b> the ~₹119 low failing, then a move below <b>₹113</b>, extends the decline; a failed bounce under ₹130 on fading volume.</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Catalysts:</b> Q2 FY27 results (date not announced; Q1 was 6 Aug, early-to-mid Nov plausible — my inference); month-end order disclosures; JJM and state payment releases; the NHAI litigation outcome; the exchange filing on the reported pledge; smart-meter ramp; CARE’s debt/PBILDT path (3.87x at Q1); the NSE/BSE bulk-block report for 9 Oct; Sep-26 shareholding filing (due by 21 Oct). No asset sale or NCC Urban stake sale found.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">🔹 Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹122.36</td><td style="text-align:left">1H price label (9 Oct)</td><td><span class='badge b-neut'>Near</span></td></tr>
+          <tr><td>₹121.98</td><td style="text-align:left">‘C vs A (Zig Zag)’ 61.8% target (−2.5%)</td><td><span class='badge b-neut'>Target hit</span></td></tr>
+          <tr><td>₹119.0</td><td style="text-align:left">RSI 10.5 low · candidate circled-2 low (−4.8%)</td><td><span class='badge b-bull'>Key</span></td></tr>
+          <tr><td>₹113</td><td style="text-align:left">Daily support (−9.6%) — invalidation</td><td><span class='badge b-bear'>Floor</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">🔸 Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹127.74</td><td style="text-align:left">9 Oct high (+2.1%)</td><td><span class='badge b-neut'>Near</span></td></tr>
+          <tr><td>₹130</td><td style="text-align:left">1D resistance (+4.0%)</td><td><span class='badge b-bull'>Signal</span></td></tr>
+          <tr><td>₹139</td><td style="text-align:left">1H resistance (+11.1%)</td><td><span class='badge b-bull'>Signal</span></td></tr>
+          <tr><td>₹149.03</td><td style="text-align:left">‘2 vs 1’ 61.8% retracement (+19.2%)</td><td><span class='badge b-neut'>Target</span></td></tr>
+          <tr><td>₹165 / ₹195</td><td style="text-align:left">ICICI Hold / Prabhudas Lilladher Buy targets (stale)</td><td><span class='badge b-neut'>Broker</span></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="notebox "><b>Source quality:</b> primary documents read: the Integrated Annual Report FY26 (NSE, 27 Jul 2026), the CARE Ratings release of 27 Aug 2026 and the India Ratings release of 8 Sep 2025 (both in full). Secondary: the ICICI Direct Q1 FY27 note (10 Aug 2026), the AlphaStreet Q1 FY27 call transcript, Screener (10 Oct 2026), and MarketSmith India and MotiveWave screenshots supplied by the author. News items — the promoter pledge, AGM voting results, NHAI status, Q2 FY27 order tallies, the FY26 guidance track record (ScanX/Nuvama) and the Whalesbook/multibagg figures — came from secondary outlets and <b>must be checked against exchange filings</b>; the <b>AGM votes, the pledge and the NHAI status are unverified</b>. Conflicts are shown, not resolved.</div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, CARE Ratings (27 Aug 2026) and India Ratings (8 Sep 2025) rating releases read in full, the company’s Integrated Annual Report FY26, an ICICI Direct Q1 FY27 note (10 Aug 2026), an AlphaStreet call transcript, and other public web sources as of 10 Oct 2026, and from the author's own MotiveWave Elliott Wave analysis. Figures marked "my arithmetic" are the author's calculations. Several data points conflict across sources and are shown, not resolved. Price, volume and financial figures should be independently verified. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in ₹ Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
