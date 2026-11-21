@@ -1,0 +1,945 @@
+<!-- TEMPLATE VERSION: v6 (8 Sep 2026) — Replaced the single "Report Version" cover-page field with a growable "Revision History" table (Date | Version columns, one row per version so far, e.g. "29 Jul 2026 | v1 — Original", "8 Sep 2026 | v2 — Updated") — per user instruction "because there will be more changes": a fixed two-line display would not have scaled to a 3rd/4th future refresh, a table does. Sits directly below the "Generated On" meta-block. On any future refresh, append one new <tr> row with that refresh's date and next integer version — never overwrite/remove prior rows. -->
+<!DOCTYPE html>
+<html lang="en-IN">
+<head><meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f1b33">
+<title>DEEPAKFERT — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#6b7587; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#6b7587; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#6b7587; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#6b7587; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#6b7587; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#6b7587; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#sec01">Skip to report</a>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+
+  /* a11y pass 1 Nov 2026 (Web Interface Guidelines) */
+  .skip-link{position:absolute;left:-9999px;top:0;background:#0f1b33;color:#fff;padding:8px 12px;z-index:100}
+  .skip-link:focus{left:8px;top:8px}
+  a:focus-visible{outline:2px solid #c9a24b;outline-offset:2px}
+  .sec-title{scroll-margin-top:56px}
+  table.t td,table.t th,table.peer td,table.peer th,.rev-history-table td{font-variant-numeric:tabular-nums}
+  h1,h2{text-wrap:balance}
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+  <div class="brand-bar"></div>
+  <div class="main">
+    <div class="logo-wrap"><div class="text-logo">DEEPAK <span>FERTILISERS</span></div></div>
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Deepak Fertilisers and Petrochemicals Corporation Limited</h1>
+    <div class="divider"></div>
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: DEEPAKFERT</div>
+      <div class="ticker-chip">Mkt Cap: &#8377;18,143 Cr</div>
+      <div class="ticker-chip">Master Score: B / 70 (conflict)</div>
+    </div>
+    <div class="sector-line">Industrial chemicals (TAN, nitric acid, IPA) and crop-nutrition fertilisers</div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">21 November 2026</span>
+    </div>
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th scope="col">Date</th><th scope="col">Version</th></tr>
+        <tr><td>21/11/26</td><td class="rev-note">v1 &mdash; Original</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#6b7587">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+<div class="page-wrap">
+<div class="page">
+
+<div class="hdr">
+  <div>
+    <div class="meta">NSE: DEEPAKFERT &nbsp;·&nbsp; Industrial chemicals &amp; fertilisers &nbsp;·&nbsp; MarketSmith group: NSE-Chemicals-Specialty</div>
+    <h1>Deepak Fertilisers and Petrochemicals Corporation Limited</h1>
+    <div class="tagline">India's top TAN / nitric acid / IPA producer (per IIFL) &nbsp;·&nbsp; Q2 FY27 EBITDA +61.7% on 22.5% margin &nbsp;·&nbsp; about &#8377;4,660 Cr of new TAN and nitric acid capacity due 4Q FY27 &nbsp;·&nbsp; user expects a ~14% green-2 pullback toward &#8377;1,232</div>
+  </div>
+  <div class="pricebox">
+    <div class="price">&#8377;1,437.20 <span class="chg">&#9660; −0.88%</span></div>
+    <div class="sub">Price date: 20 Nov 2026 (MarketSmith / Screener) &nbsp;|&nbsp; IIFL CMP &#8377;1,353 (16 Nov) &nbsp;|&nbsp; Mkt Cap: &#8377;18,143 Cr &nbsp;|&nbsp; Master Score: B / 70 (conflict)</div>
+  </div>
+</div>
+<div class="tagstrip">
+  <div style="color:#e07c00;background:#fff6e6">&#9679; Call: WAIT / PINK-watch</div>
+  <div style="color:#2e7d32;background:#ecf6ec">&#9679; Q2 FY27 PAT +84.7% YoY</div>
+  <div style="color:#e07c00;background:#fff6e6">&#9679; Valuation: 15.6x TTM P/E (my arithmetic)</div>
+  <div style="color:#c62828;background:#fdeef0">&#9679; Margin peak risk: 22.5% vs 11.8% in 4Q FY26</div>
+  <div style="color:#6b7587;background:#eef1f6">&#9679; Special: on the radar of HFT players</div>
+</div>
+<nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Q2 FY27</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+<div class="sec">
+<div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+<div class="cols">
+ <div style="flex:1.5">
+  <div class="microhead">What They Do</div>
+  <p>Deepak Fertilisers (DFPCL) makes <b>industrial chemicals</b> and <b>crop-nutrition fertilisers</b>. The chemicals side is <b>technical ammonium nitrate (TAN)</b>, the explosive base used in mining and quarrying, plus <b>nitric acid</b> and <b>isopropyl alcohol (IPA)</b>. The fertiliser side is NPK/ANP bulk grades, traded fertilisers, and specialty crop products. IIFL calls it India's top producer of TAN, nitric acid and IPA; <b>no market-share percentage is given by IIFL or Systematix</b>, and a secondary-source claim of ~45% of merchant nitric acid is unverified.</p>
+  <p style="margin-top:7px">FY26 revenue was <b>&#8377;11,506 Cr (+12%)</b>; TTM sales are <b>&#8377;12,432 Cr</b> (MarketSmith &#8377;12,431.67 Cr, my sum of four quarters &#8377;12,431.8 Cr). Chemicals were 46% of FY26 revenue but 73% of segment EBIT (my arithmetic from IIFL: 53,042 / 115,060 and 11,466 / (11,466 + 4,199)).</p>
+  <div class="notebox blue" style="margin-top:10px"><b>Key competitive advantage (broker-reported, not independently verified):</b> a captive ammonia plant at Taloja (via Performance Chemiserve) fed by a 15-year Equinor LNG contract (~0.65 mtpa, deliveries from 2026), which management calls a structural cost cushion, plus an eastern-India TAN import-substitution position (Gopalpur, 376 ktpa, ~98% complete). IIFL estimates ammonia-plant savings of &#8377;855.9 Cr in FY27E against &#8377;49.3 Cr in FY26 (my conversion from Rs mn).</div>
+ </div>
+ <div style="flex:1">
+  <div class="microhead">Revenue Mix (FY26)</div>
+  <svg role="img" aria-label="Chart: FY26 revenue mix" viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 0 1 334.5,87.3 L281.4,96.7 A42,42 0 0 0 240.0,62.0 Z" fill="#1a2a4a" stroke="#fff" stroke-width="1"/><text x="284.4" y="55.1" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">22%</text><path d="M334.5,87.3 A96,96 0 0 1 312.6,166.9 L271.7,131.5 A42,42 0 0 0 281.4,96.7 Z" fill="#8fa3c4" stroke="#fff" stroke-width="1"/><text x="306.5" y="126.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">14%</text><path d="M312.6,166.9 A96,96 0 0 1 144.0,105.5 L198.0,104.7 A42,42 0 0 0 271.7,131.5 Z" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="216.4" y="172.8" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">38%</text><path d="M144.0,105.5 A96,96 0 0 1 183.1,26.7 L215.1,70.2 A42,42 0 0 0 198.0,104.7 Z" fill="#e67e22" stroke="#fff" stroke-width="1"/><text x="178.2" y="77.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">15%</text><path d="M183.1,26.7 A96,96 0 0 1 240.0,8.0 L240.0,62.0 A42,42 0 0 0 215.1,70.2 Z" fill="#9163cb" stroke="#fff" stroke-width="1"/><text x="218.5" y="42.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">10%</text><text x="240" y="102" text-anchor="middle" font-size="13" font-weight="900" fill="#1a2a4a">&#8377;11,506 Cr</text><text x="240" y="114" text-anchor="middle" font-size="6.5" letter-spacing="0.6" fill="#8a94a6">FY26 REVENUE</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">TAN (mining chemicals)</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">FY26 revenue share, IIFL chart</text><rect x="26" y="252" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="43" y="262" font-size="10.5" fill="#2a3342" font-weight="700">Nitric acid + IPA</text><text x="43" y="275" font-size="9.3" fill="#8a94a6">8% + 6%</text><rect x="26" y="282" width="11" height="11" rx="2" fill="#2e7d32"/><text x="43" y="292" font-size="10.5" fill="#2a3342" font-weight="700">Bulk fertilisers (NPK)</text><text x="43" y="305" font-size="9.3" fill="#8a94a6">FY26 revenue share</text><rect x="26" y="312" width="11" height="11" rx="2" fill="#e67e22"/><text x="43" y="322" font-size="10.5" fill="#2a3342" font-weight="700">Traded fertilisers</text><text x="43" y="335" font-size="9.3" fill="#8a94a6">FY26 revenue share</text><rect x="26" y="342" width="11" height="11" rx="2" fill="#9163cb"/><text x="43" y="352" font-size="10.5" fill="#2a3342" font-weight="700">Bentonite sulphur + other</text><text x="43" y="365" font-size="9.3" fill="#8a94a6">3% + 7%</text></svg>
+  <div class="chartcap">Source: IIFL chart, 16 Nov 2026. Slices as printed sum to 99% (rounding in the source); two-line items combined here (nitric 8% + IPA 6%; bentonite sulphur 3% + other 7%).</div>
+ </div>
+ <div style="flex:1.05">
+  <div class="microhead">Where the Profit Comes From</div>
+  <div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+   <div style="font-size:15px;font-weight:900;color:#1a2a4a">Chemicals ~90% of 1H FY27 segment EBIT</div>
+   <p style="font-size:11px;margin-top:5px">FY26: chemicals 21.6% EBIT margin (&#8377;1,147 Cr) vs fertilisers 6.8% (&#8377;420 Cr). 1H FY27: chemicals EBIT &#8377;1,454 Cr of &#8377;1,624 Cr (about 90%, IIFL, my arithmetic). Q2 FY27 chemicals EBIT margin 35.4% (Q1 42.8%), fertilisers 8.4% (Q1 3.2%).</p>
+   <p style="font-size:11px;margin-top:5px"><b>Mix is cyclical, not structural:</b> management guides fertiliser EBIT margin back to 5-7% in 3Q/4Q FY27, and the chemicals margin was inflated by a temporary West Asia supply-chain benefit that management did not quantify.</p>
+  </div>
+ </div>
+</div>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+<table class="t prose">
+ <tr><th style="text-align:left" scope="col">Dimension</th><th scope="col">Rating</th><th style="text-align:left" scope="col">Commentary</th></tr>
+ <tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">Moderate</span></td><td style="text-align:left">A B2B supplier brand in mining explosives and industrial acids; recognition matters to a narrow buyer set. Customer names (mining majors) were <b>not found</b> in either broker note. About 16% of mining-chemicals revenue is B2C (18 kt of 126 kt TAN volume, IIFL).</td></tr>
+ <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">Weak / N.A.</span></td><td style="text-align:left">Does not apply to commodity-linked chemicals and fertilisers.</td></tr>
+ <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">Moderate</span></td><td style="text-align:left">Long-term offtake contracts help: ~65% of new concentrated nitric acid (CNA) capacity is under a 20-year offtake (IIFL; counterparty not named). Mining customers are expected to shift gradually from public-sector to private miners over 5-10 years (Systematix). Contract terms beyond this were not found.</td></tr>
+ <tr><td style="text-align:left">Cost Advantage</td><td><span class="badge b-bull">Strong, but cyclical</span></td><td style="text-align:left">Captive ammonia plus the Equinor LNG contract: management says ammonia price changes pass through to customers with a lag while the sourcing advantage lasts. IIFL's own savings table (&#8377; Cr, my conversion) shows 121 (FY25), 49 (FY26), 856 (FY27E), 526 (FY28E), 559 (FY29E): the FY27E figure is about 31% of IIFL's FY27E EBITDA (my arithmetic), so normalisation risk is real. <b>LNG pricing formula: not found.</b></td></tr>
+ <tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Not found</span></td><td style="text-align:left">No patent evidence was found in the sources read. The Substack author (Parth Kotak, 2 Jan 2024, opinion) called the chemicals business &ldquo;monopolistic &amp; high ROCE&rdquo;; Screener ROCE is 11.4% (20 Nov 2026), which does not support high ROCE today.</td></tr>
+</table>
+<div class="cols" style="margin-top:10px">
+ <div style="flex:1"><div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+  <p style="font-size:11.3px">Competition arrives: IIFL says a domestic competitor's TAN capacity was commissioned and caused &ldquo;initial market disruption&rdquo; (unquantified, competitor not named by IIFL). Chambal Fertilisers started TAN commercial production at Gadepan in Aug 2026 (Screener-side peer research; it is the likely candidate, but that is my inference, not a broker statement). TAN volume was 126.2 kt in Q2 FY27, down 8% YoY and 4% QoQ even at 93% utilisation.</p></div>
+ <div style="flex:1"><div class="notebox blue" style="margin-top:0"><b>Synthesis:</b> the moat is a <b>cost and integration edge plus an eastern-India import-substitution position</b>, not a patent or brand moat. Eastern India plus Singrauli is about 55% of domestic ammonium nitrate demand with historically high import dependence (IIFL). The edge is real but is being tested by new domestic supply and by the lagged pass-through of ammonia prices, so its durability is unproven in a normal-margin year.</div></div>
+</div>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec03"><span class="num">03</span><h2>Q2 FY27 Results (16 Nov 2026) &amp; Capex Way Forward</h2></div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Q2 FY27 Revenue</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">&#8377;3,334 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+10.9% YoY</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EBITDA</div><div style="font-size:17px;font-weight:900;color:#2e7d32">&#8377;750 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+61.7% YoY</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EBITDA Margin</div><div style="font-size:17px;font-weight:900;color:#2e7d32">22.5%</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">vs 15.4% a year ago (Q1: 26.0%)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">PAT</div><div style="font-size:17px;font-weight:900;color:#2e7d32">&#8377;394 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+84.7% (IIFL) / +84.0% (Systematix)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EPS (qtr)</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">&#8377;31.2</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">Q1 FY27: &#8377;38.82</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Finance Cost</div><div style="font-size:17px;font-weight:900;color:#c62828">&#8377;113 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+50.6% YoY, +18.8% QoQ</div></div></div>
+<div class="cols">
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="microhead" style="margin-top:0">What Drove the Beat, and What May Not Repeat</div>
+  <div style="border:2px solid #2e7d32;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#eaf7ea,#f6fff4)">
+   <p style="font-size:11.4px"><b>Chemicals did the work.</b> Chemicals revenue &#8377;1,832 Cr (+42.5%), EBIT &#8377;649 Cr (+128%), margin 35.4%. Fertilisers revenue &#8377;1,494 Cr (-12.8%), EBIT &#8377;125 Cr (-20.2%), margin 8.4% (IIFL, converted from Rs mn). IIFL says EBITDA beat its estimate by 13.2% and PAT by 12.6%, while revenue was 0.9% light.</p>
+   <p style="font-size:11.4px;margin-top:7px"><b>Quality flags:</b> gross margin 37.8% vs 42.1% in Q1 and 30.7% a year ago; employee cost +44.2% and unallocated corporate cost +109% YoY (project-execution overheads); inventory &#8377;2,610 Cr vs &#8377;1,740 Cr at Mar-26, almost all crop nutrition. Management guides EBITDA margin &ldquo;broadly ~22%&rdquo; subject to market, and said part of 1H margin was a temporary supply-chain benefit it declined to quantify.</p>
+   <div style="font-size:10.3px;color:#8a6d1f;background:#fff9e0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Price reaction conflict:</b> JM Financial says the stock rose 4.35% to &#8377;1,315.40 on 16 Nov; Arthneeti shows &#8377;1,262; the broker notes use CMP &#8377;1,353; the 20 Nov close was &#8377;1,437.20. All kept; timing of the reaction is unclear.</div>
+  </div>
+ </div>
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="microhead" style="margin-top:0">Capex Way Forward (IIFL, Systematix, 16 Nov 2026)</div>
+  <div class="krow"><span class="klab">Gopalpur TAN</span><span class="kval">376 ktpa, budget &#8377;2,680 Cr<small>~98% complete (Q1: 96%); adds 60-70% to ~550-560 kt TAN sales</small></span></div><div class="krow"><span class="klab">Dahej nitric acid</span><span class="kval">300 ktpa WNA + 150 ktpa CNA, &#8377;1,980 Cr<small>~98% complete (Q1: 93%); existing merchant sales ~240-250 kt</small></span></div><div class="krow"><span class="klab">Total programme</span><span class="kval">~&#8377;4,660 Cr<small>26.8 + 19.8 = 46.6 bn (my sum); 55-60% term loans</small></span></div><div class="krow"><span class="klab">Commissioning</span><span class="kval" style="color:#c62828">4Q FY27<small>SLIPPED from end-2Q FY27; only a partial quarter in 4Q</small></span></div><div class="krow"><span class="klab">Ramp-up (mgmt)</span><span class="kval">75% &#8594; 85% &#8594; &gt;95%<small>within weeks, next stage, following year</small></span></div><div class="krow"><span class="klab">Chardham (CCPL)</span><span class="kval">Commercial 2H FY28<small>Acquired by DMSL, &#8377;121.45 Cr cash, closed 6 May 2026</small></span></div>
+  <div style="font-size:10.3px;color:#33691e;background:#eef7ee;border-radius:4px;padding:6px 9px;margin-top:8px"><b>TAN exports:</b> ban lifted Oct 2026; international development restarts Nov 2026; Q2 exports were just 0.2 kt (IIFL). New depreciation ~&#8377;180-200 Cr a year (IIFL); Sovrenn's &ldquo;per quarter&rdquo; wording looks like an error (kept as a conflict below).</div>
+ </div>
+</div>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+<div class="cols">
+ <div class="panel" style="background:linear-gradient(180deg,#fff,#fdf1f1);border:3px solid #c62828">
+  <div class="plab">Key Watch-Item</div>
+  <div class="pval" style="color:#c62828;font-size:16px">&#9888; Is 22.5% EBITDA margin the peak?</div>
+  <p style="font-size:11.3px;margin-top:5px">Margin was 11.8% in 4Q FY26, 26.0% in Q1 and 22.5% in Q2 FY27. IIFL itself flags that elevated FY27 earnings may moderate: its FY28E EPS is &#8377;101.5 vs &#8377;110.9 for FY27E (-8.5%). Systematix has the opposite shape (&#8377;126.4 &#8594; &#8377;151.5). The two brokers cannot both be right.</p>
+ </div>
+ <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
+  <div class="plab">Overall Sentiment</div>
+  <div class="pval" style="color:#f57f17">CONSTRUCTIVE, BUT DIVIDED</div>
+  <p style="font-size:11.3px;margin-top:5px">Both fresh broker notes are BUY (IIFL TP &#8377;1,785, Systematix TP &#8377;1,801, 16 Nov). MarketSmith shows 2 analysts, 2 Buys, average target &#8377;1,530.5. ICRA and CRISIL both carry AA- with a Positive outlook. Against that, MarketSmith calls the industry group &ldquo;poor&rdquo; and notes institutional holding declined in the last reported quarter.</p>
+ </div>
+ <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
+  <div class="plab">Momentum Prediction</div>
+  <div class="pval" style="color:#f57f17">RALLY DONE? GREEN 2 PENDING</div>
+  <p style="font-size:11.3px;margin-top:5px">The user's count has green 1 finished off the &#8377;1,092 low and green 2 underway. The daily gauges are strong (Trend Momentum short +5 / long +3, Buy signal 17 Nov 2026, 09:00) but the proposed better-risk zone is the 61.8% retracement near &#8377;1,232, about 14% below the current price. Earnings momentum is strong; price momentum is stretched after a 31% run from the low.</p>
+ </div>
+</div>
+<div class="notebox"><b>Independent analyst view (Substack, dated and stale):</b> Parth Kotak / Plus91 Asset Management, &ldquo;A typical 2 pager&rdquo;, <b>2 Jan 2024, about 22.5 months old</b>. <b>Opinion:</b> backward integration into ammonia lowers cost; TAN/chemicals expected to be demerged and valued above fertilisers; 8-10x EBIT; &ldquo;monopolistic &amp; high ROCE&rdquo;. <b>Sourced facts:</b> Taloja ammonia 510,000 MTPA commissioned 4 Aug 2023; gas contracts reportedly with GAIL, IGS and GSPC. His ~&#8377;2,200 Cr EBIT estimate has no derivation and looks high against later reported results; the demerger expectation is unverified; his charts were images and could not be read. I use none of his valuation numbers. No other Substack article on this company was found.</div>
+<div class="notebox red" style="margin-top:8px"><b>SPECIAL ENTRY: this stock is on the radar of HFT players.</b> MarketSmith's bulk-deal screen shows <b>Graviton Research Capital LLP in 6 buy/sell pairs</b>, <b>HRTI Private Ltd in 2</b>, <b>QE Securities LLP in 1</b>, plus XTX Markets LLP (1 Mar 2021) and BNP Paribas Arbitrage (20 Feb 2024). The newest deal on the screen is <b>30 Jan 2025</b> (Graviton, at &#8377;1,156.9); nothing is visible for 2026. Same-day matched buys and sells are intraday churn and roughly net to zero, so <b>these are not directional conviction</b>. <b>Caveat:</b> this is a pattern read from bulk-deal rows on one screen, not a confirmed list of algorithmic accounts; I have not seen their full order flow.</div>
+</div>
+<div class="sec">
+<div class="cols">
+ <div style="flex:1"><div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div><svg role="img" aria-label="Chart: Sector Market Size - fertiliser subsidy FY27" viewBox="0 0 610 206" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="46" y1="180" x2="602" y2="180" stroke="#dde2ea"/><text x="10" y="22" font-size="9.5" fill="#6b7587">&#8377; Lakh Cr</text><rect x="80" y="107.9" width="120" height="72.1" fill="#1a2a4a" rx="3"/><text x="140" y="102.9" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">1.71</text><text x="140" y="199" text-anchor="middle" font-size="10" fill="#5a6475">FY27 budget</text><rect x="245" y="78.0" width="120" height="102.0" fill="#2a9d8f" rx="3"/><text x="305" y="73.0" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">2.42</text><text x="305" y="199" text-anchor="middle" font-size="10" fill="#5a6475">ICRIER low</text><rect x="410" y="40.0" width="120" height="140.0" fill="#2a9d8f" rx="3"/><text x="470" y="35.0" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">3.32</text><text x="470" y="199" text-anchor="middle" font-size="10" fill="#5a6475">ICRIER high</text></svg>
+  <div class="chartcap">India fertiliser subsidy, FY27 (&#8377; lakh Cr): budget ~1.71 vs ICRIER scenarios 2.42 to 3.32; a separate article says 58% of the budget was already used (date unclear). Sources disagree on the total and both ranges are kept. Rabi 2026-27 NBS rates (PIB, 12 Nov 2026): N &#8377;94.21/kg, P &#8377;66.11, K &#8377;2.38, S &#8377;10.42. Deepak's &#8377;12,432 Cr TTM is small against subsidy-led fertiliser demand; TAN/nitric acid/IPA market-size figures were <b>not found</b>.</div></div>
+ <div style="flex:1.08"><div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 4 Qtrs</h2></div><table class="t">
+ <tr><th scope="col">Category</th><th scope="col">Dec'25</th><th scope="col">Mar'26</th><th scope="col">Jun'26</th><th scope="col">Sep'26</th><th scope="col">&#916;</th></tr>
+ <tr><td>Promoters</td><td>45.63%</td><td>45.63%</td><td>45.63%</td><td>45.63%</td><td>flat</td></tr>
+ <tr><td>Mutual funds</td><td>9.66%</td><td>9.58%</td><td>10.96%</td><td>10.77%</td><td class="pos">&#9650; 1.11pp</td></tr>
+ <tr><td>FIIs</td><td>n/f</td><td>10.31%</td><td>~10.0%</td><td>10.14%</td><td>~flat</td></tr>
+ <tr><td>DIIs</td><td>n/f</td><td>13.2%</td><td>14.7%</td><td>14.47%</td><td class="pos">&#9650; 1.27pp</td></tr>
+ <tr><td>Promoter pledge (% of promoter)</td><td>n/f</td><td>5.0%</td><td>5.5%</td><td>3.9%</td><td class="pos">&#9660; 1.1pp</td></tr>
+</table>
+<div class="chartcap"><b>Reading it:</b> promoters unchanged at 45.63% for four quarters (principal holder Nova Synthetic 34.53%; SBI Nifty 500 Index Fund 6.43%; SCM Capital Growth 5.86%). Mutual funds rose from 9.58% to 10.77% since Mar'26, yet MarketSmith's text says institutional holding declined in the last reported quarter and its fund count fell 1.53% to 193. <b>Conflict kept:</b> pledge is 3.9% (IIFL / Systematix) vs 4.86% (Sep 2025 aggregator) vs &ldquo;none&rdquo; in another; a 4 Mar 2026 fresh pledge of 105,000 shares was reported. A 22 Apr 2026 inter-se transfer of 74,00,000 shares (5.86%) stayed within the promoter group. n/f = not found; shareholder-count series not found.</div></div>
+ <div style="flex:1.05"><div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div><table class="peer">
+ <tr><th scope="col">Index</th><th scope="col">1M</th><th scope="col">3M</th><th scope="col">1Y</th></tr>
+ <tr style="background:#eef4fc"><td>&#9733; DEEPAKFERT</td><td class="pos">+0.6%</td><td class="neg">−9.6%</td><td class="neg">−4.2%</td></tr>
+ <tr><td>Nifty 50 / Midcap / Smallcap</td><td>n/f</td><td>n/f</td><td>n/f</td></tr>
+</table>
+<div class="chartcap">Stock returns per IIFL (priced 16 Nov 2026, so they pre-date the 20 Nov close); index comparison not found.</div>
+<div class="krow"><span class="klab">52-Wk High</span><span class="kval">&#8377;1,681<small>MarketSmith FY26 high 1,681; IIFL 1,653 (conflict) &#183; price is 14.5% below it (MS)</small></span></div><div class="krow"><span class="klab">52-Wk Low</span><span class="kval">&#8377;866<small>MS 866; IIFL 866; Systematix 868; Screener 865 &#183; price +65.9% off low (MS)</small></span></div><div class="krow"><span class="klab">Vs moving averages</span><span class="kval">+12% / +11%<small>above 50-DMA / 200-DMA (MarketSmith text); base &ldquo;forming&rdquo;, 13-15% to pivot (conflict)</small></span></div></div>
+</div>
+</div>
+<div class="sec compact">
+<div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — YoY &amp; QoQ (&#8377; Crore, Consolidated)</h2></div>
+<div class="cols" style="margin-bottom:10px">
+ <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q2 FY27 (Sep'26) · Results 16 Nov 2026</div>
+  <div style="border:2px solid #2e7d32;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#eaf7ea,#f6fff4 60%,#eefaf0);flex:1">
+   <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+    <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;3,334 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue <b class="pos">+10.9% YoY</b></div></div>
+    <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;750 Cr</div><div style="font-size:10.5px;color:#5a6475">EBITDA <b class="pos">+61.7% YoY</b></div></div>
+    <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">22.5%</div><div style="font-size:10.5px;color:#5a6475">Margin <b class="pos">+706bps YoY</b></div></div>
+    <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;394 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT <b class="pos">+84.7% YoY</b></div></div>
+    <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;31.2</div><div style="font-size:10.5px;color:#5a6475">EPS (qtr) vs &#8377;16.89</div></div>
+    <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">27.7%</div><div style="font-size:10.5px;color:#5a6475">Tax rate (Q4 FY26: 13.5%)</div></div>
+   </div>
+   <div style="font-size:10.4px;color:#33691e;margin-top:8px">PBT &#8377;545 Cr, depreciation &#8377;104 Cr, other income &#8377;11 Cr; no exceptional items (Systematix). 1H FY27 PAT &#8377;884 Cr (+93.7%). The prior-year PAT differs by source (&#8377;214 Cr Systematix vs &#8377;213 Cr IIFL), which is why growth reads +84.0% vs +84.7%.</div>
+  </div></div>
+ <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+  <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+  <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
+   <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM Sales</div><div class="val ">&#8377;12,432 Cr</div><div class="note">MS &#8377;12,431.67 Cr</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val warn">15.6x</div><div class="note">EPS 92.26 = 11.21+11.04+38.82+31.19 (my arithmetic); MS says 16</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Fwd P/E (FY27E)</div><div class="val ">17.5x</div><div class="note">MS EPS 81.90; IIFL 110.9 gives 13.0x; Systematix 126.4 gives 11.4x (my arithmetic)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val ">2.65x</div><div class="note">MS; Screener BV &#8377;601 gives 2.39x (conflict)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">PEG (TTM)</div><div class="val pos">0.85</div><div class="note">my arithmetic: 15.6 / 18.3% TTM EPS growth; see ratios</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Net Debt</div><div class="val ">&#8377;4,740 Cr</div><div class="note">IIFL Sep-26; Systematix FY26 &#8377;4,950 Cr</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Debt / Equity</div><div class="val ">0.60 / 0.72</div><div class="note">MS LTD/E vs my Screener calc (5,476 / 7,581)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE / ROCE</div><div class="val ">11% / 11.4%</div><div class="note">MS ROE 11% (table) vs 10% (text); Screener ROCE</div></div>
+  </div>
+ </div>
+</div>
+<div class="cols" style="margin-top:6px">
+ <div style="flex:0 0 calc(50% - 7px);min-width:0">
+  <div class="microhead">Annual P&amp;L — Consolidated (&#8377; Cr)</div>
+  <table class="t fit">
+   <tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">EBITDA</th><th scope="col">Margin</th><th scope="col">PBT</th><th scope="col">PAT</th><th scope="col">EPS (&#8377;)</th></tr>
+   <tr><td>FY23</td><td>n/f</td><td>n/f</td><td>n/f</td><td>n/f</td><td>n/f</td><td>97.70</td></tr>
+   <tr><td>FY24</td><td>n/f</td><td>n/f</td><td>n/f</td><td>n/f</td><td>n/f</td><td>35.05</td></tr>
+   <tr><td>FY25</td><td>10,274</td><td>1,925</td><td>18.7%</td><td>n/f</td><td>n/f</td><td>73.95</td></tr>
+   <tr><td><b>FY26</b></td><td><b>11,506</b></td><td><b>1,684</b></td><td><b class="neg">14.6%</b></td><td><b>1,010</b></td><td><b>739</b></td><td><b class="neg">58.40</b></td></tr>
+   <tr><td><b>TTM</b></td><td><b>12,432</b></td><td><b>~2,303*</b></td><td><b class="pos">~18.5%*</b></td><td><b>n/f</b></td><td><b>1,165</b></td><td><b class="pos">92.26</b></td></tr>
+  </table>
+  <div class="chartcap">*TTM EBITDA is my arithmetic: Q3 FY26 353.1 + Q4 FY26 354.0 + Q1 FY27 ~846.6 (26.0% of revenue, derived) + Q2 FY27 749.6. TTM PAT is Screener "as shown". FY22 and earlier annual revenue/PAT were not read.</div>
+  <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 5 Quarters (&#8377; Cr)</div>
+  <table class="t fit">
+   <tr><th scope="col">Quarter</th><th scope="col">Revenue</th><th scope="col">EBITDA</th><th scope="col">Margin</th><th scope="col">PAT</th><th scope="col">EPS (&#8377;)</th></tr>
+   <tr><td>Q2 FY26 (Sep'25)</td><td>3,006</td><td>464</td><td>15.4%</td><td>213</td><td>16.89</td></tr>
+   <tr><td>Q3 FY26 (Dec'25)</td><td>2,830</td><td>353</td><td>12.5%</td><td>n/f</td><td>11.21</td></tr>
+   <tr><td>Q4 FY26 (Mar'26)</td><td>3,011</td><td>354</td><td>11.8%</td><td>n/f</td><td>11.04</td></tr>
+   <tr><td>Q1 FY27 (Jun'26)</td><td>3,256</td><td>~847</td><td>26.0%</td><td>~490</td><td>38.82</td></tr>
+   <tr><td><b>Q2 FY27 (Sep'26)</b></td><td><b>3,334</b></td><td><b>750</b></td><td><b class="pos">22.5%</b></td><td><b class="pos">394</b></td><td><b class="pos">31.19</b></td></tr>
+  </table>
+ </div>
+ <div style="flex:0 0 calc(50% - 7px);min-width:0">
+  <div class="microhead">Quarterly Revenue (&#8377; Cr) — YoY +9%, +10%, +13%, +22%, +11%</div>
+  <svg role="img" aria-label="Chart: quarterly revenue, Rs Cr" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="586" y2="146" stroke="#dde2ea"/><rect x="50.0" y="55.8" width="68" height="90.2" fill="#1a2a4a" rx="2"/><text x="84.0" y="51.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">3,006</text><text x="84.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep-25</text><rect x="168.0" y="61.1" width="68" height="84.9" fill="#1a2a4a" rx="2"/><text x="202.0" y="57.1" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">2,830</text><text x="202.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Dec-25</text><rect x="286.0" y="55.7" width="68" height="90.3" fill="#1a2a4a" rx="2"/><text x="320.0" y="51.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">3,011</text><text x="320.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Mar-26</text><rect x="404.0" y="48.3" width="68" height="97.7" fill="#1a2a4a" rx="2"/><text x="438.0" y="44.3" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">3,256</text><text x="438.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Jun-26</text><rect x="522.0" y="46.0" width="68" height="100.0" fill="#5b7bb5" rx="2"/><text x="556.0" y="42.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">3,334</text><text x="556.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep-26</text></svg>
+  <div class="microhead" style="margin-top:9px">Quarterly EPS (&#8377;)</div>
+  <svg role="img" aria-label="Chart: quarterly EPS, Rs" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="586" y2="146" stroke="#dde2ea"/><rect x="50.0" y="102.5" width="68" height="43.5" fill="#2e7d32" rx="2"/><text x="84.0" y="98.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">16.89</text><text x="84.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep-25</text><rect x="168.0" y="117.1" width="68" height="28.9" fill="#2e7d32" rx="2"/><text x="202.0" y="113.1" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">11.21</text><text x="202.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Dec-25</text><rect x="286.0" y="117.6" width="68" height="28.4" fill="#2e7d32" rx="2"/><text x="320.0" y="113.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">11.04</text><text x="320.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Mar-26</text><rect x="404.0" y="46.0" width="68" height="100.0" fill="#2e7d32" rx="2"/><text x="438.0" y="42.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">38.82</text><text x="438.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Jun-26</text><rect x="522.0" y="65.7" width="68" height="80.3" fill="#1b5e20" rx="2"/><text x="556.0" y="61.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">31.19</text><text x="556.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep-26</text></svg>
+  <div class="chartcap" style="text-align:center">Low-tax quarters flatter some comparisons: Q4 FY26 tax rate 13.5% (Systematix), Q2 FY27 27.7%.</div>
+ </div>
+</div>
+<div class="cols" style="margin-top:9px">
+ <div style="flex:1"><div class="notebox green"><b>&#9733; Cash-flow check (FY26):</b> operating cash flow before interest was &#8377;206 Cr, only 12% of EBITDA (my arithmetic: 2,062 / 16,838), after a &#8377;1,288 Cr working-capital outflow. Capex was &#8377;1,593 Cr (IIFL; Systematix &#8377;1,569 Cr). FY25 OCF was &#8377;1,880 Cr. In 1H FY27, operating cash of &#8377;1,490 Cr funded capex &#8377;770 Cr, working capital &#8377;180 Cr, and dividend plus finance costs &#8377;440 Cr (IIFL concall).</div></div>
+ <div style="flex:1"><div class="notebox red"><b>&#9733; Debt and interest:</b> borrowings &#8377;5,486 Cr (FY26, IIFL / Systematix; Screener shows &#8377;5,670 Cr at Mar-26 and &#8377;5,476 Cr at Sep-26). Quarterly finance cost is rising as capex loans switch on: &#8377;95 Cr (Q1 FY27) to &#8377;113 Cr (Q2). IIFL's FY27E interest is &#8377;450 Cr vs Systematix &#8377;264 Cr; Systematix looks too low because the first two quarters already total &#8377;207 Cr (my arithmetic). Debt maturity profile: <b>not found</b>.</div></div>
+</div>
+<div class="microhead" style="margin-top:12px">Data Conflicts Kept, Both Numbers Shown</div>
+<table class="t">
+ <tr><th style="text-align:left" scope="col">Item</th><th style="text-align:left" scope="col">Number A (source)</th><th style="text-align:left" scope="col">Number B (source)</th></tr>
+ <tr><td style="text-align:left">Price</td><td style="text-align:left">&#8377;1,437.20, -0.88% one day (MS, Screener, 20 Nov)</td><td style="text-align:left">&#8377;1,353 (IIFL, Systematix, 16 Nov); also &#8377;1,315.40 / &#8377;1,262 post-results</td></tr>
+ <tr><td style="text-align:left">Master Score</td><td style="text-align:left">B (MS header and text)</td><td style="text-align:left">70 (MS table)</td></tr>
+ <tr><td style="text-align:left">EPS Rating / RS</td><td style="text-align:left">77 FAIR; Price Strength 72 (MS tile, table)</td><td style="text-align:left">78; RS Rating 74 (MS text)</td></tr>
+ <tr><td style="text-align:left">Group rank</td><td style="text-align:left">69 (tile) / 69 of 197 (table)</td><td style="text-align:left">66 (MS text)</td></tr>
+ <tr><td style="text-align:left">Distance to pivot</td><td style="text-align:left">~13% (MS text)</td><td style="text-align:left">15% (MS chart label)</td></tr>
+ <tr><td style="text-align:left">52-week high</td><td style="text-align:left">1,681 (MS, Systematix, Screener)</td><td style="text-align:left">1,653 (IIFL)</td></tr>
+ <tr><td style="text-align:left">Net debt</td><td style="text-align:left">&#8377;4,740 Cr Sep-26 / &#8377;4,820 Cr Mar-26 (IIFL; web source 4,743 / 4,824)</td><td style="text-align:left">&#8377;4,950 Cr FY26 (Systematix, own definition)</td></tr>
+ <tr><td style="text-align:left">Net debt / EBITDA</td><td style="text-align:left">1.5x Sep-26 (IIFL, TTM basis)</td><td style="text-align:left">2.9x FY26 (IIFL)</td></tr>
+ <tr><td style="text-align:left">Borrowings</td><td style="text-align:left">&#8377;5,486 Cr FY26 (IIFL, Systematix)</td><td style="text-align:left">&#8377;5,670 Cr Mar-26 (Screener)</td></tr>
+ <tr><td style="text-align:left">EPS estimates</td><td style="text-align:left">MS: FY27E 81.90, FY28E 78.76; IIFL 110.9 / 101.5</td><td style="text-align:left">Systematix 126.4 / 151.5 (FY28 EPS 49% above IIFL, my arithmetic)</td></tr>
+ <tr><td style="text-align:left">Dividend</td><td style="text-align:left">FY26 &#8377;10/share; IIFL FY27E 11, FY28E 12; FY25 DPS 10.0 (IIFL)</td><td style="text-align:left">Systematix 10 / 10; FY25 DPS 8.5; yield 0.7% (MS, Screener)</td></tr>
+ <tr><td style="text-align:left">Pledge</td><td style="text-align:left">3.9% of promoter shares (IIFL, Systematix)</td><td style="text-align:left">4.86% (Sep 2025 aggregator); &ldquo;none&rdquo; (another); fresh 105,000 shares 4 Mar 2026</td></tr>
+ <tr><td style="text-align:left">Institutional holding</td><td style="text-align:left">Declined last quarter (MS text)</td><td style="text-align:left">MF 10.77% vs 9.58% at Mar-26; FII +0.12pp QoQ</td></tr>
+ <tr><td style="text-align:left">Targets</td><td style="text-align:left">MS high 1,744, avg 1,530.5, low 1,317</td><td style="text-align:left">IIFL 1,785, Systematix 1,801 (both above MS high; MS list stale or excludes them)</td></tr>
+ <tr><td style="text-align:left">Fertiliser volumes</td><td style="text-align:left">ANP/Smartek 134 kt in IIFL table</td><td style="text-align:left">&minus;38% YoY in IIFL text; Croptek &minus;29%; specialty &minus;57% (JM/Sovrenn summary)</td></tr>
+ <tr><td style="text-align:left">New depreciation</td><td style="text-align:left">&#8377;180-200 Cr a year (IIFL; consistent with 25-year life)</td><td style="text-align:left">&#8377;180-200 Cr per quarter (Sovrenn; likely error)</td></tr>
+ <tr><td style="text-align:left">Credit rating</td><td style="text-align:left">ICRA AA- / Positive 15 Oct 2026; CRISIL AA- / Positive 26 May 2026</td><td style="text-align:left">Earlier ICRA watch (Apr 2026) and a CRISIL watch note (gas supply), not reconciled</td></tr>
+</table>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+<div class="cols">
+ <div class="panel" style="background:#fffbe8;border-color:#f9a825">
+  <div class="plab">PEG &nbsp;·&nbsp; P/E &divide; EPS growth (three bases, my arithmetic) <span class="badge b-warn">Treat with care</span></div>
+  <div class="pval" style="font-size:22px">0.85 / 0.44 / n/m</div>
+  <p style="font-size:11.3px;margin-top:6px"><b>Basis 1, TTM EPS growth:</b> TTM EPS 92.26 vs prior TTM 77.97 (19.86 + 21.96 + 19.26 + 16.89) is +18.3%; 15.6x &divide; 18.3 = <b>0.85</b>. <b>Basis 2, FY27E growth (MarketSmith EPS 81.90 vs FY26 58.40, +40.2%):</b> forward P/E 17.5x &divide; 40.2 = <b>0.44</b>; flagged because MS shows FY28E <b>falling</b> 3.8%, so this is a one-year jump, not a growth rate. <b>Basis 3, FY26 EPS growth:</b> 58.40 vs 73.95 = &minus;21.0%, so PEG is <b>n/m</b>. Earnings are commodity and margin driven with several one-quarter swings (tax rate 13.5% in Q4 FY26), so no basis is a clean growth rate. On IIFL's FY27E EPS 110.9 the PEG would look far lower, but IIFL's own FY28E decline makes that unusable.</p>
+ </div>
+ <div class="panel" style="background:#fdf0f0;border-color:#c62828">
+  <div class="plab">Cash conversion &nbsp;·&nbsp; OCF &divide; EBITDA <span class="badge b-bear">Weak in FY26</span></div>
+  <div class="pval" style="font-size:22px">~12% <span style="font-size:13px;font-weight:600;color:#5a6475">(&#8377;206 Cr &divide; &#8377;1,684 Cr FY26)</span></div>
+  <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> OCF/EBITDA was 0.1x in FY26 (IIFL), driven by a &#8377;1,288 Cr working-capital outflow; FCF was about &minus;&#8377;1,923 Cr after interest (IIFL) vs &minus;&#8377;1,363 Cr (Systematix), a definition gap that is kept. IIFL expects 0.7x in FY27E. Inventory rose from &#8377;1,740 Cr to &#8377;2,610 Cr in six months (my arithmetic: 26.1 &minus; 17.4 bn), nearly all crop nutrition. Market cap &divide; FY26 OCF is about 88x (18,143 / 206, my arithmetic), which is the ratio that would hurt first if working capital does not unwind. MarketSmith lists cash flow 16.34 on its own definition.</p>
+ </div>
+</div>
+<div class="cols" style="margin-top:10px">
+ <div class="notebox blue"><b>Other valuation reads (my arithmetic):</b> EV is about &#8377;22,886 Cr (market cap 18,143 + net debt 4,743 per the web source consistent with IIFL), before roughly &#8377;619 Cr of minority interest (Systematix FY26). EV / TTM EBITDA is about 9.9x using the derived TTM EBITDA of ~&#8377;2,303 Cr. Systematix's target uses 8x chemicals and 6x fertilisers FY28E EV/EBITDA. MarketSmith: five-year P/E range 7-22; earnings stability 37 (low); EPS growth rate 4%; pre-tax margin 9%.</div>
+</div>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics &amp; Credit Ratings</h2></div>
+<div class="tiles">
+ <div class="tile"><div class="lab">Leadership</div><div class="val ">Sailesh C. Mehta (CMD)</div><div class="note">MarketSmith lists Parul Sailesh Mehta <b>twice</b> (non-exec non-independent and non-exec woman director): a data-entry conflict, kept. Independent director named: Bhuwan Chandra Tripathi. Remuneration, tenure and succession: <b>not found</b>.</div></div><div class="tile"><div class="lab">Tax Paid as % of PBT</div><div class="val pos">26.9% FY26</div><div class="note">Q2 FY27 27.7%; Q4 FY26 only 13.5% (Systematix), so low-tax quarters flatter some comparisons.</div></div><div class="tile"><div class="lab">Chardham Chemicals</div><div class="val warn">Governance flag</div><div class="note">DMSL bought 100% for &#8377;121.45 Cr cash (SPA 24 Dec 2025, closed 6 May 2026); one report says the target had <b>nil turnover</b> for three fiscals. Seller related-party status and fairness opinion: not found.</div></div><div class="tile"><div class="lab">Tax Disputes</div><div class="val warn">Several open</div><div class="note">VAT-rate demand &#8377;74.89 Cr (Pune state tax, 31 Mar 2026); CGST ITC demand ~&#8377;26.8 lakh; subsidiary CGST &#8377;54.88 lakh appeal; income-tax notices AY13-14 to AY18-19 (amounts not read).</div></div>
+</div>
+<div class="microhead" style="margin-top:10px">Credit Ratings (all agencies checked)</div>
+<table class="t">
+ <tr><th style="text-align:left" scope="col">Agency</th><th style="text-align:left" scope="col">Rating / outlook</th><th style="text-align:left" scope="col">Date and note</th></tr>
+ <tr><td style="text-align:left">ICRA</td><td style="text-align:left"><b>AA- / Positive</b></td><td style="text-align:left">15 Oct 2026, reaffirmed and removed from Watch (consolidated). Placed on Watch around Apr 2026 (date inferred); short-term A1+ withdrawn. Rated amounts not read.</td></tr>
+ <tr><td style="text-align:left">CRISIL</td><td style="text-align:left"><b>AA- / Positive / A1+</b></td><td style="text-align:left">Affirmed, rationale 26 May 2026 (NSE filing 27 May). A CRISIL watch item on gas supply (~Mar/Apr 2026) was seen in a secondary source; details unread, conflict with Positive not resolved.</td></tr>
+ <tr><td style="text-align:left">CARE / India Ratings (company and subsidiaries) / Acuite / Brickwork</td><td style="text-align:left">Not found</td><td style="text-align:left">No rating found for any of the four; India Ratings press releases were not read in full. Auditor name and any qualification: not found; internal auditor Ernst &amp; Young LLP reappointed for FY27.</td></tr>
+</table>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance &amp; Credibility Checklist</h2></div>
+<div class="microhead">Management Guidance (Q2 FY27 call, as summarised by IIFL) vs What Followed</div>
+<table class="t">
+ <tr><th style="text-align:left" scope="col">Item</th><th style="text-align:left" scope="col">Guidance</th><th style="text-align:left" scope="col">Evidence so far</th><th scope="col">Status</th></tr>
+ <tr><td style="text-align:left">EBITDA margin</td><td style="text-align:left">Broadly ~22%, market permitting</td><td style="text-align:left">Q2 FY27 22.5%; Q1 26.0%; 4Q FY26 11.8%</td><td><span class="badge b-warn">On track</span></td></tr>
+ <tr><td style="text-align:left">Fertiliser EBIT margin</td><td style="text-align:left">5-7% in 3Q/4Q FY27 (revised Rabi NBS)</td><td style="text-align:left">Q2 8.4%; Q1 3.2%; FY26 6.8%</td><td><span class="badge b-neut">Pending</span></td></tr>
+ <tr><td style="text-align:left">Gopalpur / Dahej commissioning</td><td style="text-align:left">Commercial in 4Q FY27</td><td style="text-align:left">Earlier target end-2Q FY27; ~98% complete, within budget</td><td><span class="badge b-bear">Slipped one quarter</span></td></tr>
+ <tr><td style="text-align:left">Chardham</td><td style="text-align:left">Commercial 2H FY28, incremental to TAN</td><td style="text-align:left">Refurbishment under way; rights issue 124.6m shares to DMSL</td><td><span class="badge b-neut">Pending</span></td></tr>
+ <tr><td style="text-align:left">TAN exports</td><td style="text-align:left">Restart international development Nov 2026</td><td style="text-align:left">Ban lifted Oct 2026; Q2 exports 0.2 kt</td><td><span class="badge b-neut">Early</span></td></tr>
+ <tr><td style="text-align:left">DMSL listing / CCD conversion</td><td style="text-align:left">Route (IPO vs demerger) under evaluation; CCD conversion dilutes holding by 3.0-3.5% from 100%</td><td style="text-align:left">No decision</td><td><span class="badge b-neut">Open</span></td></tr>
+</table>
+<div class="cols" style="margin-top:12px">
+ <div style="flex:1.2"><div class="notebox"><b>Credibility record:</b> I did not find an annual guided-vs-delivered history for prior years, so no multi-year credibility score is given. What is checkable: Q2 FY27 EBITDA beat IIFL's estimate by 13.2%; commissioning slipped by a quarter; the Q1 FY27 and Q2 FY27 margins (26.0%, 22.5%) are far above the FY26 14.6%. The IIFL FY27E H2 EPS implied is about 40.9 against H1 70.0 (my arithmetic: 110.9 &minus; 70.0), i.e. even IIFL expects the second half to be weaker.</div></div>
+ <div style="flex:1"><div class="microhead" style="margin-top:0">Management-Quality Red-Flag Checklist</div>
+ <table class="t">
+  <tr><th style="text-align:left" scope="col">Warning Sign</th><th scope="col">Present?</th></tr>
+  <tr><td style="text-align:left">Capacity built ahead of demand</td><td><span class="badge b-warn">Watch</span></td></tr>
+  <tr><td style="text-align:left">Working-capital deterioration</td><td><span class="badge b-bear">&#10003; Yes (FY26)</span></td></tr>
+  <tr><td style="text-align:left">Timeline slip on capex</td><td><span class="badge b-warn">&#10003; One quarter</span></td></tr>
+  <tr><td style="text-align:left">Acquisition of a shell-like target</td><td><span class="badge b-warn">Flag (Chardham)</span></td></tr>
+  <tr><td style="text-align:left">Promoter pledge</td><td><span class="badge b-warn">3.9%, falling</span></td></tr>
+ </table></div>
+</div>
+</div>
+<div class="sec">
+<div class="cols">
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+  <div class="krow"><span class="klab">Analysts Covering</span><span class="kval">2 (MarketSmith)<small>plus IIFL and Systematix notes of 16 Nov 2026</small></span></div>
+  <div class="krow"><span class="klab">Buy / Hold / Sell</span><span class="kval" style="color:#2e7d32">2 / 0 / 0<small>consensus Buy (MS); IIFL BUY, Systematix BUY</small></span></div>
+  <div class="krow"><span class="klab">Avg Price Target</span><span class="kval" style="color:#2e7d32">&#8377;1,530.5<small>+6.5% vs &#8377;1,437.20 (MS, 12-month)</small></span></div>
+  <div class="krow"><span class="klab">Target Range</span><span class="kval">&#8377;1,317 &ndash; &#8377;1,744<small>MS low and high; IIFL 1,785 and Systematix 1,801 sit above it (conflict)</small></span></div>
+  <div class="krow"><span class="klab">IIFL / Systematix</span><span class="kval">&#8377;1,785 / &#8377;1,801<small>+24.2% / +25.3% vs 1,437.20 (my arithmetic); brokers quote +32% / +33% on CMP 1,353</small></span></div>
+  <div class="krow"><span class="klab">Older / undated</span><span class="kval">Emkay 2,000; Keynote 1,744<small>Emkay Nov 2025 (pre-Q2 FY27); Simply Wall St ~1,622 and 1,709, both undated</small></span></div>
+  <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Social / news:</b> Not systematically read. Not found: Motilal Oswal, Nuvama, ICICI Securities, Kotak views after Q2 FY27, and any hard consensus EPS. MS says its estimates are from 2 analysts.</div>
+ </div>
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+  <div class="krow"><span class="klab">Volume (20 Nov)</span><span class="kval">2,76,080<small>31.11% below the average (MS); implied average ~4.0 lakh (my arithmetic)</small></span></div>
+  <div class="krow"><span class="klab">Float</span><span class="kval">6.82 Cr shares<small>MarketSmith</small></span></div>
+  <div class="krow"><span class="klab">Funds holding</span><span class="kval">193<small>-1.53%; shares held by funds 3.11 Cr (-0.36%)</small></span></div>
+  <div class="krow"><span class="klab">Up/Down volume</span><span class="kval" style="color:#2e7d32">2.3<small>MarketSmith (accumulation reading B+)</small></span></div>
+  <div class="krow"><span class="klab">Beta</span><span class="kval">1.72<small>alpha 0.03 (MS)</small></span></div>
+  <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828"><b>&#9888; HFT radar (see section 04):</b> Graviton (6 pairs), HRTI (2), QE Securities (1), XTX Markets, BNP Paribas Arbitrage. Newest on screen 30 Jan 2025. Matched same-day pairs, so intraday churn, not conviction. Other bulk deals on the screen are older and unrelated to the present range (for example, a 7 Jun 2023 block near &#8377;548 and a 16 Sep 2022 index-fund trade near &#8377;890).</div>
+ </div>
+</div>
+</div>
+<div class="sec">
+<div class="cols">
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+  <p style="font-size:11px">The wheel has no Materials wedge, so I map this stock to <b>Industrials</b> (mining, infrastructure and capital-spending demand for TAN and nitric acid). A secondary read is Energy, because ammonia and LNG prices drive the margin swing. The phase shown is the wheel's own reading for the wedge; I did not test it independently.</p>
+  <div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg role="img" aria-label="Sector rotation wheel with the mapped sector highlighted" viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& lending growth.</text></g></g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">DEEPAK</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">FERT &amp; CHEM</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to industrials</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">late-expansion phase</text><path d="M 81.56,49.37 L 72.15,62.31 L 89.80,65.24 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+  </div>
+  <div class="chartcap" style="text-align:center;margin-top:2px">NSE: DEEPAKFERT &middot; mapped: industrials &middot; phase: late expansion</div>
+ </div>
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+  <table class="peer">
+   <tr><th scope="col">Company</th><th scope="col">MCap</th><th scope="col">TTM Sales</th><th scope="col">TTM PAT</th><th scope="col">EPS</th><th scope="col">P/E</th><th scope="col">D/E</th><th scope="col">ROCE</th><th scope="col">3y Sales CAGR</th></tr>
+   <tr style="background:#eef4fc"><td>&#9733; Deepak</td><td><b>18,143</b></td><td><b>12,432</b></td><td><b>1,165</b></td><td><b>92.26</b></td><td><b>15.6x</b></td><td><b>0.72</b></td><td><b>11.4%</b></td><td><b>1%</b></td></tr>
+   <tr><td>Chambal</td><td>14,886</td><td>20,710</td><td>1,911</td><td>47.70</td><td>7.8x</td><td class="pos">0.16</td><td class="pos">25.2%</td><td>−9%</td></tr>
+   <tr><td>GNFC</td><td>6,836</td><td>9,215</td><td>1,052</td><td>71.59</td><td>6.5x*</td><td class="pos">0.01</td><td>12.0%</td><td>−9%</td></tr>
+   <tr><td>Coromandel</td><td>58,885</td><td>33,242</td><td>1,508</td><td>52.91</td><td>37.7x</td><td class="pos">0.12</td><td class="pos">22.0%</td><td>2%</td></tr>
+  </table>
+  <div class="chartcap" style="margin-top:4px">One source and date: Screener.in consolidated, 20 Nov 2026 close; &#8377; Cr except EPS and price. P/E = price / TTM EPS (my arithmetic). D/E = Sep-26 borrowings / (equity capital + reserves), my calculation. Deepak price 1,437; Chambal 372; GNFC 465; Coromandel 1,996. *GNFC TTM PAT of &#8377;1,052 Cr on &#8377;9,215 Cr sales (11% net margin) looks high and <b>its 6.5x P/E is unverified</b>, possibly a one-off or other income. Deepak on IIFL's CMP 1,353 would be 14.7x, but that is a different source and date and is not used here.</div>
+  <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> Deepak is not cheap against the two nitrogen peers (7.8x and 6.5x) and is far below Coromandel (37.7x), the quality ceiling. Its ROCE of 11.4% and 3-year sales CAGR of 1% explain the gap to Chambal; the leverage (0.72 vs 0.01-0.16) is the highest in the set. Peers chosen: GNFC for product overlap (ammonia, nitric acid, TAN), Chambal for the new TAN competitor, Coromandel as a fertiliser-quality reference with weaker product overlap. Paradeep, RCF and the specialty chemical names were not pulled; MarketSmith's own chemicals group list is a different set.</div>
+ </div>
+</div>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+<table class="t prose">
+ <tr><th style="text-align:left" scope="col">Category</th><th scope="col">Severity</th><th style="text-align:left" scope="col">Detail</th></tr>
+ <tr><td style="text-align:left">Commodity / Margin Normalisation</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">EBITDA margin 22.5% (Q2) vs 11.8% (4Q FY26). IIFL's FY28E EPS (&#8377;101.5) is 8.5% below FY27E and 18.9% under consensus; Systematix's FY28E (&#8377;151.5) is 49% above IIFL (my arithmetic). IIFL attributes the peak to West Asia-driven conditions in 1Q FY27, and its ammonia-savings table falls from &#8377;856 Cr (FY27E) to &#8377;526 Cr (FY28E).</td></tr>
+ <tr><td style="text-align:left">Debt / Financial</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">Net debt &#8377;4,740 Cr (1.5x TTM EBITDA, IIFL); finance cost +50.6% YoY in Q2; promoter pledge 3.9%. FY26 OCF only 12% of EBITDA; minority interest about &#8377;619 Cr. Debt maturity schedule and loan rates: not found.</td></tr>
+ <tr><td style="text-align:left">Capex Execution</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Both projects ~98% complete and within budget but already one quarter late. Interest and &#8377;180-200 Cr of annual depreciation start before full ramp (75% / 85% / &gt;95% over about three stages).</td></tr>
+ <tr><td style="text-align:left">Competition</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">New domestic TAN capacity caused &ldquo;initial disruption&rdquo; (unquantified); Chambal began TAN production Aug 2026 (research note). TAN volume already fell 8% YoY. Nitric acid realisations are subdued by higher market supply (IIFL). The new Gopalpur plant adds 60-70% to volume into this market.</td></tr>
+ <tr><td style="text-align:left">Regulatory / Subsidy</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">TAN export ban history (lifted Oct 2026); NBS subsidy rates drive fertiliser margins (guided 5-7%); Maharashtra restrictions on specialty fertilisers; subsidy-budget totals disagree across sources.</td></tr>
+ <tr><td style="text-align:left">Weather / Working Capital</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Weak Kharif and El Nino uncertainty; inventory up &#8377;870 Cr in six months; phosphoric acid +25% QoQ to US$1,700/t; employee cost +44% and unallocated corporate cost +109% YoY.</td></tr>
+</table>
+<div class="cols" style="margin-top:10px">
+ <div style="flex:1"><div class="notebox"><b>Source limits:</b> primary documents (investor presentation, concall transcript, annual report, exchange filings for Q2) were <b>not read</b>. The IIFL concall section is a broker summary. Competitor name, TAN market share, customer names, LNG pricing formula, Rabi NBS effect on Deepak and Chardham deal rationale beyond brokers: not found.</div></div>
+ <div style="flex:1"><div class="notebox red"><b>Both sides of the call:</b> the case for owning is cheap-ish P/E at 15.6x, AA- Positive ratings and two BUY notes; the case against is peak margins, 12% cash conversion, a fresh price run of ~31% from the low and an EW count that expects a pullback first. Neither is decisive on its own.</div></div>
+</div>
+</div>
+<div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+<div class="sec">
+<div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
+<div class="cols">
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="microhead">Relative Strength (MarketSmith India)</div>
+  <div style="font-size:48px;font-weight:900;color:#1a2a4a;line-height:1">72 / 74</div>
+  <div style="font-size:11px;color:#5a6475;margin:2px 0 8px">Price Strength 72 (tile, table) vs RS Rating 74 (text): <b>conflict kept</b></div>
+  <p style="font-size:11.5px">Master Score is <b>B</b> in the header and text but <b>70</b> in the table. EPS Rating 77 FAIR (78 in text), Buyer Demand B+, Accumulation/Distribution B+, group NSE-Chemicals-Specialty ranked 69 of 197 (66 in the text) and described as a poor industry group. The profile is decent price strength and demand, only fair earnings rating and a weak group: a stock that is outperforming a weak neighbourhood.</p>
+  <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> MarketSmith says the stock is above its 50-DMA (+12%) and 200-DMA (+11%) and is &ldquo;forming a base&rdquo;, 13% (text) or 15% (chart label) from its pivot. 5-year P/E range 7-22; current 16. Beta 1.72 means moves are amplified.</div>
+ </div>
+ <div style="flex:0 0 calc(50% - 10px);min-width:0">
+  <div class="microhead">MarketSmith Score Breakdown</div>
+  <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EPS Rating</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">77</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">FAIR (78 in text)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Price Strength</div><div style="font-size:17px;font-weight:900;color:#2e7d32">72</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">RS 74 in text</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Buyer Demand</div><div style="font-size:17px;font-weight:900;color:#2e7d32">B+</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">Acc/Dis B+</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Group Rank</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">69</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">of 197 (66 in text)</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Master Score</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">B</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">70 in table</div></div></div>
+  <div class="microhead" style="margin-top:10px">MotiveWave Gauges (daily only; no 1-hour screen)</div>
+  <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Trend Momentum</div><div style="font-size:17px;font-weight:900;color:#2e7d32">+5 / +3</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">short / long</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Volume Confirm</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">2</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">Trend 1 &#183; OBV 1</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">RVOL / Diverge</div><div style="font-size:17px;font-weight:900;color:#6b7587">0 / 0</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">no reading</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Signal</div><div style="font-size:17px;font-weight:900;color:#2e7d32">Buy 1 / Sell 0</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">Buy 17 Nov 2026 09:00</div></div></div>
+  <div class="chartcap">Chart levels: support 1,338, resistance 1,532. MarketSmith chart shows OH &minus;14.50% and OL +65.88%, and analyst-target labels of 1,744 / 1,531 / 1,317.</div>
+ </div>
+</div>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+<div class="notebox blue" style="margin-top:0;margin-bottom:10px"><b>THE USER'S OWN COUNT (leads this section).</b> <b>Degree legend:</b> <span style="color:#e67e22;font-weight:900">orange = Intermediate</span> &nbsp;·&nbsp; <span style="color:#2e7d32;font-weight:900">green = Minor</span> &nbsp;·&nbsp; <b>circled roman = Minute</b> &nbsp;·&nbsp; <b>circled numbers = Primary</b>. <b>What the labels show (levels approximate, read off the screenshot):</b> a Primary <b>circled 2</b> low near &#8377;870; <span style="color:#e67e22;font-weight:900">orange (1)</span> top near &#8377;1,720; <span style="color:#e67e22;font-weight:900">orange (2)</span> an A-B-C ending in C near &#8377;1,092. <b>The user's call:</b> <span style="color:#2e7d32;font-weight:900">green wave 1</span> is done off the &#8377;1,092 low (rally to about &#8377;1,458, with chart bars up to about &#8377;1,485) and <span style="color:#2e7d32;font-weight:900">green wave 2</span> is underway. <span style="color:#e67e22;font-weight:900">Orange (3)</span> has started; once green 2 ends, the next leg is <b>green 3 of orange (3) &mdash; a &ldquo;3 of 3&rdquo;</b>. The user expects green 2 to retrace <b>61.8%</b> of green 1 and says to wait and watch price action. <b>This is their count, not an independent one; my checks below are arithmetic and do not overrule it.</b></div>
+<div class="cols">
+ <div class="imgwrap" style="flex:1"><img width="1960" height="1144" loading="lazy" src="DEEPAKFERT_chart.jpg" alt="MotiveWave daily chart of DEEPAKFERT with Elliott Wave labels and trend-momentum gauges, 21 Nov 2026"></div>
+</div>
+<div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+<table class="t prose">
+ <tr><td style="width:90px;vertical-align:top"><b>Their Count</b></td><td style="text-align:left"><b>Orange (2) ended near &#8377;1,092 and the move up is orange (3), whose first Minor leg (green 1) has finished near &#8377;1,458.</b> A correction (green 2) is now expected, and the leg after it is green 3 of orange (3), a 3 of 3, normally the strongest part of the sequence. Context (my arithmetic): orange (2) retraced about 73.9% of orange (1) ((1,720 &minus; 1,092) &divide; (1,720 &minus; 870) = 628 &divide; 850). Green 1 is +33.5% (1,458 &divide; 1,092). Price &#8377;1,437.20 is only 1.4% under the green-1 high and 3.3% under the chart's ~1,485 bar high, so green 2 has not yet shown a deep retracement on the closing price.</td></tr>
+ <tr><td style="vertical-align:top"><b>Fibonacci (my arithmetic)</b></td><td style="text-align:left"><b>61.8% retracement of green 1 &mdash; the user's expected target.</b> Range 1,458 &minus; 1,092 = 366; 0.618 &times; 366 = 226.2; level = <b>&#8377;1,231.8</b> (about &#8377;1,232), which is <b>14.3% below</b> &#8377;1,437.20. Using the ~1,485 bar high instead gives &#8377;1,242, a sensitivity only. Reference rows:
+  <table class="t" style="margin-top:6px">
+   <tr><th scope="col">Retracement</th><th scope="col">Price</th><th scope="col">From &#8377;1,437.20</th><th style="text-align:left" scope="col">Note</th></tr>
+   <tr><td><b>61.8%</b></td><td><b>&#8377;1,232</b></td><td><span class="neg">&minus;14.3%</span></td><td style="text-align:left"><b>User's target; centre of the PINK zone</b></td></tr>
+   <tr><td>38.2%</td><td>&#8377;1,318</td><td><span class="neg">&minus;8.3%</span></td><td style="text-align:left">reference; sits just below the 1,338 support</td></tr>
+   <tr><td>50%</td><td>&#8377;1,275</td><td><span class="neg">&minus;11.3%</span></td><td style="text-align:left">reference; upper edge of the PINK zone</td></tr>
+   <tr><td>78.6%</td><td>&#8377;1,170</td><td><span class="neg">&minus;18.6%</span></td><td style="text-align:left">reference; deepest normal wave-2 retracement</td></tr>
+  </table>
+  <b>Two notes on the chart's own marks.</b> (1) The chart's &ldquo;C vs A (Zig Zag)&rdquo; 61.8% marks at 1,166.4 and 1,177.6 measure a <b>different, already-exceeded leg</b> (orange (2)'s C against A) and do not apply to green 2. (2) The <b>&#8377;1,338 support</b> (6.9% below price) sits above the 61.8% target, so if 1,338 fails the way to &#8377;1,232 is open; a hold above 1,338 would mean green 2 is shallower than the user expects.</td></tr>
+ <tr><td style="vertical-align:top"><b>Synthesis</b></td><td style="text-align:left"><b>Two-stage discipline.</b> <b style="color:#d81b60">PINK (anticipation) zone, my proposal:</b> about &#8377;1,190 to &#8377;1,275, centred on the 61.8% level of &#8377;1,232, with green 2 showing signs of ending. This is a better-risk zone than adding after a 31% run. <b style="color:#2e7d32">GREEN (confirmation):</b> a daily close above the green-1 high (~&#8377;1,458, bars to ~1,485) <b>and above the &#8377;1,532 resistance</b>, after green 2 has ended (stricter of the two: 1,532 is +6.6% from here). <b>Invalidation: a close below &#8377;1,092</b>, the orange (2) low, which a wave-3 start must hold. The daily gauges are already positive (+5 / +3, Buy 17 Nov), so what is missing is the pullback, not the strength. <b>Overall call: WAIT / PINK-watch.</b></td></tr>
+</table>
+</div>
+<div class="sec">
+<div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+<div class="cols">
+ <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
+  <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
+  <div class="pval" style="color:#e67e22;font-size:19px">WAIT / PINK-WATCH</div>
+  <p style="font-size:11.4px;margin-top:6px">Strong quarter, a Buy gauge signal on 17 Nov, two BUY notes: but margins look peaky, cash conversion is weak, and the user's own count expects green 2 to pull back about 14% before the next up leg. Patience over prediction.</p>
+  <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; PINK (anticipation):</b> &#8377;1,190 to &#8377;1,275, centred on the 61.8% retracement at &#8377;1,232, with reversal evidence. Not reached yet; price is &#8377;1,437.20.</div>
+  <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; GREEN (trigger):</b> daily close above the green-1 high (~&#8377;1,458) and above <b>&#8377;1,532</b> after green 2 ends. <b>Invalidation:</b> close below &#8377;1,092.</div>
+  <div style="font-size:11.3px;margin-top:6px"><b>Next to watch:</b> Gopalpur/Dahej commissioning (4Q FY27), Q3 FY27 margin vs the ~22% guide, inventory and operating cash flow, and any DMSL listing decision.</div>
+ </div>
+ <div class="panel" style="border-color:#1565c0">
+  <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+  <table class="t" style="margin-top:4px">
+   <tr><td>&#8377;1,338</td><td style="text-align:left">Chart support (&minus;6.9%)</td><td><span class="badge b-neut">Near</span></td></tr>
+   <tr><td>&#8377;1,318</td><td style="text-align:left">38.2% retrace of green 1</td><td><span class="badge b-neut">Fib</span></td></tr>
+   <tr><td>&#8377;1,275</td><td style="text-align:left">50% retrace</td><td><span class="badge b-neut">Fib</span></td></tr>
+   <tr><td>&#8377;1,232</td><td style="text-align:left"><b>61.8% retrace &mdash; PINK centre</b></td><td><span class="badge b-bull">Target</span></td></tr>
+   <tr><td>&#8377;1,092</td><td style="text-align:left">Orange (2) low &mdash; <b>invalidation</b></td><td><span class="badge b-bear">Critical</span></td></tr>
+  </table>
+ </div>
+ <div class="panel" style="border-color:#2e7d32">
+  <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+  <table class="t" style="margin-top:4px">
+   <tr><td>&#8377;1,458-1,485</td><td style="text-align:left">Green-1 high / chart bar high</td><td><span class="badge b-neut">Near</span></td></tr>
+   <tr><td>&#8377;1,531-1,532</td><td style="text-align:left">Chart resistance / <b>GREEN band</b>; MS average target 1,530.5</td><td><span class="badge b-bull">Signal</span></td></tr>
+   <tr><td>&#8377;1,681</td><td style="text-align:left">52-week high (MS; IIFL 1,653)</td><td><span class="badge b-neut">Major</span></td></tr>
+   <tr><td>&#8377;1,720</td><td style="text-align:left">Orange (1) top</td><td><span class="badge b-bull">Major</span></td></tr>
+   <tr><td>&#8377;1,785-1,801</td><td style="text-align:left">IIFL / Systematix targets</td><td><span class="badge b-neut">Broker</span></td></tr>
+  </table>
+ </div>
+</div>
+</div>
+
+<div class="disclaim">Disclaimer: This report is prepared using publicly available data as of 21 Nov 2026 from MarketSmith India, Screener.in, IIFL Capital and Systematix result notes (16 Nov 2026), ICRA and CRISIL filings, company announcements as reported by secondary web sources, one dated Substack article, and the author's own MotiveWave Elliott Wave analysis. Primary company documents were not read, so figures labelled broker-reported or secondary should be independently verified. Where sources disagree, both numbers are shown. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
+<div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
